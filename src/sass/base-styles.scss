@@ -28,3 +28,22 @@
     max-width: rem(1372);
   }
 }
+
+.btn {
+  @include for-size(tablet) {
+    width: rem(250);
+    height: rem(48);
+    font-size: rem(11);
+  }
+
+  @include for-size(desktop) {
+    width: rem(300);
+    height: rem(68);
+    font-size: rem(12);
+  }
+
+  @include for-size(hd-desktop) {
+    width: rem(350);
+    font-size: rem(14);
+  }
+}
