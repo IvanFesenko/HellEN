@@ -58,16 +58,6 @@
     height: rem(80);
     border-radius: 50%;
   }
-  .Эллипс_1 {
-    border-radius: 50%;
-    background-color: rgb(241, 241, 241);
-    position: absolute;
-    left: 120px;
-    top: 7170px;
-    width: 80px;
-    height: 80px;
-    z-index: 415;
-  }
 
   @include for-size(tablet) {
     & .slick-arrow.slick-prev,
@@ -124,27 +114,27 @@
     background-image: url('../images/reviews/next.svg');
   }
 
-  &__item-img {
-    border-radius: 50%;
-    width: rem(54);
-    height: rem(54);
+  &__item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 
-    &:hover,
-    &:focus {
-      border: 2px solid $orange-color;
+    &-img-wrp,
+    &-img {
+      border-radius: 50%;
+      width: rem(54);
+      height: rem(54);
+
+      &:hover,
+      &:focus {
+        border: 2px solid $orange-color;
+      }
     }
   }
 }
 
-.slider__item {
+&__item {
   display: flex;
   justify-content: center;
   text-align: center;
-
-  &-img-wrp {
-    width: rem(54);
-    height: rem(54);
-    border-radius: 50%;
-    background-color: $orange-color;
-  }
 }
