@@ -1,0 +1,20 @@
+.section-list {
+  counter-reset: section-counter;
+  &__item {
+    position: relative;
+    &::before {
+      position: static;
+      display: block;
+    }
+  }
+}
+.advantages-reason::before {
+  content: '0' counters(section-counter, '') '';
+  counter-increment: section-counter;
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(50%);
+  left: rem(35);
+  color: $orange-color;
+  font-weight: 600;
+}
