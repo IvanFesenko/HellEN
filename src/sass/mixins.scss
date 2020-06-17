@@ -12,10 +12,14 @@
       @content;
     }
   } @else if $size == hd-desktop {
-    @media (min-width: rem(1880)) {
+    @media (min-width: rem(1680)) {
       @content;
     }
   }
+}
+
+@function rem($px) {
+  @return ($px / 16) + rem;
 }
 
 @mixin flexible($justify: center) {
