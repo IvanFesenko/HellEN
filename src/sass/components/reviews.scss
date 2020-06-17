@@ -5,21 +5,6 @@
 .reviews {
   padding: rem(24) 0 rem(24) 0;
 }
-//big slider
-
-//small slider
-
-/* Слайдер */
-.slick-slider {
-}
-
-/* Слайдер запущен */
-.slick-slider.slick-initialized {
-}
-
-/* Слайдер с точками */
-.slick-slider.slick-dotted {
-}
 
 /* Ограничивающая оболочка */
 .slick-list {
@@ -67,7 +52,6 @@
     top: 50%;
   }
 
-<<<<<<< HEAD
   &__item-img,
   &__item-img-wrp {
     width: rem(80);
@@ -75,8 +59,6 @@
     border-radius: 50%;
   }
 
-=======
->>>>>>> parent of f0249ff... clear img
   @include for-size(tablet) {
     & .slick-arrow.slick-prev,
     & .slick-arrow.slick-next {
@@ -149,4 +131,10 @@
       }
     }
   }
+}
+
+&__item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
