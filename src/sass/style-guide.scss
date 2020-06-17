@@ -8,6 +8,12 @@
   }
 }
 
+.style-guide__wrapper {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: rem(50);
+}
+
 .color-map {
   display: flex;
   flex-wrap: wrap;
@@ -50,10 +56,6 @@
   }
 }
 
-.typography {
-  margin: 0 auto;
-}
-
 .main-font {
   font-family: $main-font;
 }
@@ -66,10 +68,27 @@
   text-align: center;
 }
 
-.typography {
-  text-align: center;
+.font-color.white-font {
+  background-color: #000000;
 }
 
-.style-guide__btn {
+.style-guide__hover {
+  width: rem(200);
+  height: rem(40);
+  background-color: $grey-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+}
+
+.pseudo-line.orange-font {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.site-guide__style-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
