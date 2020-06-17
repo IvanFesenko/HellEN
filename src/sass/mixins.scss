@@ -1,18 +1,18 @@
 @mixin for-size($size) {
   @if $size == mobile {
-    @media (max-width: rem(767)) {
+    @media (max-width: rem(599)) {
       @content;
     }
   } @else if $size == tablet {
-    @media (min-width: rem(768)) {
+    @media (min-width: rem(600)) {
       @content;
     }
   } @else if $size == desktop {
-    @media (min-width: rem(1280)) {
+    @media (min-width: rem(900)) {
       @content;
     }
   } @else if $size == hd-desktop {
-    @media (min-width: rem(1680)) {
+    @media (min-width: rem(1200)) {
       @content;
     }
   }
