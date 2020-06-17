@@ -28,3 +28,74 @@
     max-width: rem(1372);
   }
 }
+
+// class for button, change sizes and font-sizes
+.btn {
+  @include for-size(tablet) {
+    border: rem(2) solid $orange-color;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $orange-color;
+    width: rem(250);
+    height: rem(48);
+    font-size: rem(11);
+  }
+
+  @include for-size(desktop) {
+    width: rem(300);
+    height: rem(68);
+    font-size: rem(12);
+  }
+
+  @include for-size(hd-desktop) {
+    width: rem(350);
+    font-size: rem(14);
+  }
+}
+
+// font-color-class
+.black-font-m {
+  color: $black-color-m;
+}
+
+.black-font-s {
+  color: $black-color-s;
+}
+
+.orange-font {
+  color: $orange-color;
+}
+
+.white-font {
+  color: $white-color;
+}
+
+.grey-font {
+  color: $grey-color;
+}
+
+//hover
+.orange-hover {
+  &:hover {
+    background-color: $orange-color;
+  }
+}
+
+// pseudo-line
+.pseudo-line:before {
+  @include pseudo(rem(25), rem(2));
+  position: absolute;
+  background-color: $orange-color;
+  top: 50%;
+  left: rem(-35);
+  transform: translateY(-50%);
+}
+
+.pseudo-line-title::after {
+  @include pseudo(rem(25), rem(2));
+  display: block;
+  margin: 0 auto;
+  background-color: $orange-color;
+  margin-top: rem(16);
+}
