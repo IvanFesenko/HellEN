@@ -6,6 +6,23 @@
   padding: rem(24) 0 rem(24) 0;
 }
 
+.section-title {
+  width: rem(180);
+  text-align: center;
+  margin: 0 auto;
+  line-height: rem(26.5);
+  margin-bottom: rem(20);
+}
+
+.sliderbig__item-img-box {
+  width: rem(80);
+  margin: 0 auto;
+}
+
+.sliderbig__item-img-wrp {
+  margin-bottom: rem(20);
+}
+
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -14,30 +31,7 @@
 /* Лента слайдов */
 .slick-track {
   display: flex;
-}
-
-/* Слайд */
-.slick-slide {
-}
-
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
-
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-
-/* Стрелка */
-.slick-arrow {
-}
-
-/* Стрелка влево */
-.slick-arrow.slick-prev {
-}
-
-/* Стрелка вправо */
-.slick-arrow.slick-next {
+  align-items: center;
 }
 
 // BIG SLIDER
@@ -133,7 +127,13 @@
   }
 }
 
+.social-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
 .social-list__item-svg {
-  width: 26px;
-  height: 14px;
+  width: rem(26);
+  height: rem(14);
 }
