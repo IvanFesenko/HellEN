@@ -40,6 +40,7 @@
     width: rem(250);
     height: rem(48);
     font-size: rem(11);
+    cursor: pointer;
   }
 
   @include for-size(desktop) {
@@ -101,6 +102,7 @@
   margin-top: rem(16);
 }
 
+//titles
 .title {
   font-size: rem(20);
   font-weight: 800;
