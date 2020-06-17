@@ -31,7 +31,8 @@
 
 // class for button, change sizes and font-sizes
 .btn {
-  display: inline-block;
+  @include flexible(center);
+  align-items: center;
   border: rem(2) solid $orange-color;
   background-color: transparent;
   text-transform: uppercase;
