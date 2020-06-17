@@ -1,21 +1,21 @@
 @mixin for-size($size) {
   @if $size == mobile {
-    @media (max-width: 569px) {
+    @media (max-width: 767px) {
       @content;
     }
   } @else if $size == tablet {
-    @media (min-width: 570px) {
+    @media (min-width: 768px) {
       @content;
     }
   } @else if $size == desktop {
-    @media (min-width: 900px) {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $size == hd-desktop {
+    @media (min-width: 1880px) {
       @content;
     }
   }
-}
-
-@function rem($px) {
-  @return ($px / 16) + rem;
 }
 
 @mixin flexible($justify: center) {
@@ -29,7 +29,11 @@
   height: $height;
 }
 
-@mixin background-settings($repeat: no-repeat, $position: center, $size: cover) {
+@mixin background-settings(
+  $repeat: no-repeat,
+  $position: center,
+  $size: cover
+) {
   background-repeat: $repeat;
   background-position: $position;
   background-size: $size;

@@ -17,10 +17,14 @@
   margin: 0 auto;
 
   @include for-size(tablet) {
-    max-width: 674px;
+    max-width: 630px;
   }
 
   @include for-size(desktop) {
-    max-width: 720px;
+    max-width: 1240px;
+  }
+
+  @include for-size(hd-desktop) {
+    max-width: 1372px;
   }
 }
