@@ -1,14 +1,18 @@
 @mixin for-size($size) {
   @if $size == mobile {
-    @media (max-width: 569px) {
+    @media (max-width: rem(599)) {
       @content;
     }
   } @else if $size == tablet {
-    @media (min-width: 570px) {
+    @media (min-width: rem(600)) {
       @content;
     }
   } @else if $size == desktop {
-    @media (min-width: 900px) {
+    @media (min-width: rem(900)) {
+      @content;
+    }
+  } @else if $size == hd-desktop {
+    @media (min-width: rem(1200)) {
       @content;
     }
   }
@@ -29,7 +33,11 @@
   height: $height;
 }
 
-@mixin background-settings($repeat: no-repeat, $position: center, $size: cover) {
+@mixin background-settings(
+  $repeat: no-repeat,
+  $position: center,
+  $size: cover
+) {
   background-repeat: $repeat;
   background-position: $position;
   background-size: $size;

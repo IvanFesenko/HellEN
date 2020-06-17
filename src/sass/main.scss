@@ -11,3 +11,15 @@
 @import 'mixins.scss';
 
 @import 'base-styles.scss';
+
+//components
+@import './components/header';
+@import './components/troubles';
+@import './components/about';
+@import './components/program';
+@import './components/advantages';
+@import './components/teacher';
+@import './components/guarantee';
+@import './components/reviews';
+@import './components/registration';
+@import './components/footer';
