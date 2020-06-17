@@ -1,1 +1,52 @@
-<section class="registration"></section>
+<section class="registration">
+  <div class="container">
+    <h3 class="registration__title">
+      Регистрация на <span class="orange-font">бесплатную</span> телефонную
+      <span class="orange-font">консультацию</span> по нюансам ЗНО по
+      английскому языку
+    </h3>
+    <p class="registration__description">
+      Оставляйте заявку на участие в
+      <span class="orange-font">бесплатном занятии.</span> С вами свяжется
+      консультант и ответит на вопросы.
+    </p>
+    <div class="form-wrapper">
+      <form
+        class="contacts__form"
+        action="./script/mail.php"
+        method="POST"
+        name="info-data"
+        id="form"
+      >
+        <ul class="personal-data">
+          <li class="input">
+            <input
+              type="text"
+              name="name"
+              placeholder="фамилия имя *"
+              id="name"
+              required
+            />
+          </li>
+          <li class="input">
+            <input
+              type="text"
+              name="phone"
+              placeholder="номер телефона *"
+              id="phone"
+              required
+            />
+          </li>
+        </ul>
+        <button
+          type="submit"
+          onclick="valid(document.getElementById('form'))"
+          name="submit"
+          class="btn"
+        >
+          отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
