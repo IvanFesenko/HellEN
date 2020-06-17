@@ -1,21 +1,13 @@
 * {
   outline: 1px solid blue;
 }
+
+.reviews {
+  padding: rem(24) 0 rem(24) 0;
+}
 //big slider
 
 //small slider
-.slider__item {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-
-  &-img-wrp {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    background-color: rgb(255, 107, 8);
-  }
-}
 
 /* Слайдер */
 .slick-slider {
@@ -81,8 +73,8 @@
       background-position: center;
       background-repeat: no-repeat;
       cursor: pointer;
-      height: 20px;
-      width: 20px;
+      height: rem(20);
+      width: rem(20);
       transform: translate(-50%, -50%);
     }
 
@@ -113,8 +105,8 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: rem(20);
+    width: rem(20);
     background-color: transparent;
     border: none;
     transform: translate(-50%, -50%);
@@ -132,5 +124,25 @@
 
   &__item-img {
     border-radius: 50%;
+    width: rem(54);
+    height: rem(54);
+
+    &:hover,
+    &:focus {
+      border: 2px solid $orange-color;
+    }
+  }
+}
+
+.slider__item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &-img-wrp {
+    width: rem(54);
+    height: rem(54);
+    border-radius: 50%;
+    background-color: $orange-color;
   }
 }
