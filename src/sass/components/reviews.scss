@@ -129,4 +129,8 @@
     right: 0;
     background-image: url('../images/reviews/next.svg');
   }
+
+  &__item-img {
+    border-radius: 50%;
+  }
 }

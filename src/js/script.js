@@ -12,6 +12,7 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           slidesToShow: 7,
+          asNavFor: '',
         },
       },
     ],
@@ -24,37 +25,40 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 600,
-        settings: { arrows: true },
+        settings: {
+          arrows: true,
+          asNavFor: '',
+        },
       },
     ],
     mobileFirst: true,
   });
 
   $('.first-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 1);
+    $('.sliderbig').slick('goTo', 0);
   });
 
   $('.second-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 2);
+    $('.sliderbig').slick('goTo', 1);
   });
 
   $('.third-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 3);
+    $('.sliderbig').slick('goTo', 2);
   });
 
   $('.fourth-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 4);
+    $('.sliderbig').slick('goTo', 3);
   });
 
   $('.fifth-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 5);
+    $('.sliderbig').slick('goTo', 4);
   });
 
   $('.sixth-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 6);
+    $('.sliderbig').slick('goTo', 5);
   });
 
   $('.seventh-slider__item').click(function (event) {
-    $('.sliderbig').slick('goTo', 7);
+    $('.sliderbig').slick('goTo', 6);
   });
 });
