@@ -79,6 +79,7 @@
 .orange-hover {
   &:hover {
     background-color: $orange-color;
+    color: $white-color;
   }
 }
 
@@ -98,4 +99,43 @@
   margin: 0 auto;
   background-color: $orange-color;
   margin-top: rem(16);
+}
+
+.title {
+  font-size: rem(20);
+  font-weight: 800;
+
+  @include for-size(tablet) {
+    font-size: rem(26);
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(42);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(45.83);
+  }
+}
+
+.subtitle {
+  font-size: rem(13);
+  line-height: rem(20);
+  font-weight: 700;
+
+  @include for-size(tablet) {
+    font-size: rem(13);
+    line-height: rem(20);
+    font-weight: 700;
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(18);
+    line-height: rem(29.17);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(45.83);
+    line-height: rem(62.54);
+  }
 }
