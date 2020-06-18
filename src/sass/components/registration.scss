@@ -1,0 +1,181 @@
+.registration {
+  background-image: url(../../images/registration/registration-m.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 55px 0 60px 0;
+  text-align: center;
+  color: $white-color;
+  @include for-size(tablet) {
+    background-image: url(../../images/registration/registration-t.jpg);
+  }
+  @include for-size(desktop) {
+    background-image: url(../../images/registration/registration-d.jpg);
+  }
+  @include for-size(hd-desktop) {
+    background-image: url(../../images/registration/registration-xd.jpg);
+  }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../../images/registration/registration-m@1.5x.jpg);
+    @include for-size(tablet) {
+      background-image: url(../../images/registration/registration-t@1.5x.jpg);
+    }
+    @include for-size(desktop) {
+      background-image: url(../../images/registration/registration-d@1.5x.jpg);
+    }
+    @include for-size(hd-desktop) {
+      background-image: url(../../images/registration/registration-xd@1.5x.jpg);
+    }
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../../images/registration/registration-m@2x.jpg);
+    @include for-size(tablet) {
+      background-image: url(../../images/registration/registration-t@2x.jpg);
+    }
+    @include for-size(desktop) {
+      background-image: url(../../images/registration/registration-d@2x.jpg);
+    }
+    @include for-size(hd-desktop) {
+      background-image: url(../../images/registration/registration-xd@2x.jpg);
+    }
+  }
+  &__title {
+    font-size: rem(14);
+    line-height: rem(26);
+    font-weight: 800;
+    padding: 0 10px 0 10px;
+    margin: 0 0 26px 0;
+    @include for-size(tablet) {
+      font-size: rem(22);
+      line-height: rem(38);
+      margin: 0 0 35px 0;
+      padding: 0 50px 0 50px;
+    }
+    @include for-size(desktop) {
+      font-size: rem(37.5);
+      line-height: rem(50);
+      margin: 0 0 50px 0;
+      padding: 0 140px 0 140px;
+    }
+    @include for-size(hd-desktop) {
+      margin: 0 0 70px 0;
+      padding: 0 240px 0 240px;
+    }
+  }
+  &__description {
+    font-size: rem(11);
+    line-height: rem(20);
+    font-weight: 600;
+    padding: 0 10px 0 10px;
+    margin: 0 0 28px 0;
+    @include for-size(tablet) {
+      font-size: rem(15);
+      margin: 0 0 38px 0;
+      padding: 0 100px 0 100px;
+    }
+    @include for-size(desktop) {
+      font-size: rem(18);
+      line-height: rem(24.5);
+      margin: 0 0 50px 0;
+      padding: 0 200px 0 200px;
+    }
+    @include for-size(hd-desktop) {
+      font-size: rem(25);
+      line-height: rem(37.5);
+      margin: 0 0 55px 0;
+    }
+  }
+}
+
+.form__wrapper {
+  @media (min-width: rem(430)) {
+    margin: auto;
+    width: 400px;
+  }
+  @include for-size(desktop) {
+    width: 620px;
+  }
+}
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  height: 48px;
+  width: 100%;
+  border-style: none;
+  outline: none;
+  color: $white-color;
+  font-weight: 600;
+  font-size: rem(15);
+  padding-left: 30px;
+  background: none;
+  border: 1px solid $white-color;
+  transition: border;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+  font-size: 16px;
+  font-family: var(--font-first);
+  @include for-size(desktop) {
+    height: rem(70);
+  }
+}
+input:active {
+  background: none;
+}
+
+input + input {
+  margin: 20px 0 55px 0;
+  @include for-size(tablet) {
+    margin: 20px 0 30px 0;
+  }
+  @include for-size(desctop) {
+    margin: 30px 0 55px 0;
+  }
+}
+
+input:hover {
+  border: 1px solid #f3c83b;
+}
+
+.button {
+  display: block;
+  width: rem(250);
+  height: rem(48);
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: $white-color;
+  background-color: $orange-color;
+  border-style: none;
+  font-size: rem(11);
+  font-weight: 700;
+  transition: all;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+  outline: none;
+  font-weight: 700;
+  cursor: pointer;
+  @include for-size(desktop) {
+    font-size: rem(14);
+    width: rem(350);
+    height: rem(70);
+  }
+}
+
+.contacts__form input::placeholder {
+  font-size: rem(14);
+  color: $white-color;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: none;
+  @include for-size(desktop) {
+    font-size: rem(20.8);
+  }
+}
+
+.input input[type='text']:invalid {
+  color: red;
+}
