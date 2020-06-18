@@ -7,15 +7,30 @@
 .navigation {
   display: flex;
   align-items: center;
-}
 
-.logo {
+  @include for-size(mobile) {
+    margin-bottom: rem(55);
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: rem(60);
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: rem(45);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(50);
+  }
 }
 
 .menu {
   display: none;
   font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  padding: 0;
   margin-left: auto;
 
   @include for-size(desktop) {
@@ -28,9 +43,6 @@
     font-size: rem(14);
     margin-right: rem(55);
   }
-}
-
-.menu__item {
 }
 
 .menu__item:not(:last-child) {
@@ -72,7 +84,7 @@
   }
 
   @include for-size(desktop) {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 0;
   }
 }
@@ -81,7 +93,7 @@
 .header__burger {
   display: block;
   width: rem(30);
-  height: rem(20);
+  height: rem(12);
   cursor: pointer;
   position: relative;
 
@@ -99,7 +111,7 @@
     background-color: $black-color;
     position: absolute;
     width: 100%;
-    height: rem(4);
+    height: rem(2);
     left: 0;
     transition: all 0.2s linear;
   }
@@ -111,32 +123,126 @@
   &::after {
     bottom: 0;
   }
+
+  span {
+    position: absolute;
+    background-color: $black-color;
+    width: 100%;
+    height: rem(2);
+    top: rem(5);
+    left: 0;
+    transition: all 0.2s linear;
+  }
 }
 
-.header__burger span {
-  position: absolute;
-  background-color: $black-color;
-  width: 100%;
-  height: rem(4);
-  top: rem(8);
-  left: 0;
-  transition: all 0.2s linear;
-}
+.header__burger.active {
+  &::before {
+    transform: rotate(45deg);
+    background-color: $black-color;
+    top: rem(5);
+  }
 
-.header__burger.active::before {
-  transform: rotate(45deg);
-  background-color: $black-color;
-  top: rem(8);
-}
+  &::after {
+    transform: rotate(-45deg);
+    background-color: $black-color;
+    bottom: rem(5);
+  }
 
-.header__burger.active::after {
-  transform: rotate(-45deg);
-  background-color: $black-color;
-  bottom: rem(8);
+  span {
+    transform: scale(0);
+  }
 }
-
-.header__burger.active span {
-  transform: scale(0);
-}
-
 // Burger END
+
+// Hero START
+
+.hero {
+  @include for-size(desktop) {
+    @include flexible(space-between);
+    align-items: center;
+    max-width: rem(500);
+  }
+}
+
+.hero__offer {
+  @include for-size(mobile) {
+    margin-bottom: rem(35);
+  }
+}
+
+.hero__title {
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(20);
+    line-height: 1.45em;
+    margin-bottom: rem(35);
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(48);
+  }
+}
+
+.hero__title-span {
+  @include for-size(mobile) {
+    display: block;
+  }
+}
+
+.hero__text {
+  font-weight: 500;
+  line-height: 1.355;
+  letter-spacing: 0.05em;
+  color: $grey-color;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(15);
+    margin-bottom: rem(5);
+  }
+
+  @include for-size(desktop) {
+  }
+}
+
+.hero__subtitle {
+  line-height: 1.355;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(15);
+    margin-bottom: rem(35);
+  }
+
+  @include for-size(desktop) {
+  }
+}
+
+.hero__btn {
+  background-color: $orange-color;
+  color: $white-color;
+
+  @include for-size(mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $orange-color;
+  }
+}
+
+.hero__img {
+  @include for-size(mobile) {
+    @include flexible(center);
+  }
+}
+
+// Hero END
