@@ -8,7 +8,7 @@ $(document).ready(function () {
     arrows: true,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           arrows: false,
           slidesToShow: 7,
@@ -24,7 +24,7 @@ $(document).ready(function () {
     arrows: false,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           arrows: true,
           asNavFor: '',

@@ -7,11 +7,24 @@
 }
 
 .section-title {
-  width: rem(180);
+  max-width: rem(180);
   text-align: center;
   margin: 0 auto;
   line-height: rem(26.5);
   margin-bottom: rem(20);
+
+  @include for-size(tablet) {
+    max-width: rem(340);
+    line-height: rem(62.5);
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(550);
+  }
+
+  @include for-size(hd-desktop) {
+    max-width: rem(600);
+  }
 }
 
 .hidden-word {
@@ -70,7 +83,7 @@
     height: rem(80);
     border-radius: 50%;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       width: rem(145);
       height: rem(145);
     }
@@ -129,9 +142,15 @@
 
     @include for-size(tablet) {
       text-align: left;
-      max-width: rem(450);
+      max-width: 100%;
       margin-left: 0;
       font-size: rem(12.5);
+    }
+  }
+
+  &-content-box {
+    @include for-size(tablet) {
+      max-width: 74%;
     }
   }
 
@@ -148,8 +167,8 @@
 
     @include for-size(tablet) {
       text-align: left;
-      max-width: rem(462);
       margin-left: 0;
+      max-width: 100%;
     }
 
     &-link {
@@ -165,6 +184,9 @@
     @include for-size(tablet) {
       margin-left: 0;
       margin-right: rem(42);
+    }
+
+    @include for-size(desktop) {
       width: rem(145);
     }
   }
@@ -229,8 +251,14 @@
 
 .social-list {
   display: flex;
+  justify-content: center;
+  align-content: center;
   padding: 0;
   margin: 0;
+
+  &__item:not(:last-child) {
+    margin-right: rem(3);
+  }
 
   &__item-svg {
     width: rem(26);
