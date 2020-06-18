@@ -3,6 +3,19 @@
   margin: 0;
   @include flexible;
   flex-wrap: wrap;
+  padding-bottom: rem(50);
+
+  @include for-size(tablet) {
+    padding-bottom: rem(50);
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: rem(100);
+  }
+
+  @include for-size(hd-desktop) {
+    padding-bottom: rem(130);
+  }
 
   &__img {
     width: rem(45);
@@ -18,8 +31,13 @@
   &__item {
     flex-basis: rem(290);
     padding: rem(30) rem(25) rem(25);
-    box-shadow: rem(8) rem(8) rem(32) rem(26) rgba(0, 0, 0, 0.11);
+    box-shadow: rem(8) rem(8) rem(32) rem(7) rgba(29, 29, 27, 0.11);
     text-align: center;
+    transition: all 0.3s ease-out;
+
+    &:hover .about-list__img {
+      fill: $white-color;
+    }
 
     @media (max-width: rem(617)) {
       &:not(:last-child) {
