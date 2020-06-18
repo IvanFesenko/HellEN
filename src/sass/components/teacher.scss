@@ -14,6 +14,11 @@
   min-width: rem(246);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .teacher-name {
   padding-bottom: rem(5);
   font-weight: 800;
@@ -39,6 +44,10 @@
   margin-bottom: rem(24);
 }
 
+.skill-list__item:hover #check {
+  transform: scale(1.5);
+}
+
 .skill-list__discription {
   padding-left: rem(20);
   font-size: rem(13);
@@ -52,6 +61,7 @@
   width: rem(16);
   height: rem(16);
   fill: $orange-color;
+  transition: 0.2s;
 }
 
 .list-about {
@@ -94,8 +104,22 @@
     padding: 0;
   }
 
+  .teacher-photo {
+    margin: 0;
+    margin-right: rem(46);
+  }
   .teacher-wrapper {
     @include flexible;
     justify-content: space-between;
+  }
+  .list-about {
+    padding: 0;
+  }
+}
+
+@include for-size(desktop) {
+  .teacher-photo {
+    width: rem(496);
+    height: rem(644);
   }
 }
