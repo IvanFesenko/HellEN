@@ -1,5 +1,6 @@
 .teacher {
   padding: 0 20px;
+  margin-bottom: rem(50);
 }
 
 .sections-title,
@@ -7,6 +8,10 @@
 .teacher-photo {
   margin: 0;
   margin-bottom: rem(24);
+}
+
+.teacher-photo {
+  min-width: rem(246);
 }
 
 .teacher-name {
@@ -18,11 +23,7 @@
 .skill-list {
   margin: 0;
   padding: 0;
-  margin-bottom: rem(16);
-}
-
-.pseudo-line-title::after {
-  left: rem(5);
+  margin-bottom: rem(32);
 }
 
 .skill-list:first-child {
@@ -54,12 +55,20 @@
 }
 
 .list-about {
+  position: relative;
   margin: 0;
   margin-bottom: rem(10);
   padding: 0;
   padding-left: rem(15);
   line-height: rem(20);
   font-size: rem(11);
+}
+
+.list-about::before {
+  @include pseudo(rem(25), rem(2));
+  position: absolute;
+  background-color: $orange-color;
+  top: rem(-16);
 }
 
 .list-about__item:not(:last-child) {
@@ -75,10 +84,18 @@
 }
 
 .certificate-link {
-  //   display: inline-block;
-  //   margin: 0 auto;
-
   font-size: rem(11);
   text-decoration: underline;
   line-height: rem(29);
+}
+
+@include for-size(tablet) {
+  .teacher {
+    padding: 0;
+  }
+
+  .teacher-wrapper {
+    @include flexible;
+    justify-content: space-between;
+  }
 }
