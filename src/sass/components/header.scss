@@ -78,7 +78,7 @@
 .header__burger {
   display: block;
   width: rem(30);
-  height: rem(20);
+  height: rem(12);
   cursor: pointer;
   position: relative;
 
@@ -96,7 +96,7 @@
     background-color: $black-color;
     position: absolute;
     width: 100%;
-    height: rem(4);
+    height: rem(2);
     left: 0;
     transition: all 0.2s linear;
   }
@@ -108,32 +108,34 @@
   &::after {
     bottom: 0;
   }
+
+  span {
+    position: absolute;
+    background-color: $black-color;
+    width: 100%;
+    height: rem(2);
+    top: rem(5);
+    left: 0;
+    transition: all 0.2s linear;
+  }
 }
 
-.header__burger span {
-  position: absolute;
-  background-color: $black-color;
-  width: 100%;
-  height: rem(4);
-  top: rem(8);
-  left: 0;
-  transition: all 0.2s linear;
-}
+.header__burger.active {
+  &::before {
+    transform: rotate(45deg);
+    background-color: $black-color;
+    top: rem(5);
+  }
 
-.header__burger.active::before {
-  transform: rotate(45deg);
-  background-color: $black-color;
-  top: rem(8);
-}
+  &::after {
+    transform: rotate(-45deg);
+    background-color: $black-color;
+    bottom: rem(5);
+  }
 
-.header__burger.active::after {
-  transform: rotate(-45deg);
-  background-color: $black-color;
-  bottom: rem(8);
-}
-
-.header__burger.active span {
-  transform: scale(0);
+  span {
+    transform: scale(0);
+  }
 }
 
 // Burger END
