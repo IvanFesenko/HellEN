@@ -1,4 +1,7 @@
 .header {
+  @include for-size(mobile) {
+    padding-top: rem(25);
+  }
 }
 
 .navigation {
@@ -60,5 +63,13 @@
   &:focus {
     background-color: $orange-color;
     color: $white-color;
+  }
+
+  @include for-size(mobile) {
+    display: none;
+  }
+
+  @include for-size(tablet) {
+    margin-left: auto;
   }
 }
