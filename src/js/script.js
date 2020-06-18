@@ -6,6 +6,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     asNavFor: '.sliderbig',
     arrows: true,
+
     responsive: [
       {
         breakpoint: 768,
@@ -22,6 +23,7 @@ $(document).ready(function () {
   $('.sliderbig').slick({
     asNavFor: '.slider',
     arrows: false,
+    draggable: false,
     responsive: [
       {
         breakpoint: 768,
