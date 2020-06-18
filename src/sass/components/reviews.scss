@@ -2,10 +2,6 @@
   padding: rem(24) 0 rem(24) 0;
 }
 
-* {
-  outline: 1px solid blueviolet;
-}
-
 .section-title {
   max-width: rem(180);
   text-align: center;
@@ -146,6 +142,10 @@
       text-align: left;
       font-size: rem(18);
     }
+
+    @include for-size(desktop) {
+      font-size: rem(25);
+    }
   }
 
   &-description {
@@ -186,6 +186,11 @@
       text-align: left;
       margin-left: 0;
       max-width: 100%;
+    }
+
+    @include for-size(desktop) {
+      font-size: rem(16.6);
+      line-height: rem(29);
     }
 
     &-link {
@@ -272,7 +277,7 @@
 
       &:hover,
       &:focus {
-        border: 2px solid $orange-color;
+        border: rem(1) solid $orange-color;
       }
     }
   }
