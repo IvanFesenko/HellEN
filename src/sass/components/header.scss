@@ -1,6 +1,22 @@
 .header {
+  background-image: url('../images/header/header-bg/header-bg_m.png');
+
+  @include background-settings(no-repeat, center top, cover);
+
   @include for-size(mobile) {
     padding-top: rem(25);
+  }
+
+  @include for-size(tablet) {
+    background-image: url('../images/header/header-bg/header-bg_t.png');
+  }
+
+  @include for-size(desktop) {
+    background-image: url('../images/header/header-bg/header-bg_d.png');
+  }
+
+  @include for-size(hd-desktop) {
+    background-image: url('../images/header/header-bg/header-bg_xd.png');
   }
 }
 
@@ -164,6 +180,15 @@
   @include for-size(tablet) {
     @include flexible(space-between);
     align-items: center;
+    margin-bottom: rem(117);
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: rem(128);
+  }
+
+  @include for-size(hr-desktop) {
+    margin-bottom: rem(107);
   }
 }
 
@@ -222,18 +247,22 @@
 }
 
 .hero__text {
+  font-size: rem(15);
   font-weight: 500;
   line-height: 1.355;
   letter-spacing: 0.05em;
   color: $grey-color;
-  margin: 0;
-
-  @include for-size(mobile) {
-    font-size: rem(15);
-    margin-bottom: rem(5);
-  }
+  margin: 0 0 rem(5) 0;
 
   @include for-size(desktop) {
+    font-size: rem(18);
+    line-height: 1.46;
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(20.83);
+    line-height: 1.6;
+    margin-bottom: rem(10);
   }
 }
 
@@ -241,30 +270,39 @@
   line-height: 1.355;
   font-weight: 700;
   letter-spacing: 0.05em;
-  margin: 0;
+  margin: 0 0 rem(35) 0;
 
   @include for-size(mobile) {
     font-size: rem(15);
-    margin-bottom: rem(35);
   }
 
   @include for-size(desktop) {
+    font-size: rem(18);
+    line-height: 1.46;
+    margin-bottom: rem(65);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(20.83);
+    line-height: 1.6;
+    margin-bottom: rem(45);
   }
 }
 
 .hero__btn {
   background-color: $orange-color;
   color: $white-color;
+  transition: all 0.2s linear;
+
+  @include for-size(mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &:hover,
   &:focus {
     background-color: $white-color;
     color: $orange-color;
-  }
-
-  @include for-size(mobile) {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
