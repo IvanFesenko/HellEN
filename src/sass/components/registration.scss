@@ -148,6 +148,7 @@ input {
   transition-duration: 0.3s;
   font-size: 16px;
   font-family: var(--font-first);
+
   @include for-size(desktop) {
     height: rem(70);
   }
@@ -163,6 +164,41 @@ input:active {
   }
   @include for-size(desctop) {
     margin: 30px 0 55px 0;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.input {
+  @include placeholder {
+    color: #aaa;
+    text-indent: 0px;
+    transition: text-indent 500ms;
+  }
+
+  &:hover {
+    @include placeholder {
+      text-indent: 290px;
+      color: grey;
+    }
+  }
+  &:focus {
+    @include placeholder {
+      text-indent: -100px;
+    }
   }
 }
 
@@ -187,10 +223,16 @@ input:hover {
   outline: none;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.3s linear;
   @include for-size(desktop) {
     font-size: rem(14);
     width: rem(350);
     height: rem(70);
+  }
+  &:hover {
+    background-color: $white-color;
+    color: $orange-color;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
