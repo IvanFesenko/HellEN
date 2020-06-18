@@ -158,5 +158,18 @@
 .about-title {
   @include for-size(mobile) {
     text-align: center;
+    margin: 0 0 rem(36);
+  }
+
+  @include for-size(tablet) {
+    margin: 0 0 rem(38);
+  }
+
+  @include for-size(desktop) {
+    margin: 0 0 rem(40);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(44);
   }
 }
