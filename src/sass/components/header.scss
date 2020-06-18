@@ -8,6 +8,14 @@
   display: flex;
   align-items: center;
 
+  @include for-size(mobile) {
+    margin-bottom: rem(55);
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: rem(60);
+  }
+
   @include for-size(desktop) {
     margin-bottom: rem(45);
   }
@@ -20,6 +28,7 @@
 .menu {
   display: none;
   font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0;
   margin-left: auto;
@@ -143,28 +152,33 @@
     transform: scale(0);
   }
 }
-
 // Burger END
 
 // Hero START
 
 .hero {
-  @include flexible(space-between);
-  align-items: center;
-}
-
-.hero__offer {
-  @include for-size(mobile) {
-  }
-
   @include for-size(desktop) {
+    @include flexible(space-between);
+    align-items: center;
     max-width: rem(500);
   }
 }
 
-.hero__title {
-  font-weight: 800;
+.hero__offer {
   @include for-size(mobile) {
+    margin-bottom: rem(35);
+  }
+}
+
+.hero__title {
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(20);
+    line-height: 1.45em;
+    margin-bottom: rem(35);
   }
 
   @include for-size(desktop) {
@@ -172,13 +186,63 @@
   }
 }
 
+.hero__title-span {
+  @include for-size(mobile) {
+    display: block;
+  }
+}
+
 .hero__text {
+  font-weight: 500;
+  line-height: 1.355;
+  letter-spacing: 0.05em;
+  color: $grey-color;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(15);
+    margin-bottom: rem(5);
+  }
+
+  @include for-size(desktop) {
+  }
 }
 
 .hero__subtitle {
+  line-height: 1.355;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(15);
+    margin-bottom: rem(35);
+  }
+
+  @include for-size(desktop) {
+  }
+}
+
+.hero__btn {
+  background-color: $orange-color;
+  color: $white-color;
+
+  @include for-size(mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $orange-color;
+  }
 }
 
 .hero__img {
+  @include for-size(mobile) {
+    @include flexible(center);
+  }
 }
 
 // Hero END
