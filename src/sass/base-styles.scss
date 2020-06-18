@@ -112,6 +112,7 @@
   font-size: rem(20);
   font-weight: 800;
   line-height: rem(33);
+  letter-spacing: 0.05em;
 
   @include for-size(tablet) {
     font-size: rem(26);
