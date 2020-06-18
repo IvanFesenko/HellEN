@@ -86,6 +86,7 @@
     width: rem(80);
     height: rem(80);
     border-radius: 50%;
+    // background-color: $orange-color;
 
     @include for-size(desktop) {
       width: rem(145);
@@ -200,6 +201,12 @@
     &-link {
       color: $orange-color;
       text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: $accent-orange-color;
+        outline: none;
+      }
     }
   }
 
