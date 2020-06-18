@@ -2,6 +2,10 @@
   padding: rem(24) 0 rem(24) 0;
 }
 
+* {
+  outline: 1px solid blueviolet;
+}
+
 .section-title {
   max-width: rem(180);
   text-align: center;
@@ -74,6 +78,7 @@
     position: absolute;
     top: 50%;
     z-index: 10;
+    outline: none;
   }
 
   &__item-img,
@@ -245,12 +250,12 @@
   }
 
   & .slick-arrow.slick-prev {
-    left: rem(10);
+    left: 10px;
     background-image: url('../images/reviews/prev.svg');
   }
 
   & .slick-arrow.slick-next {
-    right: rem(-10);
+    right: -10px;
     background-image: url('../images/reviews/next.svg');
   }
 
