@@ -101,18 +101,26 @@
   margin: 0 auto;
   background-color: $orange-color;
   margin-top: rem(16);
+
+  @include for-size(desktop) {
+    margin-top: rem(6);
+  }
 }
 
 //titles
 .title {
   font-size: rem(20);
   font-weight: 800;
+  line-height: rem(33);
+  letter-spacing: 0.05em;
 
   @include for-size(tablet) {
     font-size: rem(26);
+    line-height: rem(33);
   }
 
   @include for-size(desktop) {
+    line-height: rem(31.25);
     font-size: rem(42);
   }
 
