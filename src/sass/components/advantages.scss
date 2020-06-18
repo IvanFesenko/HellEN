@@ -1,4 +1,6 @@
 .section-list {
+  padding: 0 28px 0;
+  margin: 0;
   counter-reset: section-counter;
   &__item {
     position: relative;
@@ -6,15 +8,15 @@
       position: static;
       display: block;
     }
+    &::after {
+      content: counter(section-counter, decimal-leading-zero);
+      counter-increment: section-counter;
+      position: absolute;
+      bottom: 100%;
+      transform: translateY(50%);
+      left: rem(35);
+      color: $orange-color;
+      font-weight: 600;
+    }
   }
-}
-.advantages-reason::before {
-  content: '0' counters(section-counter, '') '';
-  counter-increment: section-counter;
-  position: absolute;
-  bottom: 100%;
-  transform: translateY(50%);
-  left: rem(35);
-  color: $orange-color;
-  font-weight: 600;
 }
