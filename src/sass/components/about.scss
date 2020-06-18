@@ -33,6 +33,11 @@
     padding: rem(30) rem(25) rem(25);
     box-shadow: rem(8) rem(8) rem(32) rem(26) rgba(0, 0, 0, 0.11);
     text-align: center;
+    transition: all 0.3s ease-out;
+
+    &:hover .about-list__img {
+      fill: $white-color;
+    }
 
     @media (max-width: rem(617)) {
       &:not(:last-child) {
