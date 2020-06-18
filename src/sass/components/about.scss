@@ -49,6 +49,7 @@
     }
 
     @media (min-width: rem(1280)) and (max-width: rem(1680)) {
+      padding: rem(40) rem(35) rem(36);
       flex-basis: rem(390);
       &:not(:nth-child(3n)) {
         margin-right: rem(20);
