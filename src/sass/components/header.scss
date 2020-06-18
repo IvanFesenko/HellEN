@@ -157,16 +157,31 @@
 // Hero START
 
 .hero {
-  @include for-size(desktop) {
+  @include for-size(mobile) {
+    margin-bottom: rem(87);
+  }
+
+  @include for-size(tablet) {
     @include flexible(space-between);
     align-items: center;
-    max-width: rem(500);
   }
 }
 
 .hero__offer {
   @include for-size(mobile) {
     margin-bottom: rem(35);
+  }
+
+  @include for-size(tablet) {
+    max-width: rem(290);
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(510);
+  }
+
+  @include for-size(hd-desktop) {
+    max-width: rem(610);
   }
 }
 
@@ -181,8 +196,22 @@
     margin-bottom: rem(35);
   }
 
+  @include for-size(tablet) {
+    font-size: rem(26);
+    line-height: 1.26em;
+    margin-bottom: rem(26);
+  }
+
   @include for-size(desktop) {
     font-size: rem(48);
+    line-height: 1.2em;
+    margin-bottom: rem(30);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(58.33);
+    line-height: 1.3em;
+    margin-bottom: rem(33);
   }
 }
 
@@ -227,11 +256,11 @@
   background-color: $orange-color;
   color: $white-color;
 
-  // &:hover,
-  // &:focus {
-  //   background-color: $white-color;
-  //   color: $orange-color;
-  // }
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $orange-color;
+  }
 
   @include for-size(mobile) {
     margin-left: auto;
@@ -242,6 +271,10 @@
 .hero__img {
   @include for-size(mobile) {
     @include flexible(center);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-right: rem(-110);
   }
 }
 
