@@ -31,17 +31,18 @@
 
 // class for button, change sizes and font-sizes
 .btn {
-  @include for-size(tablet) {
-    border: rem(2) solid $orange-color;
-    background-color: transparent;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: $orange-color;
-    width: rem(250);
-    height: rem(48);
-    font-size: rem(11);
-    cursor: pointer;
-  }
+  @include flexible(center);
+  align-items: center;
+  border: rem(2) solid $orange-color;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $orange-color;
+  width: rem(250);
+  height: rem(48);
+  font-size: rem(11);
+  font-family: $second-font;
+  cursor: pointer;
 
   @include for-size(desktop) {
     width: rem(300);
@@ -137,7 +138,7 @@
   }
 
   @include for-size(hd-desktop) {
-    font-size: rem(45.83);
-    line-height: rem(62.54);
+    font-size: rem(20.83);
+    line-height: rem(29.17);
   }
 }
