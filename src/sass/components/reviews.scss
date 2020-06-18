@@ -190,7 +190,7 @@
     }
 
     @include for-size(desktop) {
-      max-width: rem(145);
+      width: rem(145);
     }
   }
 
