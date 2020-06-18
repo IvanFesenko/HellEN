@@ -62,3 +62,10 @@ $(document).ready(function () {
     $('.sliderbig').slick('goTo', 6);
   });
 });
+
+// const readMoreLink = document.querySelector('.sliderbig__content-link');
+// const box = document.querySelector('.sliderbig__content');
+
+// readMoreLink.onclick = function () {
+//   box.classList.add('sliderbig__content-open');
+// };
