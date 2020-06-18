@@ -10,7 +10,7 @@
       <span class="orange-font">бесплатном занятии.</span> С вами свяжется
       консультант и ответит на вопросы.
     </p>
-    <div class="form-wrapper">
+    <div class="form__wrapper">
       <form
         class="contacts__form"
         action="./script/mail.php"
@@ -18,33 +18,30 @@
         name="info-data"
         id="form"
       >
-        <ul class="personal-data">
-          <li class="input">
-            <input
-              type="text"
-              name="name"
-              placeholder="фамилия имя *"
-              id="name"
-              required
-            />
-          </li>
-          <li class="input">
-            <input
-              type="text"
-              name="phone"
-              placeholder="номер телефона *"
-              id="phone"
-              required
-            />
-          </li>
-        </ul>
+        <input
+          class="input"
+          type="text"
+          name="name"
+          placeholder="имя*"
+          id="name"
+          required
+        />
+        <input
+          class="input"
+          type="text"
+          name="phone"
+          placeholder="телефон*"
+          id="phone"
+          required
+        />
+
         <button
           type="submit"
           onclick="valid(document.getElementById('form'))"
           name="submit"
-          class="btn"
+          class="button"
         >
-          отправить
+          хочу на бесплатное занятие
         </button>
       </form>
     </div>
