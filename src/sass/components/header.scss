@@ -9,6 +9,7 @@
 
   @include for-size(tablet) {
     background-image: url('../images/header/header-bg/header-bg_t.png');
+    padding-top: rem(36);
   }
 
   @include for-size(desktop) {
@@ -17,6 +18,7 @@
 
   @include for-size(hd-desktop) {
     background-image: url('../images/header/header-bg/header-bg_xd.png');
+    padding-top: rem(30);
   }
 }
 
@@ -177,9 +179,12 @@
     margin-bottom: rem(87);
   }
 
-  @include for-size(tablet) {
+  @media (min-width: rem(576)) {
     @include flexible(space-between);
     align-items: center;
+  }
+
+  @include for-size(tablet) {
     margin-bottom: rem(117);
   }
 
@@ -194,7 +199,13 @@
 
 .hero__offer {
   @include for-size(mobile) {
+    text-align: center;
     margin-bottom: rem(35);
+  }
+
+  @media (min-width: rem(576)) {
+    margin-bottom: 0;
+    text-align: left;
   }
 
   @include for-size(tablet) {
