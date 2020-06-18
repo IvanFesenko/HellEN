@@ -1,0 +1,38 @@
+.guarantee {
+  .container {
+    background-color: #f1f1f1;
+  }
+
+  &-list {
+    padding: 0 20px 0 0;
+    // border-left: 2px dotted #bababa;
+
+    &__item {
+      position: relative;
+      padding-left: 40px;
+
+      &:not(:last-child) {
+        border-left: 2px dotted #bababa;
+        padding-bottom: 28px;
+      }
+
+      &::before {
+        @include pseudo(16px, 22px);
+        position: absolute;
+        top: -5;
+        left: -8px;
+        background-image: url(../images/guarantee/fire-desktop.gif);
+        @include background-settings;
+      }
+      &-text {
+        margin: 0;
+        font-weight: 500;
+        font-size: rem(11);
+      }
+    }
+  }
+}
+
+.list-wrapper {
+  padding: 28px 0 28px 5px;
+}

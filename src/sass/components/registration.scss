@@ -1,45 +1,74 @@
 .registration {
-  background-image: url(../../images/registration/registration-m.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgb(17, 21, 23) url(../images/registration/registration-m.png)
+    no-repeat center center;
   background-size: cover;
   padding: 55px 0 60px 0;
   text-align: center;
   color: $white-color;
   @include for-size(tablet) {
-    background-image: url(../../images/registration/registration-t.jpg);
+    background: rgb(17, 21, 23) url(../images/registration/registration-t.png)
+      no-repeat center center;
+    background-size: cover;
   }
   @include for-size(desktop) {
-    background-image: url(../../images/registration/registration-d.jpg);
+    background: rgb(17, 21, 23) url(../images/registration/registration-d.png)
+      no-repeat center center;
+    background-size: cover;
   }
   @include for-size(hd-desktop) {
-    background-image: url(../../images/registration/registration-xd.jpg);
+    background: rgb(17, 21, 23) url(../images/registration/registration-xd.png)
+      no-repeat center center;
+    background-size: cover;
   }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url(../../images/registration/registration-m@1.5x.jpg);
+    background: rgb(17, 21, 23)
+      url(../images/registration/registration-m@1.5x.png) no-repeat center
+      center;
+    background-size: cover;
     @include for-size(tablet) {
-      background-image: url(../../images/registration/registration-t@1.5x.jpg);
+      background: rgb(17, 21, 23)
+        url(../images/registration/registration-t@1.5x.png) no-repeat center
+        center;
+      background-size: cover;
     }
     @include for-size(desktop) {
-      background-image: url(../../images/registration/registration-d@1.5x.jpg);
+      background: rgb(17, 21, 23)
+        url(../images/registration/registration-d@1.5x.png) no-repeat center
+        center;
+      background-size: cover;
     }
     @include for-size(hd-desktop) {
-      background-image: url(../../images/registration/registration-xd@1.5x.jpg);
+      background: rgb(17, 21, 23)
+        url(../images/registration/registration-xd@1.5x.png) no-repeat center
+        center;
+      background-size: cover;
     }
   }
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../../images/registration/registration-m@2x.jpg);
+    background: rgb(17, 21, 23)
+      url(../images/registration/registration-m@2x.png) no-repeat center center;
+    background-size: cover;
     @include for-size(tablet) {
-      background-image: url(../../images/registration/registration-t@2x.jpg);
+      background: rgb(17, 21, 23)
+        url(../images/registration/registration-t@2x.png) no-repeat center
+        center;
+      background-size: cover;
     }
     @include for-size(desktop) {
-      background-image: url(../../images/registration/registration-d@2x.jpg);
+      background: rgb(17, 21, 23)
+        url(../images/registration/registration-d@2x.png) no-repeat center
+        center;
+      background-size: cover;
     }
     @include for-size(hd-desktop) {
-      background-image: url(../../images/registration/registration-xd@2x.jpg);
+      background: rgb(17, 21, 23)
+        url(../images/registration/registration-xd@2x.png) no-repeat center
+        center;
+      background-size: cover;
     }
   }
+
   &__title {
     font-size: rem(14);
     line-height: rem(26);
@@ -72,7 +101,7 @@
     @include for-size(tablet) {
       font-size: rem(15);
       margin: 0 0 38px 0;
-      padding: 0 100px 0 100px;
+      padding: 0 80px 0 80px;
     }
     @include for-size(desktop) {
       font-size: rem(18);
@@ -127,7 +156,7 @@ input:active {
   background: none;
 }
 
-input + input {
+.input + .input {
   margin: 20px 0 55px 0;
   @include for-size(tablet) {
     margin: 20px 0 30px 0;

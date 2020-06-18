@@ -1,21 +1,36 @@
 .header {
+  @include for-size(mobile) {
+    padding-top: rem(25);
+  }
 }
 
 .navigation {
   display: flex;
   align-items: center;
-}
 
-.logo {
-  width: rem(131);
-  height: rem(43);
-  background-color: $grey-color;
+  @include for-size(mobile) {
+    margin-bottom: rem(55);
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: rem(60);
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: rem(45);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(50);
+  }
 }
 
 .menu {
   display: none;
   font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  padding: 0;
   margin-left: auto;
 
   @include for-size(desktop) {
@@ -28,9 +43,6 @@
     font-size: rem(14);
     margin-right: rem(55);
   }
-}
-
-.menu__item {
 }
 
 .menu__item:not(:last-child) {
@@ -61,4 +73,209 @@
     background-color: $orange-color;
     color: $white-color;
   }
+
+  @include for-size(mobile) {
+    display: none;
+  }
+
+  @include for-size(tablet) {
+    margin-left: auto;
+    margin-right: rem(45);
+  }
+
+  @include for-size(desktop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
+
+// Burger strat
+.header__burger {
+  display: block;
+  width: rem(30);
+  height: rem(12);
+  cursor: pointer;
+  position: relative;
+
+  @include for-size(mobile) {
+    margin-left: auto;
+  }
+
+  @include for-size(desktop) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: $black-color;
+    position: absolute;
+    width: 100%;
+    height: rem(2);
+    left: 0;
+    transition: all 0.2s linear;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  span {
+    position: absolute;
+    background-color: $black-color;
+    width: 100%;
+    height: rem(2);
+    top: rem(5);
+    left: 0;
+    transition: all 0.2s linear;
+  }
+}
+
+.header__burger.active {
+  &::before {
+    transform: rotate(45deg);
+    background-color: $black-color;
+    top: rem(5);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    background-color: $black-color;
+    bottom: rem(5);
+  }
+
+  span {
+    transform: scale(0);
+  }
+}
+// Burger END
+
+// Hero START
+
+.hero {
+  @include for-size(mobile) {
+    margin-bottom: rem(87);
+  }
+
+  @include for-size(tablet) {
+    @include flexible(space-between);
+    align-items: center;
+  }
+}
+
+.hero__offer {
+  @include for-size(mobile) {
+    margin-bottom: rem(35);
+  }
+
+  @include for-size(tablet) {
+    max-width: rem(290);
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(510);
+  }
+
+  @include for-size(hd-desktop) {
+    max-width: rem(610);
+  }
+}
+
+.hero__title {
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(20);
+    line-height: 1.45em;
+    margin-bottom: rem(35);
+  }
+
+  @include for-size(tablet) {
+    font-size: rem(26);
+    line-height: 1.26em;
+    margin-bottom: rem(26);
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(48);
+    line-height: 1.2em;
+    margin-bottom: rem(30);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(58.33);
+    line-height: 1.3em;
+    margin-bottom: rem(33);
+  }
+}
+
+.hero__title-span {
+  @include for-size(mobile) {
+    display: block;
+  }
+}
+
+.hero__text {
+  font-weight: 500;
+  line-height: 1.355;
+  letter-spacing: 0.05em;
+  color: $grey-color;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(15);
+    margin-bottom: rem(5);
+  }
+
+  @include for-size(desktop) {
+  }
+}
+
+.hero__subtitle {
+  line-height: 1.355;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+
+  @include for-size(mobile) {
+    font-size: rem(15);
+    margin-bottom: rem(35);
+  }
+
+  @include for-size(desktop) {
+  }
+}
+
+.hero__btn {
+  background-color: $orange-color;
+  color: $white-color;
+
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $orange-color;
+  }
+
+  @include for-size(mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero__img {
+  @include for-size(mobile) {
+    @include flexible(center);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-right: rem(-110);
+  }
+}
+
+// Hero END
