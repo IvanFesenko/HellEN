@@ -36,6 +36,24 @@
         margin-bottom: rem(16);
       }
     }
+
+    @include for-size(tablet) {
+      &:nth-child(odd) {
+        margin-right: rem(22);
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: rem(24);
+      }
+    }
+
+    @include for-size(desktop) {
+      flex-basis: rem(390);
+    }
+
+    @include for-size(hd-desktop) {
+      flex-basis: rem(430);
+    }
   }
 
   &__title {
