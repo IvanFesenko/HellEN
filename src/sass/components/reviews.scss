@@ -35,10 +35,6 @@
   }
 }
 
-// .sliderbig__content-open {
-//   max-height: 500px;
-// }
-
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -62,10 +58,17 @@
   @include for-size(tablet) {
     max-width: rem(688);
     padding: rem(42) rem(36) rem(48) rem(36);
+    margin-bottom: rem(24);
   }
 
   @include for-size(desktop) {
-    max-width: rem(1064);
+    max-width: rem(1066);
+    padding: rem(42) rem(84) rem(48) rem(84);
+    margin-bottom: rem(36);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(42);
   }
 
   & .slick-arrow {
@@ -187,7 +190,7 @@
     }
 
     @include for-size(desktop) {
-      width: rem(145);
+      max-width: rem(145);
     }
   }
 
@@ -200,6 +203,15 @@
 .slider {
   position: relative;
   margin: 0 auto;
+  max-width: rem(190);
+
+  @include for-size(tablet) {
+    max-width: rem(506);
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(600);
+  }
 
   & .slick-arrow {
     position: absolute;
