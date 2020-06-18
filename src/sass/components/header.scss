@@ -1,0 +1,64 @@
+.header {
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: rem(131);
+  height: rem(43);
+  background-color: $grey-color;
+}
+
+.menu {
+  display: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: auto;
+
+  @include for-size(desktop) {
+    display: flex;
+    font-size: rem(12);
+    margin-right: rem(45);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(14);
+    margin-right: rem(55);
+  }
+}
+
+.menu__item {
+}
+
+.menu__item:not(:last-child) {
+  @include for-size(desktop) {
+    margin-right: rem(45);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-right: rem(55);
+  }
+}
+
+.menu__link {
+  color: $grey-color;
+  transition: color 0.2s linear;
+
+  &:hover,
+  &:focus {
+    color: $orange-color;
+  }
+}
+
+.header__btn {
+  transition: all 0.2s linear;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-color;
+    color: $white-color;
+  }
+}
