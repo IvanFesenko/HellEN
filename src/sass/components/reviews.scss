@@ -42,6 +42,10 @@
   align-items: center;
 }
 
+.slick-slide.slick-active {
+  outline: none;
+}
+
 // BIG SLIDER
 .sliderbig {
   position: relative;
@@ -305,8 +309,4 @@
       fill: $orange-color;
     }
   }
-}
-
-.slick-slide.slick-active {
-  outline: none;
 }
