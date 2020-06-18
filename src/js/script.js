@@ -73,3 +73,23 @@ $(function () {
     $('body').toggleClass('lock');
   });
 });
+
+const readMore = document.querySelector('.more-text'),
+  dots = document.querySelector('.sliderbig__item-content_dots'),
+  readMoreButton = document.querySelector('.sliderbig__item-content-button');
+
+let i = 0;
+function read() {
+  if (!i) {
+    readMore.style.display = 'inline';
+    dots.style.display = 'none';
+    readMoreButton.innerHTML = 'скрыть текст';
+    i = 1;
+  } else {
+    readMore.style.display = 'none';
+
+    dots.style.display = 'inline';
+    readMoreButton.innerHTML = 'Читать дальше';
+    i = 0;
+  }
+}
