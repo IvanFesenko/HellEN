@@ -21,14 +21,14 @@
     box-shadow: rem(8) rem(8) rem(32) rem(26) rgba(0, 0, 0, 0.11);
     text-align: center;
 
-    @media (max-width: rem(610)) {
+    @media (max-width: rem(617)) {
       &:not(:last-child) {
         margin-bottom: rem(16);
       }
     }
 
-    @media (min-width: rem(611)) {
-      &:nth-child(odd) {
+    @media (min-width: rem(618)) and (max-width: rem(767)) {
+      &:nth-child(2n + 1) {
         margin-right: rem(16);
       }
 
@@ -37,22 +37,37 @@
       }
     }
 
-    @include for-size(tablet) {
-      &:nth-child(odd) {
+    @media (min-width: rem(768)) and (max-width: rem(1279)) {
+      padding: rem(36) rem(20) rem(24);
+      &:nth-child(2n + 1) {
         margin-right: rem(22);
       }
 
       &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: rem(24);
+        margin-bottom: rem(22);
       }
     }
 
-    @include for-size(desktop) {
+    @media (min-width: rem(1280)) and (max-width: rem(1680)) {
       flex-basis: rem(390);
+      &:not(:nth-child(3n)) {
+        margin-right: rem(20);
+      }
+
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: rem(20);
+      }
     }
 
     @include for-size(hd-desktop) {
-      flex-basis: rem(430);
+      flex-basis: rem(390);
+      &:not(:nth-child(3n)) {
+        margin-right: rem(24);
+      }
+
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: rem(24);
+      }
     }
   }
 
@@ -71,6 +86,7 @@
 
     @include for-size(desktop) {
       font-size: rem(15);
+      line-height: rem(31.25);
     }
     @include for-size(hd-desktop) {
       font-size: rem(18.75);
