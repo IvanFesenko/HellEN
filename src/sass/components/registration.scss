@@ -78,7 +78,7 @@
       font-size: rem(18);
       line-height: rem(24.5);
       margin: 0 0 50px 0;
-      padding: 0 330px 0 330px;
+      padding: 0 200px 0 200px;
     }
     @include for-size(hd-desktop) {
       font-size: rem(25);
@@ -108,17 +108,25 @@ input {
   width: 100%;
   border-style: none;
   outline: none;
+  color: $white-color;
+  font-weight: 600;
+  font-size: rem(15);
+  padding-left: 30px;
   background: none;
   border: 1px solid $white-color;
-  transition: border-bottom;
+  transition: border;
   transition-timing-function: linear;
   transition-duration: 0.3s;
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-first);
   @include for-size(desktop) {
     height: rem(70);
   }
 }
+input:active {
+  background: none;
+}
+
 input + input {
   margin: 20px 0 55px 0;
   @include for-size(tablet) {
@@ -129,7 +137,7 @@ input + input {
   }
 }
 
-.input input:hover {
+input:hover {
   border: 1px solid #f3c83b;
 }
 
@@ -158,16 +166,16 @@ input + input {
 }
 
 .contacts__form input::placeholder {
-  font-size: rem(13);
+  font-size: rem(14);
   color: $white-color;
   font-weight: 600;
-  padding: 0 0 0 20px;
   text-transform: capitalize;
+  background: none;
   @include for-size(desktop) {
     font-size: rem(20.8);
   }
 }
 
-.input input[type='email']:invalid {
+.input input[type='text']:invalid {
   color: red;
 }
