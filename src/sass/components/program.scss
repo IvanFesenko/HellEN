@@ -2,16 +2,19 @@
   background-color: $black-color-s;
   background-image: url(../images/program/program-m.png);
   background-repeat: no-repeat;
-  background-position: 100% 85.24%;
+  background-position: right 85.28%;
 
   @include for-size(tablet) {
     background-image: url(../images/program/program-t.png);
+    background-position: right 87.08%;
   }
   @include for-size(desktop) {
     background-image: url(../images/program/program-d.png);
+    background-position: left 89.5%;
   }
   @include for-size(hd-desktop) {
     background-image: url(../images/program/program-xd.png);
+    background-position: left 98.8%;
   }
 
   @media (min-resolution: 144dpi) {
@@ -41,24 +44,26 @@
   }
 
   &__container-header {
-    padding-top: rem(54);
+    padding-top: rem(20);
   }
 
   &__container-footer {
     padding-bottom: rem(418);
 
     @include for-size(tablet) {
-      padding-bottom: rem(375);
+      padding-bottom: rem(340);
     }
     @include for-size(desktop) {
-      padding-bottom: rem(418);
+      padding-bottom: rem(490);
     }
     @include for-size(hd-desktop) {
-      padding-bottom: rem(418);
+      padding-bottom: rem(372);
     }
   }
 
   &__title {
+    line-height: rem(48);
+    margin: 0;
   }
 
   &__list {
@@ -67,12 +72,17 @@
   &__item {
   }
 
+  &__title-tree {
+    margin-bottom: rem(17);
+  }
+
   &__sub-list {
   }
 
   &__orange-font {
     font-size: rem(14);
-    line-height: 2.244;
+    line-height: 2.224;
+    margin: 0;
 
     @include for-size(desktop) {
       font-size: rem(18);
@@ -111,7 +121,9 @@
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.944;
+  letter-spacing: rem(1.7);
   color: $white-color;
+  margin: 0;
 
   @include for-size(desktop) {
     font-size: rem(19);
