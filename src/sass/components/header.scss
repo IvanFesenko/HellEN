@@ -7,6 +7,14 @@
 .navigation {
   display: flex;
   align-items: center;
+
+  @include for-size(desktop) {
+    margin-bottom: rem(45);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(50);
+  }
 }
 
 .menu {
@@ -139,12 +147,35 @@
 // Burger END
 
 // Hero START
+
 .hero {
-  @include lexible(space-between) {
-  }
+  @include flexible(space-between);
+  align-items: center;
 }
 
 .hero__offer {
+  @include for-size(mobile) {
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(500);
+  }
+}
+
+.hero__title {
+  font-weight: 800;
+  @include for-size(mobile) {
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(48);
+  }
+}
+
+.hero__text {
+}
+
+.hero__subtitle {
 }
 
 .hero__img {
