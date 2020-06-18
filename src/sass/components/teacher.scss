@@ -1,3 +1,84 @@
-// .teacher-photo {
-//   width: 100%;
-// }
+.teacher {
+  padding: 0 20px;
+}
+
+.sections-title,
+.teacher-name,
+.teacher-photo {
+  margin: 0;
+  margin-bottom: rem(24);
+}
+
+.teacher-name {
+  padding-bottom: rem(5);
+  font-weight: 800;
+  border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
+}
+
+.skill-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: rem(16);
+}
+
+.pseudo-line-title::after {
+  left: rem(5);
+}
+
+.skill-list:first-child {
+  letter-spacing: rem(7);
+}
+
+.skill-list__item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.skill-list__item:not(:last-child) {
+  margin-bottom: rem(24);
+}
+
+.skill-list__discription {
+  padding-left: rem(20);
+  font-size: rem(13);
+  color: $black-color-s;
+  font-weight: 600;
+  line-height: rem(20);
+  margin: 0;
+}
+
+#check {
+  width: rem(16);
+  height: rem(16);
+  fill: $orange-color;
+}
+
+.list-about {
+  margin: 0;
+  margin-bottom: rem(10);
+  padding: 0;
+  padding-left: rem(15);
+  line-height: rem(20);
+  font-size: rem(11);
+}
+
+.list-about__item:not(:last-child) {
+  margin-bottom: rem(16);
+}
+
+.list-about__item:last-child {
+  text-align: center;
+}
+
+.list-about__discription {
+  margin: 0;
+}
+
+.certificate-link {
+  //   display: inline-block;
+  //   margin: 0 auto;
+
+  font-size: rem(11);
+  text-decoration: underline;
+  line-height: rem(29);
+}
