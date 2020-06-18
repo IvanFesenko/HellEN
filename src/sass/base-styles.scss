@@ -101,6 +101,10 @@
   margin: 0 auto;
   background-color: $orange-color;
   margin-top: rem(16);
+
+  @include for-size(desktop) {
+    margin-top: rem(6);
+  }
 }
 
 //titles
