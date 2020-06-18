@@ -10,9 +10,6 @@
 }
 
 .logo {
-  width: rem(131);
-  height: rem(43);
-  background-color: $grey-color;
 }
 
 .menu {
@@ -71,5 +68,75 @@
 
   @include for-size(tablet) {
     margin-left: auto;
+    margin-right: rem(45);
+  }
+
+  @include for-size(desktop) {
+    margin-left: auto;
+    margin-right: 0;
   }
 }
+
+// Burger strat
+.header__burger {
+  display: block;
+  width: rem(30);
+  height: rem(20);
+  cursor: pointer;
+  position: relative;
+
+  @include for-size(mobile) {
+    margin-left: auto;
+  }
+
+  @include for-size(desktop) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: $black-color;
+    position: absolute;
+    width: 100%;
+    height: rem(4);
+    left: 0;
+    transition: all 0.2s linear;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.header__burger span {
+  position: absolute;
+  background-color: $black-color;
+  width: 100%;
+  height: rem(4);
+  top: rem(8);
+  left: 0;
+  transition: all 0.2s linear;
+}
+
+.header__burger.active::before {
+  transform: rotate(45deg);
+  background-color: $black-color;
+  top: rem(8);
+}
+
+.header__burger.active::after {
+  transform: rotate(-45deg);
+  background-color: $black-color;
+  bottom: rem(8);
+}
+
+.header__burger.active span {
+  transform: scale(0);
+}
+
+// Burger END
