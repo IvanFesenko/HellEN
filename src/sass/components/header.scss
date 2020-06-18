@@ -227,15 +227,15 @@
   background-color: $orange-color;
   color: $white-color;
 
+  // &:hover,
+  // &:focus {
+  //   background-color: $white-color;
+  //   color: $orange-color;
+  // }
+
   @include for-size(mobile) {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $white-color;
-    color: $orange-color;
   }
 }
 
