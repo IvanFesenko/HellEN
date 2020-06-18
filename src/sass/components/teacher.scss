@@ -1,6 +1,10 @@
 .teacher {
   padding: 0 20px;
   margin-bottom: rem(50);
+
+  @include for-size(tablet) {
+    padding: 0;
+  }
 }
 
 .sections-title,
@@ -12,6 +16,11 @@
 
 .teacher-photo {
   min-width: rem(246);
+
+  @include for-size(tablet) {
+    margin: 0;
+    margin-right: rem(46);
+  }
 }
 
 img {
@@ -45,7 +54,7 @@ img {
 }
 
 .skill-list__item:hover #check {
-  transform: scale(1.5);
+  transform: scale(1.7);
 }
 
 .skill-list__discription {
@@ -72,6 +81,10 @@ img {
   padding-left: rem(15);
   line-height: rem(20);
   font-size: rem(11);
+
+  @include for-size(tablet) {
+    padding: 0;
+  }
 }
 
 .list-about::before {
@@ -99,27 +112,15 @@ img {
   line-height: rem(29);
 }
 
-@include for-size(tablet) {
-  .teacher {
-    padding: 0;
-  }
-
-  .teacher-photo {
-    margin: 0;
-    margin-right: rem(46);
-  }
-  .teacher-wrapper {
+.teacher-wrapper {
+  @include for-size(tablet) {
     @include flexible;
     justify-content: space-between;
   }
-  .list-about {
-    padding: 0;
-  }
 }
 
-@include for-size(desktop) {
-  .teacher-photo {
-    width: rem(496);
-    height: rem(644);
+.teacher-info {
+  @include for-size(hd-desktop) {
+    max-width: rem(670);
   }
 }

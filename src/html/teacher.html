@@ -2,18 +2,21 @@
     <h2 class="title sections-title">Преподаватель</h2>
     <div class="teacher-wrapper">
         <picture class="teacher-photo">
-            <source srcset="./images/teacher/teacher/teacher-m.jpg" media="(max-width: 717px)" />
-            <source srcset="./images/teacher/teacher/teacher-t.jpg" media="(min-width: 718px)" />
-            <source srcset="./images/teacher/teacher/teacher-d.jpg" media="(min-width: 1024px)" />
-            <source srcset="./images/teacher/teacher/teacher-xd.jpg" media="(min-width: 1372px)" />
-            <source
-                srcset="./images/teacher/teacher/teacher-xd, ./images/teacher/teacher/teacher-xd@1.5x 1.5x, ./images/teacher/teacher/teacher-xd@2x.jpg 2x,
-        ./images/teacher/teacher/teacher-d, ./images/teacher/teacher/teacher-d@1.5x 1.5x, ./images/teacher/teacher/teacher-d@2x.jpg 2x,
-        ./images/teacher/teacher/teacher-t, ./images/teacher/teacher/teacher-t@1.5x 1.5x, ./images/teacher/teacher/teacher-t@2x.jpg 2x,
-        ./images/teacher/teacher/teacher-m, ./images/teacher/teacher/teacher-m@1.5x 1.5x, ./images/teacher/teacher/teacher-m@2x.jpg 2x" />
-            <img src="./images/teacher/teacher/teacher-d.jpg" alt="teacher foto">
+            <source media="(max-width: 767px)" srcset="./images/teacher/teacher/teacher-m.jpg,
+            ./images/teacher/teacher/teacher-m@1.5x.jpg 1.5x,
+            ./images/teacher/teacher/teacher-m@2x.jpg 2x" sizes="280px" />
+            <source media="(min-width: 768px)" srcset="./images/teacher/teacher/teacher-t.jpg,
+            ./images/teacher/teacher/teacher-t@1.5x.jpg 1.5x,
+            ./images/teacher/teacher/teacher-t@2x.jpg 2x" sizes="246px" />
+            <source media="(min-width: 1280px)" srcset="./images/teacher/teacher/teacher-d.jpg,
+            ./images/teacher/teacher/teacher-d@1.5x.jpg 1.5x,
+            ./images/teacher/teacher/teacher-d@2x.jpg 2x" sizes="494px" height="642" />
+            <source media="(min-width: 1372px)" srcset="./images/teacher/teacher/teacher-xd.jpg,
+            ./images/teacher/teacher/teacher-xd@1.5x.jpg 1.5x,
+            ./images/teacher/teacher/teacher-xd@2x.jpg 2x" sizes="494px" height="642" />
+            <img src="./images/teacher/teacher/teacher-t.jpg" alt="teacher foto">
         </picture>
-        <div class="teacher-wrper">
+        <div class="teacher-info">
             <h3 class="subtitle teacher-name">Елена Морева</h3>
             <ul class="skill-list">
                 <li class="skill-list__item">
@@ -75,7 +78,7 @@
                 </li>
                 <li list-about__item>
                     <a class="certificate-link orange-font" href="https://www.cambridgeenglish.org"
-                        target="_blank">Cambrige English
+                        target="_blank">Cambridge English
                         Entry Level Certificate</a>
                 </li>
             </ul>
