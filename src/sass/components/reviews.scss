@@ -14,53 +14,11 @@
   margin-bottom: rem(20);
 }
 
-.sliderbig__item {
-  padding: rem(24) 0 rem(34) 0;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 4px 6.928px 34.96px 11.04px rgba(29, 29, 27, 0.09);
+.hidden-word {
+  display: inline;
 
-  &-title {
-    margin: 0 auto;
-    font-size: rem(13);
-    line-height: rem(29);
-    color: $orange-color;
-    text-align: center;
-    margin-bottom: rem(7);
-  }
-
-  &-description {
-    margin: 0 auto;
-    text-align: center;
-    font-size: rem(11);
-    line-height: rem(16.6);
-    color: $grey-color;
-    max-width: 82%;
-  }
-
-  &-content {
-    font-size: rem(11);
-    line-height: rem(20);
-    font-weight: 500;
-    text-align: center;
-    max-width: 78%;
-    margin: 0 auto;
-    max-height: 120px;
-    overflow: hidden;
-    transition: all 0.5s;
-
-    &-link {
-      color: $orange-color;
-      text-decoration: underline;
-    }
-  }
-
-  &-img-box {
-    width: rem(80);
-    margin: 0 auto;
-  }
-
-  &-img-wrp {
-    margin-bottom: rem(20);
+  @include for-size(tablet) {
+    display: none;
   }
 }
 
@@ -82,7 +40,20 @@
 // BIG SLIDER
 .sliderbig {
   position: relative;
+  margin: 0 auto;
   margin-bottom: rem(16);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 6.928px 34.96px 11.04px rgba(29, 29, 27, 0.09);
+  padding: rem(24) 0 rem(34) 0;
+
+  @include for-size(tablet) {
+    max-width: rem(688);
+    padding: rem(42) rem(36) rem(48) rem(36);
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(1064);
+  }
 
   & .slick-arrow {
     font-size: 0;
@@ -90,6 +61,7 @@
     border: none;
     position: absolute;
     top: 50%;
+    z-index: 10;
   }
 
   &__item-img,
@@ -97,6 +69,11 @@
     width: rem(80);
     height: rem(80);
     border-radius: 50%;
+
+    @include for-size(tablet) {
+      width: rem(145);
+      height: rem(145);
+    }
   }
 
   @include for-size(tablet) {
@@ -122,14 +99,91 @@
   }
 }
 
+.sliderbig__item {
+  @include for-size(tablet) {
+    display: flex;
+  }
+
+  &-title {
+    margin: 0 auto;
+    font-size: rem(13);
+    line-height: rem(29);
+    color: $orange-color;
+    text-align: center;
+    margin-bottom: rem(7);
+
+    @include for-size(tablet) {
+      text-align: left;
+      font-size: rem(18);
+    }
+  }
+
+  &-description {
+    margin: 0 auto;
+    text-align: center;
+    font-size: rem(11);
+    line-height: rem(16.6);
+    color: $grey-color;
+    max-width: 82%;
+    margin-bottom: rem(20);
+
+    @include for-size(tablet) {
+      text-align: left;
+      max-width: rem(450);
+      margin-left: 0;
+      font-size: rem(12.5);
+    }
+  }
+
+  &-content {
+    font-size: rem(11);
+    line-height: rem(20);
+    font-weight: 500;
+    text-align: center;
+    max-width: 78%;
+    margin: 0 auto;
+
+    overflow: hidden;
+    transition: all 0.5s;
+
+    @include for-size(tablet) {
+      text-align: left;
+      max-width: rem(462);
+      margin-left: 0;
+    }
+
+    &-link {
+      color: $orange-color;
+      text-decoration: underline;
+    }
+  }
+
+  &-img-box {
+    width: rem(80);
+    margin: 0 auto;
+
+    @include for-size(tablet) {
+      margin-left: 0;
+      margin-right: rem(42);
+      width: rem(145);
+    }
+  }
+
+  &-img-wrp {
+    margin-bottom: rem(20);
+  }
+}
+
 // SMALL SLIDER
 .slider {
   position: relative;
+  margin: 0 auto;
 
   & .slick-arrow {
     position: absolute;
     top: 50%;
     font-size: 0;
+    z-index: 10;
   }
 
   & .slick-arrow.slick-prev,
