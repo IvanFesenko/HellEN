@@ -63,9 +63,20 @@ $(document).ready(function () {
   });
 });
 
+<<<<<<< HEAD
 // const readMoreLink = document.querySelector('.sliderbig__content-link');
 // const box = document.querySelector('.sliderbig__content');
 
 // readMoreLink.onclick = function () {
 //   box.classList.add('sliderbig__content-open');
 // };
+=======
+$(function () {
+  $('.header__burger').click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.burger-wrap').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});
+>>>>>>> dev
