@@ -60,6 +60,10 @@
   }
 }
 
+.photo-wrap {
+  display: flex;
+}
+
 .teacher:hover .teacher-photo {
   box-shadow: 0 0 20px 0 rgba(255, 107, 8, 0.35);
 }
@@ -78,6 +82,7 @@
 }
 
 .teacher-info {
+  flex: 0 0 50%;
   @include for-size(tablet) {
     width: rem(400);
   }
