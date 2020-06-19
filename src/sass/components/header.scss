@@ -1,21 +1,26 @@
 .header {
   background-image: url('../images/header/header-bg/header-bg_m.png');
-
-  @include background-settings(no-repeat, center top, cover);
+  @include background-settings(no-repeat, center rem(-280), cover);
 
   @include for-size(mobile) {
     padding-top: rem(25);
     padding-bottom: rem(50);
   }
 
+  @media (min-width: rem(576)) {
+    @include background-settings(no-repeat, center rem(-680), cover);
+  }
+
   @include for-size(tablet) {
     background-image: url('../images/header/header-bg/header-bg_t.png');
+    @include background-settings(no-repeat, center rem(-110), cover);
     padding-top: rem(36);
     padding-bottom: rem(52);
   }
 
   @include for-size(desktop) {
     background-image: url('../images/header/header-bg/header-bg_d.png');
+    @include background-settings(no-repeat, center rem(-250), cover);
     padding-bottom: rem(86);
   }
 
@@ -339,8 +344,25 @@
   margin: 0;
   padding: 0;
 
+  @include for-size(mobile) {
+    width: rem(205);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: rem(576)) {
+    @include flexible(center);
+    flex-wrap: wrap;
+    width: rem(600);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include for-size(tablet) {
-    @include flexible(space-between);
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -351,6 +373,20 @@
 
   &--one {
     width: rem(205);
+
+    @include for-size(mobile) {
+      margin-bottom: rem(25);
+    }
+
+    @media (min-width: rem(576)) {
+      margin-right: rem(70);
+      margin-bottom: rem(70);
+    }
+
+    @include for-size(tablet) {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
 
     @include for-size(desktop) {
       width: rem(385);
@@ -363,6 +399,18 @@
 
   &--two {
     width: rem(185);
+
+    @include for-size(mobile) {
+      margin-bottom: rem(25);
+    }
+
+    @media (min-width: rem(576)) {
+      margin-bottom: rem(70);
+    }
+
+    @include for-size(tablet) {
+      margin-bottom: 0;
+    }
 
     @include for-size(desktop) {
       width: rem(350);
@@ -402,6 +450,11 @@
     right: rem(-2);
     top: 50%;
     transform: translateY(-50%);
+
+    @include for-size(desktop) {
+      width: rem(4);
+      right: rem(-3);
+    }
   }
 
   @include flexible(center);
@@ -422,20 +475,36 @@
   }
 }
 
-.benefit__img1 {
-  display: block;
-}
-
 .benefit__title {
-  line-height: 1.55em;
+  font-size: rem(13);
+  line-height: 1.53em;
+  letter-spacing: 0.05em;
+  font-weight: 700;
   margin: 0;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
 
+  @include for-size(mobile) {
+    padding-left: rem(70);
+  }
+
+  @include for-size(tablet) {
+    font-size: rem(13);
+    line-height: 1.53em;
+    padding-left: rem(70);
+  }
+
   @include for-size(desktop) {
+    font-size: rem(18);
+    line-height: 1.55em;
     padding-left: rem(85);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(20.83);
+    line-height: 1.6em;
   }
 }
 
