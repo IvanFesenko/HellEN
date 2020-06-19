@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/montserrat-v14-latin_cyrillic-regular.woff') format('woff'), url('../font/montserrat-v14-latin_cyrillic-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-v14-latin-700.woff') format('woff'), url('../fonts/montserrat-v14-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --font-first: "Montserrat", sans-serif;
+    --color-first: #fff;
+    --color-second: black;
+}
+
+@keyframes anim_shadow {
+    0% {
+        box-shadow: 0px 0px 20px 0px rgba(237, 253, 4, 0.75);
+    }
+    50% {
+        box-shadow: 0px 0px 5px 0px rgba(237, 253, 4, 0.75);
+    }
+    100% {
+        box-shadow: 0px 0px 20px 0px rgba(237, 253, 4, 0.75);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--font-first);
+}
+
+.page_massage {
+    background: rgb(34, 34, 34) url(../images/registration-d.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding-top: 200px;
+}
+
+.window {
+    max-width: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    background-color: rgba(83, 75, 75, .9);
+    text-align: center;
+    border-radius: 2px;
+    animation-name: anim_shadow;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.window__title {
+    margin-bottom: 20px;
+    color: var(--color-first);
+}
+
+.window__title::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: yellow;
+    position: absolute;
+    top: 20px
+}
+
+.window__link {
+    color: var(--color-first);
+    font-weight: 400;
+    position: relative;
+}
+
+.window__link:hover {
+    color: yellow;
+}
+
+.window__link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-first);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: width .2s linear;
+}
+
+.window__link:hover::after {
+    width: 100%;
+}
