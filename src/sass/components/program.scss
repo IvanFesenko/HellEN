@@ -57,6 +57,8 @@ h4 {
       text-align: left;
     }
     @include for-size(desktop) {
+      padding-top: rem(69);
+      padding-bottom: rem(22);
     }
     @include for-size(hd-desktop) {
     }
@@ -72,6 +74,9 @@ h4 {
       padding-bottom: rem(321);
     }
     @include for-size(desktop) {
+      width: 100%;
+      padding-top: rem(46);
+
       padding-bottom: rem(490);
     }
     @include for-size(hd-desktop) {
@@ -82,16 +87,17 @@ h4 {
   &__title {
     line-height: rem(48);
     margin: 0;
+
+    &-tree {
+      margin-bottom: rem(30);
+    }
   }
 
   &__list {
-    @include for-size(tablet) {
-      // display: flex;
-      // // flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: start;
-    }
+    padding: 0;
     @include for-size(desktop) {
+      display: flex;
+      justify-content: space-between;
     }
     @include for-size(hd-desktop) {
     }
@@ -99,19 +105,12 @@ h4 {
 
   &__item {
     @include for-size(tablet) {
-      // width: rem(180);
-      // display: flex;
-      // flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: start;
     }
     @include for-size(desktop) {
+      width: rem(234);
     }
     @include for-size(hd-desktop) {
     }
-  }
-
-  &__title-tree {
   }
 
   &__sub-list {
@@ -133,6 +132,7 @@ h4 {
       display: flex;
     }
     @include for-size(desktop) {
+      flex-direction: column;
     }
     @include for-size(hd-desktop) {
     }
@@ -169,9 +169,9 @@ h4 {
     @include for-size(tablet) {
       display: flex;
       flex-direction: column;
-      // width: rem(160);
     }
     @include for-size(desktop) {
+      width: 100%;
     }
     @include for-size(hd-desktop) {
     }
