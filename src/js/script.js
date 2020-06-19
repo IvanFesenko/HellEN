@@ -65,31 +65,29 @@ $(document).ready(function () {
   });
 });
 
-$(function () {
-  $('.header__burger').click(function (e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
-    $('.burger-wrap').toggleClass('active');
-    $('body').toggleClass('lock');
-  });
-});
-
-const readMore = document.querySelector('.more-text'),
-  dots = document.querySelector('.sliderbig__item-content_dots'),
-  readMoreButton = document.querySelector('.sliderbig__item-content-button');
-
+const readMore = document.getElementsByClassName('more-text'),
+  dots = document.getElementsByClassName('sliderbig__item-content_dots'),
+  readMoreButton = document.getElementsByClassName(
+    'sliderbig__item-content-button',
+  );
+console.log(readMore);
+console.log(dots);
+console.log(readMoreButton);
 let i = 0;
+// let indexOfButton;
+
+// indexOfButton =
 function read() {
   if (!i) {
-    readMore.style.display = 'inline';
-    dots.style.display = 'none';
-    readMoreButton.innerHTML = 'скрыть текст';
+    readMore[2].style.display = 'inline';
+    dots[2].style.display = 'none';
+    readMoreButton[2].innerHTML = 'скрыть текст';
     i = 1;
   } else {
-    readMore.style.display = 'none';
+    readMore[2].style.display = 'none';
 
-    dots.style.display = 'inline';
-    readMoreButton.innerHTML = 'Читать дальше';
+    dots[2].style.display = 'inline';
+    readMoreButton[2].innerHTML = 'Читать дальше';
     i = 0;
   }
 }
@@ -101,5 +99,14 @@ $(function () {
       .stop()
       .animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 400);
     e.preventDefault();
+  });
+});
+
+$(function () {
+  $('.header__burger').click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.burger-wrap').toggleClass('active');
+    $('body').toggleClass('lock');
   });
 });
