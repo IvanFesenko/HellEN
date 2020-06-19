@@ -56,8 +56,8 @@ body {
 .thanks {
     background: rgb(34, 34, 34) url(../images/registration-d.png) no-repeat center center;
     background-size: cover;
-    height: 100vh;
-    padding: 100px 0 0 0;
+    min-height: 100vh;
+    padding: 100px 0 100px 0;
 }
 
 
@@ -135,7 +135,9 @@ body {
 }
 .thanks__description-list {
     text-align: left;
-    padding: 0 50px 0 50px;
+    margin: 0 auto;
+    width: 600px;
+    padding: 0 0 0 50px;
     border-left: 1px solid var(--color-first);
     
 }
@@ -148,17 +150,16 @@ position: relative;
     }
 .thanks__description-item::before {
     content: '';
+    display: block;
     width: 20px;
-    height: 23px;
+    height: 20px;
     position: absolute;
-    top: -4px;
+    top: 0px;
     left: -61px;
-    background-image: url(../images/fire-desktop.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    border-radius: 50%;
+    background: var(--color-orange);
 }
 .thanks__description-item+.thanks__description-item {
-        margin-top: 20px;
-    }
+    margin-top: 50px;
+}
 
