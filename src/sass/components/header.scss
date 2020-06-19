@@ -522,17 +522,12 @@
     position: absolute;
     display: block;
     content: '';
-    width: rem(2);
+    width: rem(4);
     height: 70%;
     background-color: $white-color;
-    right: rem(-2);
+    right: rem(-3);
     top: 50%;
     transform: translateY(-50%);
-
-    @include for-size(desktop) {
-      width: rem(4);
-      right: rem(-3);
-    }
   }
 
   @include flexible(center);
