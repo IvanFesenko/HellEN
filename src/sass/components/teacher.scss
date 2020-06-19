@@ -125,6 +125,11 @@
   position: absolute;
   background-color: $orange-color;
   top: rem(-16);
+  transition: 0.3s;
+}
+
+.list-about:hover::before {
+  width: 100%;
 }
 
 .list-about__item:not(:last-child) {
