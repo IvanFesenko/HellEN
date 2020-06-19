@@ -63,22 +63,22 @@
   @include for-size(desktop) {
     display: flex;
     font-size: rem(12);
-    margin-right: rem(45);
+    margin-right: rem(25);
   }
 
   @include for-size(hd-desktop) {
     font-size: rem(14);
-    margin-right: rem(55);
+    margin-right: rem(35);
   }
 }
 
 .menu__item:not(:last-child) {
   @include for-size(desktop) {
-    margin-right: rem(45);
+    margin-right: rem(25);
   }
 
   @include for-size(hd-desktop) {
-    margin-right: rem(55);
+    margin-right: rem(35);
   }
 }
 
@@ -91,6 +91,84 @@
     color: $orange-color;
   }
 }
+
+// Hover
+
+.menu__link,
+.menu__link > span {
+  position: relative;
+  line-height: rem(24);
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    transition: transform 0.5s ease;
+  }
+}
+
+.menu__link {
+  display: block;
+  overflow: hidden;
+
+  &::before {
+    right: 0;
+    bottom: 0;
+    background: $orange-color;
+  }
+
+  &:before,
+  &:after {
+    right: 0;
+    bottom: 0;
+    background: $orange-color;
+  }
+
+  &:before {
+    width: 100%;
+    height: rem(2);
+    transform: translateX(-100%);
+  }
+
+  &:after {
+    width: rem(2);
+    height: 100%;
+    transform: translateY(100%);
+  }
+
+  > span {
+    display: block;
+    padding: rem(10);
+
+    &:before,
+    &:after {
+      left: 0;
+      top: 0;
+      background: $orange-color;
+    }
+
+    &:before {
+      width: 100%;
+      height: rem(2);
+      transform: translateX(100%);
+    }
+
+    &:after {
+      width: rem(2);
+      height: 100%;
+      transform: translateY(-100%);
+    }
+  }
+
+  &:hover:before,
+  &:hover:after,
+  &:hover > span:before,
+  &:hover > span:after {
+    transform: translate(0, 0);
+  }
+}
+
+// END hover
 
 .header__btn {
   transition: all 0.2s linear;
