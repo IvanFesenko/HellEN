@@ -48,7 +48,7 @@
 }
 
 .teacher-photo {
-  transition: 0.3s;
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
   @include for-size(tablet) {
     margin: 0;
     margin-right: rem(46);
@@ -63,10 +63,6 @@
 
 .photo-wrap {
   display: flex;
-}
-
-.teacher:hover .teacher-photo {
-  box-shadow: 0 0 20px 0 rgba(255, 107, 8, 0.35);
 }
 
 .teacher-name {
