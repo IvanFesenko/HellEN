@@ -3,12 +3,20 @@
   background-color: $black-color-s;
 
   &__copy {
+    margin: rem(0);
     font-weight: 500;
     font-size: rem(11);
     line-height: rem(38);
     color: rgba(253, 254, 254, 0.42);
+    letter-spacing: 0.05em;
     text-align: center;
 
+    @include for-size(tablet) {
+      text-align: left;
+    }
 
+    @include for-size(desktop) {
+      font-size: rem(14);
+    }
   }
 }
