@@ -1,6 +1,18 @@
 .teacher {
-  padding: 0 20px;
-  margin-bottom: rem(50);
+  padding: 0 rem(20);
+  padding-bottom: rem(50);
+
+  @include for-size(tablet) {
+    padding-bottom: rem(60);
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: rem(90);
+  }
+
+  @include for-size(hd-desktop) {
+    padding-bottom: rem(130);
+  }
 }
 
 .sections-title,
@@ -10,14 +22,44 @@
   margin-bottom: rem(24);
 }
 
-.teacher-photo {
-  min-width: rem(246);
+.teacher-name {
+  @include for-size(tablet) {
+    margin-bottom: rem(30);
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: rem(50);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(70);
+  }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.teacher-photo {
+  // min-width: rem(246);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+
+  @include for-size(tablet) {
+    margin: 0;
+    margin-right: rem(46);
+  }
+
+  @include for-size(desktop) {
+    margin-right: rem(86);
+  }
 }
+
+.teacher:hover .teacher-photo {
+  box-shadow: 0 0 20px 0 rgba(255, 107, 8, 0.35);
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
 
 .teacher-name {
   padding-bottom: rem(5);
@@ -45,7 +87,7 @@ img {
 }
 
 .skill-list__item:hover #check {
-  transform: scale(1.5);
+  transform: scale(1.7);
 }
 
 .skill-list__discription {
@@ -72,6 +114,10 @@ img {
   padding-left: rem(15);
   line-height: rem(20);
   font-size: rem(11);
+
+  @include for-size(tablet) {
+    padding: 0;
+  }
 }
 
 .list-about::before {
@@ -79,6 +125,11 @@ img {
   position: absolute;
   background-color: $orange-color;
   top: rem(-16);
+  transition: 0.3s;
+}
+
+.list-about:hover::before {
+  width: 100%;
 }
 
 .list-about__item:not(:last-child) {
@@ -97,29 +148,25 @@ img {
   font-size: rem(11);
   text-decoration: underline;
   line-height: rem(29);
+  transition: 0.3s;
 }
 
-@include for-size(tablet) {
-  .teacher {
-    padding: 0;
-  }
+.certificate-link:hover {
+  background-color: rgba(255, 107, 8, 0.75);
+  color: $white-color;
+  text-shadow: 1px 0px 2px $black-color;
+  box-shadow: 0 0 rem(7) rem(2) rgb(255, 107, 8);
+}
 
-  .teacher-photo {
-    margin: 0;
-    margin-right: rem(46);
-  }
-  .teacher-wrapper {
+.teacher-wrapper {
+  @include for-size(tablet) {
     @include flexible;
     justify-content: space-between;
   }
-  .list-about {
-    padding: 0;
-  }
 }
 
-@include for-size(desktop) {
-  .teacher-photo {
-    width: rem(496);
-    height: rem(644);
+.teacher-info {
+  @include for-size(hd-desktop) {
+    max-width: rem(670);
   }
 }

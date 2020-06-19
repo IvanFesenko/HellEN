@@ -140,7 +140,7 @@ input {
   color: $white-color;
   font-weight: 600;
   font-size: rem(15);
-  padding-left: 30px;
+  padding: 0 2% 0 30px;
   background: none;
   border: 1px solid $white-color;
   transition: border;
@@ -184,26 +184,35 @@ input:active {
 
 .input {
   @include placeholder {
-    color: #aaa;
+    color: $white-color;
     text-indent: 0px;
     transition: text-indent 500ms;
   }
 
-  &:hover {
+  &:focus {
     @include placeholder {
-      text-indent: 290px;
+      text-indent: 80%;
       color: grey;
     }
   }
+}
+.input + .input {
+  @include placeholder {
+    color: $white-color;
+    text-indent: 0px;
+    transition: text-indent 500ms;
+  }
+
   &:focus {
     @include placeholder {
-      text-indent: -100px;
+      text-indent: 73%;
+      color: grey;
     }
   }
 }
 
 input:hover {
-  border: 1px solid #f3c83b;
+  border: 1px solid $orange-color;
 }
 
 .button {

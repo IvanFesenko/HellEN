@@ -68,6 +68,7 @@
     height: rem(30);
     position: relative;
     font-size: rem(18);
+    z-index: 2;
     &--up {
       text-transform: uppercase;
     }
@@ -94,7 +95,7 @@
 .fire {
   position: absolute;
   left: rem(39);
-  z-index: -1;
+  z-index: 1;
   width: rem(14);
   height: rem(14);
   background-color: transparent;

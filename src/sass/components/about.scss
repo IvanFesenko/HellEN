@@ -29,14 +29,56 @@
   }
 
   &__item {
+    position: relative;
     flex-basis: rem(290);
     padding: rem(30) rem(25) rem(25);
     box-shadow: rem(8) rem(8) rem(32) rem(7) rgba(29, 29, 27, 0.11);
     text-align: center;
-    transition: all 0.3s ease-out;
+    transition: transform 0.2s linear, background 0.3s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     &:hover .about-list__img {
       fill: $white-color;
+    }
+
+    &:hover .pseudo-line-title::after {
+      background-color: $white-color;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      transform: scaleY(1);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3%;
+      left: 3%;
+      right: 3%;
+      bottom: 3%;
+      border-color: $white-color;
+      border-left: 2px solid;
+      border-right: 2px solid;
+      transition: transform 0.4s linear;
+      transform: scaleY(0);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3%;
+      left: 3%;
+      right: 3%;
+      bottom: 3%;
+      border-color: $white-color;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      transition: transform 0.4s linear;
+      transform: scaleX(0);
     }
 
     @media (max-width: rem(617)) {
@@ -79,9 +121,9 @@
     }
 
     @include for-size(hd-desktop) {
-      flex-basis: rem(390);
+      flex-basis: rem(430);
       &:not(:nth-child(3n)) {
-        margin-right: rem(24);
+        margin-right: rem(26);
       }
 
       &:not(:nth-last-child(-n + 3)) {
@@ -114,5 +156,20 @@
 }
 
 .about-title {
-  text-align: center;
+  @include for-size(mobile) {
+    text-align: center;
+    margin: 0 0 rem(36);
+  }
+
+  @include for-size(tablet) {
+    margin: 0 0 rem(38);
+  }
+
+  @include for-size(desktop) {
+    margin: 0 0 rem(40);
+  }
+
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(44);
+  }
 }
