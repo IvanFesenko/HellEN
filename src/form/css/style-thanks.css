@@ -15,18 +15,8 @@
     --font-first: "Montserrat", sans-serif;
     --color-first: #fff;
     --color-second: black;
-}
-
-@keyframes anim_shadow {
-    0% {
-        box-shadow: 0px 0px 20px 0px rgba(237, 253, 4, 0.75);
-    }
-    50% {
-        box-shadow: 0px 0px 5px 0px rgba(237, 253, 4, 0.75);
-    }
-    100% {
-        box-shadow: 0px 0px 20px 0px rgba(237, 253, 4, 0.75);
-    }
+    --color-orange: #ff6b08;
+    --grey-color: #858585;
 }
 
 * {
@@ -58,25 +48,26 @@ a {
 body {
     font-family: var(--font-first);
 }
+.container {
+    max-width: 768px;
+    margin: auto;
+}
 
-.page-massage {
+.thanks {
     background: rgb(34, 34, 34) url(../images/registration-d.png) no-repeat center center;
     background-size: cover;
     height: 100vh;
+    padding: 100px 0 0 0;
 }
 
-.container {
-    max-width: 960px;
-    margin: auto;
-    padding-top: 200px;
-}
 
-.window {
+
+.thanks__window {
     max-width: 400px;
     padding-top: 50px;
     padding-bottom: 50px;
-    margin: auto;
-    background-color: rgba(83, 75, 75, .9);
+    margin: 0 auto 50px auto;
+    background-color: rgba(255, 255, 255, .7);
     text-align: center;
     border-radius: 2px;
     animation-name: anim_shadow;
@@ -87,32 +78,38 @@ body {
     position: relative;
 }
 
-.window__title {
+.thanks__window-title {
     margin-bottom: 20px;
-    color: var(--color-first);
+    color: var(--color-second);
 }
 
-.window__title::before {
+.thanks__window-title::before {
     content: '';
     display: block;
     width: 50px;
     height: 3px;
-    background-color: yellow;
+    background-color: var(--color-orange) ;
     position: absolute;
-    top: 20px
+    top: 20px;
+    transition: all 0.3s linear;
+}
+.thanks__window:hover .thanks__window-title::before {
+    width: 100%;
 }
 
-.window__link {
+.thanks__window-link {
     color: var(--color-first);
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 700;
     position: relative;
+    transition: all 0.3s linear;
 }
 
-.window__link:hover {
-    color: yellow;
+.thanks__window-link:hover {
+    color: var(--color-orange);
 }
 
-.window__link::after {
+.thanks__window-link::after {
     content: '';
     display: block;
     width: 0;
@@ -125,6 +122,43 @@ body {
     transition: width .2s linear;
 }
 
-.window__link:hover::after {
+.thanks__window-link:hover::after {
     width: 100%;
 }
+.thanks__description {
+    text-align: center;    
+}
+.thanks__description-title {
+    font-size: 30px;
+    color: var(--color-first);
+    margin: 0 0 30px 0;
+}
+.thanks__description-list {
+    text-align: left;
+    padding: 0 50px 0 50px;
+    border-left: 1px solid var(--color-first);
+    
+}
+.thanks__description-link {
+    color: var(--color-first);
+    }
+
+.thanks__description-item {
+position: relative;
+    }
+.thanks__description-item::before {
+    content: '';
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    top: -4px;
+    left: -61px;
+    background-image: url(../images/fire-desktop.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.thanks__description-item+.thanks__description-item {
+        margin-top: 20px;
+    }
+
