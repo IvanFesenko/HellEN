@@ -1,3 +1,7 @@
+h3,
+h4 {
+  margin: 0;
+}
 .program {
   background-color: $black-color-s;
   background-image: url(../images/program/program-m.png);
@@ -73,16 +77,17 @@
   }
 
   &__title-tree {
-    margin-bottom: rem(17);
   }
 
-  &__sub-list {
+  &__sub-list:nth-last-child(n + 2) {
+    margin-bottom: rem(40);
   }
 
   &__orange-font {
-    font-size: rem(14);
-    line-height: 2.224;
-    margin: 0;
+    font-size: rem(13.25);
+    line-height: 3.6;
+    letter-spacing: rem(0.5);
+    margin-bottom: rem(0);
 
     @include for-size(desktop) {
       font-size: rem(18);
@@ -123,7 +128,6 @@
   line-height: 1.944;
   letter-spacing: rem(1.7);
   color: $white-color;
-  margin: 0;
 
   @include for-size(desktop) {
     font-size: rem(19);
