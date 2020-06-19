@@ -1,17 +1,24 @@
+h3,
+h4 {
+  margin: 0;
+}
 .program {
   background-color: $black-color-s;
   background-image: url(../images/program/program-m.png);
   background-repeat: no-repeat;
-  background-position: 100% 85.24%;
+  background-position: right 85.28%;
 
   @include for-size(tablet) {
     background-image: url(../images/program/program-t.png);
+    background-position: right 80.08%;
   }
   @include for-size(desktop) {
     background-image: url(../images/program/program-d.png);
+    background-position: left 89.5%;
   }
   @include for-size(hd-desktop) {
     background-image: url(../images/program/program-xd.png);
+    background-position: left 98.8%;
   }
 
   @media (min-resolution: 144dpi) {
@@ -41,38 +48,105 @@
   }
 
   &__container-header {
-    padding-top: rem(54);
+    padding-top: rem(20);
+    text-align: center;
+
+    @include for-size(tablet) {
+      padding-top: rem(52);
+      padding-bottom: rem(22);
+      text-align: left;
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
   }
 
   &__container-footer {
-    padding-bottom: rem(418);
+    width: rem(188);
+    padding-bottom: rem(414);
+    margin: 0 auto;
 
     @include for-size(tablet) {
-      padding-bottom: rem(375);
+      width: rem(520);
+      padding-bottom: rem(321);
     }
     @include for-size(desktop) {
-      padding-bottom: rem(418);
+      padding-bottom: rem(490);
     }
     @include for-size(hd-desktop) {
-      padding-bottom: rem(418);
+      padding-bottom: rem(372);
     }
   }
 
   &__title {
+    line-height: rem(48);
+    margin: 0;
   }
 
   &__list {
+    @include for-size(tablet) {
+      // display: flex;
+      // // flex-direction: column;
+      // flex-wrap: wrap;
+      // justify-content: start;
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
   }
 
   &__item {
+    @include for-size(tablet) {
+      // width: rem(180);
+      // display: flex;
+      // flex-direction: column;
+      // flex-wrap: wrap;
+      // justify-content: start;
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
+  }
+
+  &__title-tree {
   }
 
   &__sub-list {
+    padding: 0;
+
+    &:nth-last-of-type(n + 1) {
+      margin-bottom: rem(20);
+      @include for-size(tablet) {
+        display: flex;
+        margin-bottom: rem(28);
+      }
+      @include for-size(desktop) {
+      }
+      @include for-size(hd-desktop) {
+      }
+    }
+
+    @include for-size(tablet) {
+      display: flex;
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
+  }
+
+  &__pseudo-line {
+    margin-left: rem(36);
   }
 
   &__orange-font {
-    font-size: rem(14);
-    line-height: 2.244;
+    font-size: rem(13.25);
+    line-height: 3.6;
+    letter-spacing: rem(0.5);
+    margin-bottom: rem(0);
 
     @include for-size(desktop) {
       font-size: rem(18);
@@ -86,18 +160,41 @@
   }
 
   &__sub-item {
+    width: rem(175);
+
+    &:nth-last-of-type(n + 2) {
+      margin-right: rem(3);
+    }
+
+    @include for-size(tablet) {
+      display: flex;
+      flex-direction: column;
+      // width: rem(160);
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
   }
 
   &__orange-font {
   }
 
   &__sub-sub-list {
+    padding: 0;
+    @include for-size(tablet) {
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
   }
 
   &__grey-font {
     font-size: rem(11);
     opacity: 0.502;
     line-height: 1.818;
+    letter-spacing: rem(0.55);
 
     @include for-size(desktop) {
       font-size: rem(18.75);
@@ -111,6 +208,7 @@
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.944;
+  letter-spacing: rem(1.7);
   color: $white-color;
 
   @include for-size(desktop) {

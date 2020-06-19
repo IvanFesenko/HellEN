@@ -1,16 +1,17 @@
 .teacher {
-  padding: 0 rem(20);
+  position: relative;
+  padding-top: rem(23);
   padding-bottom: rem(50);
-
   @include for-size(tablet) {
+    padding-top: rem(31);
     padding-bottom: rem(60);
   }
-
   @include for-size(desktop) {
+    padding-top: rem(45);
     padding-bottom: rem(90);
   }
-
   @include for-size(hd-desktop) {
+    padding-top: rem(57);
     padding-bottom: rem(130);
   }
 }
@@ -22,49 +23,72 @@
   margin-bottom: rem(24);
 }
 
-.teacher-name {
+.sections-title {
   @include for-size(tablet) {
     margin-bottom: rem(30);
   }
-
   @include for-size(desktop) {
     margin-bottom: rem(50);
   }
-
   @include for-size(hd-desktop) {
     margin-bottom: rem(70);
   }
 }
 
-.teacher-photo {
-  // min-width: rem(246);
-  width: 100%;
-  height: 100%;
-  transition: 0.3s;
+.teacher-name {
+  @include for-size(tablet) {
+    margin-bottom: rem(20);
+  }
+  @include for-size(desktop) {
+    margin-bottom: rem(34);
+  }
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(34);
+  }
+}
 
+.teacher-photo {
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
   @include for-size(tablet) {
     margin: 0;
     margin-right: rem(46);
   }
-
   @include for-size(desktop) {
+    margin-right: rem(86);
+  }
+  @include for-size(hd-desktop) {
     margin-right: rem(86);
   }
 }
 
-.teacher:hover .teacher-photo {
-  box-shadow: 0 0 20px 0 rgba(255, 107, 8, 0.35);
+.photo-wrap {
+  display: flex;
 }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
 
 .teacher-name {
   padding-bottom: rem(5);
   font-weight: 800;
   border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
+}
+
+.teacher-wrapper {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.teacher-info {
+  flex: 0 0 50%;
+  @include for-size(tablet) {
+    width: rem(400);
+  }
+  @include for-size(desktop) {
+    width: rem(636);
+  }
+  @include for-size(hd-desktop) {
+    max-width: rem(676);
+  }
 }
 
 .skill-list {
@@ -90,16 +114,22 @@
   transform: scale(1.7);
 }
 
-.skill-list__discription {
+.skill-list__description {
   padding-left: rem(20);
   font-size: rem(13);
   color: $black-color-s;
   font-weight: 600;
   line-height: rem(20);
   margin: 0;
+  @include for-size(desktop) {
+    font-size: rem(17);
+  }
+  @include for-size(hd-desktop) {
+    font-size: rem(17);
+  }
 }
 
-#check {
+.skill-list__img {
   width: rem(16);
   height: rem(16);
   fill: $orange-color;
@@ -113,8 +143,6 @@
   padding: 0;
   padding-left: rem(15);
   line-height: rem(20);
-  font-size: rem(11);
-
   @include for-size(tablet) {
     padding: 0;
   }
@@ -140,33 +168,82 @@
   text-align: center;
 }
 
-.list-about__discription {
+.list-about__description,
+.certificate-link {
   margin: 0;
+  font-size: rem(11);
+  @include for-size(desktop) {
+    font-size: rem(17);
+  }
+  @include for-size(hd-desktop) {
+    font-size: rem(17);
+  }
 }
 
 .certificate-link {
-  font-size: rem(11);
   text-decoration: underline;
   line-height: rem(29);
   transition: 0.3s;
 }
 
-.certificate-link:hover {
-  background-color: rgba(255, 107, 8, 0.75);
-  color: $white-color;
-  text-shadow: 1px 0px 2px $black-color;
-  box-shadow: 0 0 rem(7) rem(2) rgb(255, 107, 8);
-}
+// POPUP ////////
 
-.teacher-wrapper {
-  @include for-size(tablet) {
-    @include flexible;
-    justify-content: space-between;
-  }
-}
+.popup__btn {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $orange-color;
 
-.teacher-info {
   @include for-size(hd-desktop) {
-    max-width: rem(670);
+    font-size: rem(11);
+    line-height: rem(29.17);
   }
+
+  @include for-size(desktop) {
+    font-size: rem(16.67);
+    line-height: rem(29.17);
+  }
+}
+
+.popup {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(112, 128, 144, 0.2);
+  z-index: 3;
+}
+
+.popup-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  margin: 0 auto;
+  min-width: rem(200);
+}
+
+.close {
+  position: absolute;
+  right: rem(-15);
+  top: rem(-25);
+  font-size: rem(50);
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:hover {
+    transform: rotateZ(360deg);
+    color: $orange-color;
+  }
+}
+
+.popup__img {
+  width: rem(400);
+  margin: 0 auto;
+  padding: rem(15);
+  border: rem(3) solid $orange-color;
+  border-radius: rem(30);
+  box-shadow: inset 0px 0px 11px 0px rgba(0, 0, 0, 0.54);
 }
