@@ -1,4 +1,5 @@
 .teacher {
+  position: relative;
   padding-top: rem(23);
   padding-bottom: rem(50);
   @include for-size(tablet) {
@@ -47,7 +48,7 @@
 }
 
 .teacher-photo {
-  transition: 0.3s;
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
   @include for-size(tablet) {
     margin: 0;
     margin-right: rem(46);
@@ -62,10 +63,6 @@
 
 .photo-wrap {
   display: flex;
-}
-
-.teacher:hover .teacher-photo {
-  box-shadow: 0 0 20px 0 rgba(255, 107, 8, 0.35);
 }
 
 .teacher-name {
@@ -132,7 +129,7 @@
   }
 }
 
-#check {
+.skill-list__img {
   width: rem(16);
   height: rem(16);
   fill: $orange-color;
@@ -187,4 +184,66 @@
   text-decoration: underline;
   line-height: rem(29);
   transition: 0.3s;
+}
+
+// POPUP ////////
+
+.popup__btn {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $orange-color;
+
+  @include for-size(hd-desktop) {
+    font-size: rem(11);
+    line-height: rem(29.17);
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(16.67);
+    line-height: rem(29.17);
+  }
+}
+
+.popup {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(112, 128, 144, 0.2);
+  z-index: 3;
+}
+
+.popup-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  margin: 0 auto;
+  min-width: rem(200);
+}
+
+.close {
+  position: absolute;
+  right: rem(-15);
+  top: rem(-25);
+  font-size: rem(50);
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:hover {
+    transform: rotateZ(360deg);
+    color: $orange-color;
+  }
+}
+
+.popup__img {
+  width: rem(400);
+  margin: 0 auto;
+  padding: rem(15);
+  border: rem(3) solid $orange-color;
+  border-radius: rem(30);
+  box-shadow: inset 0px 0px 11px 0px rgba(0, 0, 0, 0.54);
 }
