@@ -1,0 +1,14 @@
+.page-footer {
+  padding: rem(20);
+  background-color: $black-color-s;
+
+  &__copy {
+    font-weight: 500;
+    font-size: rem(11);
+    line-height: rem(38);
+    color: rgba(253, 254, 254, 0.42);
+    text-align: center;
+
+
+  }
+}
