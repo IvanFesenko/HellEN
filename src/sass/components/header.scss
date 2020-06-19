@@ -5,20 +5,24 @@
 
   @include for-size(mobile) {
     padding-top: rem(25);
+    padding-bottom: rem(50);
   }
 
   @include for-size(tablet) {
     background-image: url('../images/header/header-bg/header-bg_t.png');
     padding-top: rem(36);
+    padding-bottom: rem(52);
   }
 
   @include for-size(desktop) {
     background-image: url('../images/header/header-bg/header-bg_d.png');
+    padding-bottom: rem(86);
   }
 
   @include for-size(hd-desktop) {
     background-image: url('../images/header/header-bg/header-bg_xd.png');
     padding-top: rem(30);
+    padding-bottom: rem(127);
   }
 }
 
@@ -328,3 +332,111 @@
 }
 
 // Hero END
+
+// Benefit START
+
+.benefit {
+  margin: 0;
+  padding: 0;
+
+  @include for-size(tablet) {
+    @include flexible(space-between);
+  }
+}
+
+.benefit__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &--one {
+    width: rem(205);
+
+    @include for-size(desktop) {
+      width: rem(385);
+    }
+
+    @include for-size(hd-desktop) {
+      width: rem(430);
+    }
+  }
+
+  &--two {
+    width: rem(185);
+
+    @include for-size(desktop) {
+      width: rem(350);
+    }
+
+    @include for-size(hd-desktop) {
+      width: rem(330);
+    }
+  }
+
+  &--three {
+    width: rem(180);
+
+    @include for-size(desktop) {
+      width: rem(320);
+    }
+
+    @include for-size(hd-desktop) {
+      width: rem(383);
+    }
+  }
+}
+
+.benefit__img-wrap {
+  border: 2px solid $orange-color;
+  width: rem(58);
+  height: rem(58);
+  position: relative;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: rem(2);
+    height: 70%;
+    background-color: $white-color;
+    right: rem(-2);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include flexible(center);
+  align-items: center;
+
+  @include for-size(desktop) {
+    width: rem(103);
+    height: rem(103);
+  }
+}
+
+.benefit__img {
+  height: rem(36);
+  fill: $orange-color;
+
+  @include for-size(desktop) {
+    height: rem(45);
+  }
+}
+
+.benefit__img1 {
+  display: block;
+}
+
+.benefit__title {
+  line-height: 1.55em;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  @include for-size(desktop) {
+    padding-left: rem(85);
+  }
+}
+
+// Benefit END
