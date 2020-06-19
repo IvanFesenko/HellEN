@@ -1,0 +1,125 @@
+.program {
+  background-color: $black-color-s;
+  background-image: url(../images/program/program-m.png);
+  background-repeat: no-repeat;
+  background-position: 100% 85.24%;
+
+  @include for-size(tablet) {
+    background-image: url(../images/program/program-t.png);
+  }
+  @include for-size(desktop) {
+    background-image: url(../images/program/program-d.png);
+  }
+  @include for-size(hd-desktop) {
+    background-image: url(../images/program/program-xd.png);
+  }
+
+  @media (min-resolution: 144dpi) {
+    background-image: url(../images/program/program-m@1.5x.png);
+    @include for-size(tablet) {
+      background-image: url(../images/program/program-t@1.5x.png);
+    }
+    @include for-size(desktop) {
+      background-image: url(../images/program/program-d@1.5x.png);
+    }
+    @include for-size(hd-desktop) {
+      background-image: url(../images/program/program-xd@1.5x.png);
+    }
+  }
+
+  @media (min-resolution: 192dpi) {
+    background-image: url(../images/program/program-m@2x.png);
+    @include for-size(tablet) {
+      background-image: url(../images/program/program-t@2x.png);
+    }
+    @include for-size(desktop) {
+      background-image: url(../images/program/program-d2x.png);
+    }
+    @include for-size(hd-desktop) {
+      background-image: url(../images/program/program-xd2x.png);
+    }
+  }
+
+  &__container-header {
+    padding-top: rem(54);
+  }
+
+  &__container-footer {
+    padding-bottom: rem(418);
+
+    @include for-size(tablet) {
+      padding-bottom: rem(375);
+    }
+    @include for-size(desktop) {
+      padding-bottom: rem(418);
+    }
+    @include for-size(hd-desktop) {
+      padding-bottom: rem(418);
+    }
+  }
+
+  &__title {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__sub-list {
+  }
+
+  &__orange-font {
+    font-size: rem(14);
+    line-height: 2.244;
+
+    @include for-size(desktop) {
+      font-size: rem(18);
+      line-height: 1.62;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: rem(21);
+      line-height: 1.4;
+    }
+  }
+
+  &__sub-item {
+  }
+
+  &__orange-font {
+  }
+
+  &__sub-sub-list {
+  }
+
+  &__grey-font {
+    font-size: rem(11);
+    opacity: 0.502;
+    line-height: 1.818;
+
+    @include for-size(desktop) {
+      font-size: rem(18.75);
+      line-height: 1.556;
+    }
+  }
+}
+
+.title-tree {
+  font-size: rem(15);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.944;
+  color: $white-color;
+
+  @include for-size(desktop) {
+    font-size: rem(19);
+    line-height: 1.535;
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(29);
+    line-height: 1;
+  }
+}
