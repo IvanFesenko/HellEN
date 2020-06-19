@@ -194,14 +194,16 @@
       line-height: rem(29);
     }
 
-    &-link {
+    &-button {
       color: $orange-color;
-      text-decoration: underline;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
 
       &:hover,
       &:focus {
-        color: $accent-orange-color;
-        outline: none;
+        text-decoration: underline;
       }
     }
   }
@@ -316,4 +318,10 @@
 
 .slick-slide.slick-active {
   outline: none;
+}
+
+//read more
+
+.more-text {
+  display: none;
 }
