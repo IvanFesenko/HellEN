@@ -67,7 +67,6 @@
 
 .photo-wrap {
   display: flex;
-
 }
 
 // img {
@@ -153,7 +152,6 @@
   padding: 0;
   padding-left: rem(15);
   line-height: rem(20);
-
 
   @include for-size(tablet) {
     padding: 0;
@@ -242,13 +240,13 @@
   right: rem(-15);
   top: rem(-25);
   font-size: rem(50);
+  cursor: pointer;
   transition: all 0.3s linear;
 
   &:hover,
-  &:hover {
+  &:focus {
     transform: rotateZ(360deg);
     color: $orange-color;
-
   }
 }
 
