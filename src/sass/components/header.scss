@@ -286,6 +286,10 @@
     position: absolute;
     top: 90px;
     z-index: 51;
+    @include for-size(tablet) {
+      top: 140px;
+      left: 190px;
+    }
   }
 
   .menu__link {
@@ -306,12 +310,25 @@
     &:hover {
       color: $orange-color;
     }
+    @include for-size(tablet) {
+      font-size: rem(30);
+    }
   }
 
   .header__btn {
     display: flex;
     position: absolute;
     top: 288px;
+
+    @include for-size(tablet) {
+      position: relative;
+      top: 0;
+      z-index: 0;
+    }
+  }
+
+  @include for-size(tablet) {
+    max-width: 100%;
   }
 }
 
