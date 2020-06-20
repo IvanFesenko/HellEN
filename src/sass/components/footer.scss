@@ -2,20 +2,32 @@
   padding-top: rem(28);
   padding-bottom: rem(16);
 
+  @include for-size(mobile) {
+    &__item:not(:last-of-type) {
+      margin-bottom: rem(30);
+    }
+  }
+
   &__list {
     padding: rem(0);
     margin: rem(0);
 
     @include for-size(mobile) {
-      @include flexible();
+      @include flexible(center);
       flex-direction: column;
       align-items: center;
     }
+
+    @include for-size(tablet) {
+      @include flexible(space-around);
+      flex-direction: row-reverse;
+    }
   }
 
-  @include for-size(mobile) {
-    &__item:not(:last-of-type) {
-      margin-bottom: rem(30);
+  &__item {
+    // margin-right: 30px;
+    &--order {
+      order: -1;
     }
   }
 
