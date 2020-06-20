@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../font/montserrat-v14-latin_cyrillic-regular.woff') format('woff'), url('../font/montserrat-v14-latin_cyrillic-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-v14-latin-700.woff') format('woff'), url('../fonts/montserrat-v14-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --font-first: "Montserrat", sans-serif;
+  --color-first: #fff;
+  --color-second: black;
+  --color-orange: #ff6b08;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--font-first);
+  background-image: url(../images/thanks-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right ;
+}
+.orange-color {
+  color: var(--color-orange);
+}
+.br {
+  display: block;
+}
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 30px 0 30px;
+}
+.header {
+  padding: 57px 0 57px 0;
+}
+.contacts__image {
+  width: 40px;
+  height: 40px;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+}
+.contacts__wrapper:hover .contacts__svg {
+  transform: rotate(135deg);
+  fill: var(--color-second)
+}
+.contacts__wrapper:hover .contacts__phone {
+  color: var(--color-orange);
+}
+.contacts__svg {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: -50px;
+  fill: var(--color-orange);
+  transition: all .3s linear;
+}
+.contacts__phone {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-second);
+  transition: all .3s linear;
+}
+
+.contacts__instagram {
+  padding: 0 0 0 50px;
+  position: relative;
+}
+.contacts__instagram::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: rgba(128, 128, 128, 0.2);
+  width: 30px;
+  height: 2px;
+  transform: rotate(90deg);
+  left: 10px;
+  bottom: 50%;
+}
+.thanks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 70px 0;
+  
+}
+.thanks__image-wrapper {
+  flex: 0 0 30%;
+}
+.thanks__image {
+  /* flex: 0 1 25%; */
+}
+.thanks__description {
+  flex: 0 0 60%;
+}
+
+.thanks__title {
+  font-size: 35px;
+  text-transform: uppercase;
+  line-height: 55px;
+  margin: 0 0 50px 0;
+}
+.thanks__text {
+  font-size: 25px;
+  line-height: 35px;
+}
+.thanks__text+.thanks__text {
+  margin: 30px 0 0 0;
+  width: 80%;
+}
+
+.thanks__text-link {
+  color: var(--color-orange);
+  font-size: 25px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.social {
+  padding: 0 0 70px 0;
+}
+.social__wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;  
+  border: 2px solid var(--color-orange);
+  transition: all .4s linear;
+}
+.social__wrapper:hover {
+  background-color: var(--color-orange);
+}
+.social__wrapper:hover .social__text {
+  color: var(--color-first);
+}
+.social__wrapper:hover .social__svg {
+  fill: var(--color-second);
+}
+.social__list {
+  display: flex;
+}
+.social__text {
+  font-size: 30px;
+}
+.social__svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--color-orange);
+  transition: all .5s linear;
+  border-radius: 11px;
+}
+.social__svg:hover {
+  fill: var(--color-first);
+  background-color: var(--color-first);
+
+}
+.social__item+.social__item {
+  margin-left: 20px;
+}
+.thanks__back-link {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 35px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  font-weight: 700;
+  position: relative;
+}
+.thanks__back-link::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 3px;
+  bottom: -10px;
+  background-color: var(--color-orange);
+  transition: all .3s linear;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.thanks__back-link:hover::after {
+  width: 100%;
+}
