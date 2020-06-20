@@ -1,7 +1,7 @@
 .advantages {
   position: relative;
-  top: -410px;
-  padding: 0px 0 125px 0;
+  top: rem(-410);
+  padding: 0px 0 rrem(125) 0;
 }
 .absolute-wrapper {
   width: 100%;
@@ -14,16 +14,16 @@
 }
 @include for-size(tablet) {
   .advantages {
-    top: -210px;
+    top: rem(-210);
   }
 }
 @include for-size(desktop) {
   .advantages {
-    top: -420px;
+    top: rem(-420);
   }
 }
 @include for-size(hd-desktop) {
   .advantages {
-    top: -320px;
+    top: rem(-320);
   }
 }
