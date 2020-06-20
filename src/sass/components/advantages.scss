@@ -1,7 +1,7 @@
 .advantages {
   position: relative;
   top: rem(-410);
-  padding: 0px 0 rrem(125) 0;
+  padding: 0 0 rem(140) 0;
 }
 .absolute-wrapper {
   width: 100%;
@@ -15,6 +15,7 @@
 @include for-size(tablet) {
   .advantages {
     top: rem(-210);
+    padding: 0 0 rem(140) 0;
   }
 }
 @include for-size(desktop) {

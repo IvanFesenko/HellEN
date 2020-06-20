@@ -186,6 +186,8 @@
   text-decoration: underline;
   cursor: pointer;
   color: $orange-color;
+  font-size: rem(11);
+  line-height: rem(29.17);
 
   @include for-size(hd-desktop) {
     font-size: rem(11);
