@@ -1,12 +1,6 @@
 .troubles {
   padding-bottom: rem(64);
   position: relative;
-  background-image: linear-gradient(
-    to bottom,
-    $black-color-s 0%,
-    $black-color 72.5%,
-    $white-color 72.5%
-  );
 }
 
 .section-shadow {
@@ -56,6 +50,14 @@
   padding: 0;
 }
 @include for-size(mobile) {
+  .troubles {
+    background-image: linear-gradient(
+      to bottom,
+      $black-color-s 0%,
+      $black-color 72.5%,
+      $white-color 72.5%
+    );
+  }
   .section-title__container {
     line-height: 30px;
   }
@@ -70,19 +72,32 @@
   }
 }
 @include for-size(tablet) {
+  .troubles {
+    background-image: url(../images/troubles/fire-t.png),
+      linear-gradient(
+        to bottom,
+        $black-color-s 0%,
+        $black-color 55%,
+        $white-color 55%
+      );
+    background-color: $black-color-s;
+    background-position: right top 15%;
+    background-repeat: no-repeat;
+  }
   .section-title__container {
-    padding-right: rem(200);
-    margin-bottom: rem(44);
+    padding: rem(56) rem(200) 0 0;
+
+    margin-bottom: rem(18);
     &-centered {
       text-align: center;
-      padding-right: rem(000);
+      padding-right: rem(0);
     }
   }
   .section-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: rem(20) rem(108) rem(28);
+    padding: rem(45) rem(108) rem(28);
     &__item {
       flex-basis: rem(200);
       &:not(:nth-last-of-type(-n + 2)) {
@@ -92,16 +107,29 @@
   }
 }
 @include for-size(desktop) {
+  .troubles {
+    background-image: url(../images/troubles/fire-d.png),
+      linear-gradient(
+        to bottom,
+        $black-color-s 0%,
+        $black-color 82%,
+        $white-color 82%
+      );
+    background-color: $black-color-s;
+    background-position: right top 15%;
+    background-repeat: no-repeat;
+  }
   .section-title__container {
     line-height: rem(58);
     padding-right: rem(466);
+    margin-bottom: 42px;
     &-centered {
       text-align: center;
       padding-right: rem(000);
     }
   }
   .section-list {
-    padding: rem(118) rem(98) rem(28);
+    padding: rem(62) rem(98) rem(28);
     &__item {
       font-size: rem(18);
       line-height: rem(30);
@@ -121,6 +149,18 @@
   }
 }
 @include for-size(hd-desktop) {
+  .troubles {
+    background-image: url(../images/troubles/fire-xd.png),
+      linear-gradient(
+        to bottom,
+        $black-color-s 0%,
+        $black-color 70%,
+        $white-color 70%
+      );
+    background-color: $black-color-s;
+    background-position: right top 15%;
+    background-repeat: no-repeat;
+  }
   .section-title__container {
     line-height: rem(64);
     &-centered {

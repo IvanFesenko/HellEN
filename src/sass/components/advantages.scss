@@ -12,3 +12,18 @@
   position: absolute;
   width: 100%;
 }
+@include for-size(tablet) {
+  .advantages {
+    top: -210px;
+  }
+}
+@include for-size(desktop) {
+  .advantages {
+    top: -420px;
+  }
+}
+@include for-size(hd-desktop) {
+  .advantages {
+    top: -320px;
+  }
+}
