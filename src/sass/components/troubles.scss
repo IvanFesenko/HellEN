@@ -4,12 +4,9 @@
   background-image: linear-gradient(
     to bottom,
     $black-color-s 0%,
-    $black-color 60%,
-    $white-color 60%
+    $black-color 72.5%,
+    $white-color 72.5%
   );
-}
-.advantages {
-  position: relative;
 }
 
 .section-shadow {
@@ -63,7 +60,8 @@
     line-height: 30px;
   }
   .section-list {
-    padding: rem(26) 0 0 rem(20);
+    max-width: 460px;
+    padding: rem(26) rem(60) 0 rem(20);
     &__item {
       &:not(:last-of-type) {
         margin-bottom: rem(22);
