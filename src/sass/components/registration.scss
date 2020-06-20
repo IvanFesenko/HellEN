@@ -168,9 +168,10 @@ input:active {
 }
 
 @mixin placeholder {
+  &::placeholder {
     @content;
+  }
 }
-
 .input {
   @include placeholder {
     color: $white-color;
