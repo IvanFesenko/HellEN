@@ -18,6 +18,8 @@
   --color-orange: #ff6b08;
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -126,9 +128,6 @@ body {
 }
 .thanks__image-wrapper {
   flex: 0 0 30%;
-}
-.thanks__image {
-  /* flex: 0 1 25%; */
 }
 .thanks__description {
   flex: 0 0 60%;
