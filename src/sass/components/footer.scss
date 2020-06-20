@@ -1,16 +1,25 @@
 .upper-footer {
   padding-top: rem(28);
-  padding-bottom: rem(20);
+  padding-bottom: rem(16);
+
+  &__list {
+    padding: rem(0);
+    margin: rem(0);
+
+    @include for-size(mobile) {
+      @include flexible();
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @include for-size(mobile) {
+    &__item:not(:last-of-type) {
+      margin-bottom: rem(30);
+    }
+  }
 
   &__link {
-    position: relative;
-
-    &::before {
-      @include pseudo(rem(20), rem(20));
-      background-image: url(../images/guarantee/fire-desktop.gif);
-    }
-
-
     font-weight: 600;
     font-size: rem(18);
     line-height: rem(38);
@@ -19,14 +28,14 @@
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20);
+    height: rem(20);
     fill: $orange-color;
   }
 
   &__img {
-    width: 37px;
-    height: 37px;
+    width: rem(37);
+    height: rem(37);
   }
 }
 
