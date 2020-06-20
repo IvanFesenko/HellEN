@@ -7,12 +7,3 @@ $(function () {
     e.preventDefault();
   });
 });
-
-$(function () {
-  $('.header__burger').click(function (e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
-    $('.burger-wrap').toggleClass('active');
-    $('body').toggleClass('lock');
-  });
-});
