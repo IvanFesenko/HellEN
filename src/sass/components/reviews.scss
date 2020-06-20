@@ -3,23 +3,13 @@
 }
 
 .section-title {
-  max-width: rem(180);
   text-align: center;
   margin: 0 auto;
   line-height: rem(26.5);
   margin-bottom: rem(20);
 
   @include for-size(tablet) {
-    max-width: rem(340);
     line-height: rem(62.5);
-  }
-
-  @include for-size(desktop) {
-    max-width: rem(550);
-  }
-
-  @include for-size(hd-desktop) {
-    max-width: rem(600);
   }
 }
 
