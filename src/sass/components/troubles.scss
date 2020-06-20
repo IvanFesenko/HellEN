@@ -9,9 +9,9 @@
 
 .section-title__container {
   margin: 0;
-  padding: 48px 60px 0 0;
+  padding: rem(48) rem(60) 0 0;
   color: $white-color;
-  margin-bottom: 18px;
+  margin-bottom: rem(18);
 }
 
 .section-list {
@@ -59,11 +59,10 @@
     );
   }
   .section-title__container {
-    line-height: 30px;
+    line-height: rem(30);
   }
   .section-list {
-    max-width: 460px;
-    padding: rem(26) rem(60) 0 rem(20);
+    padding: rem(26) rem(60) rem(28) rem(20);
     &__item {
       &:not(:last-of-type) {
         margin-bottom: rem(22);
@@ -122,7 +121,7 @@
   .section-title__container {
     line-height: rem(58);
     padding-right: rem(466);
-    margin-bottom: 42px;
+    margin-bottom: rem(42);
     &-centered {
       text-align: center;
       padding-right: rem(000);
