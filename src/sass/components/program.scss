@@ -14,7 +14,7 @@ h4 {
   }
   @include for-size(desktop) {
     background-image: url(../images/program/program-d.png);
-    background-position: left 89.5%;
+    background-position: left 70%;
   }
   @include for-size(hd-desktop) {
     background-image: url(../images/program/program-xd.png);
@@ -47,6 +47,14 @@ h4 {
     }
   }
 
+  &__timeline {
+    @include for-size(desktop) {
+      border-bottom: rem(1.5) solid rgb(84, 98, 100);
+    }
+    @include for-size(hd-desktop) {
+    }
+  }
+
   &__container-header {
     padding-top: rem(20);
     text-align: center;
@@ -57,6 +65,8 @@ h4 {
       text-align: left;
     }
     @include for-size(desktop) {
+      padding-top: rem(69);
+      padding-bottom: rem(42);
     }
     @include for-size(hd-desktop) {
     }
@@ -65,6 +75,7 @@ h4 {
   &__container-footer {
     width: rem(188);
     padding-bottom: rem(414);
+    padding-left: rem(49);
     margin: 0 auto;
 
     @include for-size(tablet) {
@@ -72,7 +83,10 @@ h4 {
       padding-bottom: rem(321);
     }
     @include for-size(desktop) {
-      padding-bottom: rem(490);
+      width: 100%;
+      padding-top: rem(24);
+
+      padding-bottom: rem(440);
     }
     @include for-size(hd-desktop) {
       padding-bottom: rem(372);
@@ -82,16 +96,27 @@ h4 {
   &__title {
     line-height: rem(48);
     margin: 0;
+
+    &-tree {
+      @include for-size(desktop) {
+        margin-bottom: rem(3);
+      }
+      @include for-size(hd-desktop) {
+        margin-bottom: rem(0);
+      }
+      &_finish {
+        @include for-size(desktop) {
+          margin-bottom: rem(27);
+        }
+      }
+    }
   }
 
   &__list {
-    @include for-size(tablet) {
-      // display: flex;
-      // // flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: start;
-    }
+    padding: 0;
     @include for-size(desktop) {
+      display: flex;
+      justify-content: space-between;
     }
     @include for-size(hd-desktop) {
     }
@@ -99,28 +124,17 @@ h4 {
 
   &__item {
     @include for-size(tablet) {
-      // width: rem(180);
-      // display: flex;
-      // flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: start;
     }
     @include for-size(desktop) {
+      width: rem(234);
     }
     @include for-size(hd-desktop) {
     }
-  }
 
-  &__title-tree {
-  }
-
-  &__sub-list {
-    padding: 0;
-
-    &:nth-last-of-type(n + 1) {
+    &:nth-last-of-type(n + 2) {
       margin-bottom: rem(20);
+
       @include for-size(tablet) {
-        display: flex;
         margin-bottom: rem(28);
       }
       @include for-size(desktop) {
@@ -128,11 +142,16 @@ h4 {
       @include for-size(hd-desktop) {
       }
     }
+  }
+
+  &__sub-list {
+    padding: 0;
 
     @include for-size(tablet) {
       display: flex;
     }
     @include for-size(desktop) {
+      flex-direction: column;
     }
     @include for-size(hd-desktop) {
     }
@@ -146,11 +165,12 @@ h4 {
     font-size: rem(13.25);
     line-height: 3.6;
     letter-spacing: rem(0.5);
-    margin-bottom: rem(0);
+    margin-bottom: rem(1.5);
 
     @include for-size(desktop) {
       font-size: rem(18);
       line-height: 1.62;
+      margin-bottom: rem(5);
     }
 
     @include for-size(hd-desktop) {
@@ -169,15 +189,19 @@ h4 {
     @include for-size(tablet) {
       display: flex;
       flex-direction: column;
-      // width: rem(160);
+      margin-right: 0;
     }
     @include for-size(desktop) {
+      width: 100%;
+      padding-top: rem(27);
     }
     @include for-size(hd-desktop) {
     }
-  }
-
-  &__orange-font {
+    &_finish {
+      @include for-size(desktop) {
+        padding-top: 0;
+      }
+    }
   }
 
   &__sub-sub-list {
@@ -204,6 +228,7 @@ h4 {
 }
 
 .title-tree {
+  position: relative;
   font-size: rem(15);
   font-weight: 700;
   text-transform: uppercase;
@@ -219,5 +244,27 @@ h4 {
   @include for-size(hd-desktop) {
     font-size: rem(29);
     line-height: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: rem(-36);
+    top: rem(10);
+    width: rem(10);
+    height: rem(10);
+    border-radius: 50%;
+    background-color: rgb(255, 107, 8);
+
+    @include for-size(tablet) {
+    }
+    @include for-size(desktop) {
+      left: rem(-21);
+      top: rem(-49);
+      width: rem(17);
+      height: rem(17);
+    }
+    @include for-size(hd-desktop) {
+    }
   }
 }
