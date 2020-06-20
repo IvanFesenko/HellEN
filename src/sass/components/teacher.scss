@@ -44,9 +44,6 @@
   @include for-size(desktop) {
     margin-bottom: rem(34);
   }
-  @include for-size(hd-desktop) {
-    margin-bottom: rem(34);
-  }
 }
 
 .teacher-photo {
@@ -60,20 +57,11 @@
   @include for-size(desktop) {
     margin-right: rem(86);
   }
-  @include for-size(hd-desktop) {
-    margin-right: rem(86);
-  }
 }
 
 .photo-wrap {
   display: flex;
-
 }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
 
 .teacher-name {
   padding-bottom: rem(5);
@@ -105,6 +93,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: rem(32);
+
+  @include for-size(desktop) {
+    max-width: rem(480);
+  }
 }
 
 .skill-list:first-child {
@@ -120,7 +112,7 @@
   margin-bottom: rem(24);
 }
 
-.skill-list__item:hover #check {
+.skill-list__item:hover .skill-list__img {
   transform: scale(1.7);
 }
 
@@ -131,17 +123,18 @@
   font-weight: 600;
   line-height: rem(20);
   margin: 0;
+  @include for-size(tablet) {
+    line-height: rem(20);
+  }
   @include for-size(desktop) {
     font-size: rem(17);
-  }
-  @include for-size(hd-desktop) {
-    font-size: rem(17);
+    line-height: rem(29.17);
   }
 }
 
 .skill-list__img {
-  width: rem(16);
-  height: rem(16);
+  width: rem(18);
+  height: rem(18);
   fill: $orange-color;
   transition: 0.2s;
 }
@@ -153,7 +146,6 @@
   padding: 0;
   padding-left: rem(15);
   line-height: rem(20);
-
 
   @include for-size(tablet) {
     padding: 0;
@@ -184,10 +176,11 @@
 .certificate-link {
   margin: 0;
   font-size: rem(11);
-  @include for-size(desktop) {
-    font-size: rem(17);
+  line-height: rem(20);
+  @include for-size(tablet) {
+    line-height: rem(29.17);
   }
-  @include for-size(hd-desktop) {
+  @include for-size(desktop) {
     font-size: rem(17);
   }
 }
@@ -224,7 +217,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(112, 128, 144, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
@@ -239,16 +232,17 @@
 
 .close {
   position: absolute;
-  right: rem(-15);
-  top: rem(-25);
+  right: rem(-20);
+  top: rem(-30);
   font-size: rem(50);
+  color: $white-color;
+  cursor: pointer;
   transition: all 0.3s linear;
 
   &:hover,
-  &:hover {
+  &:focus {
     transform: rotateZ(360deg);
     color: $orange-color;
-
   }
 }
 
