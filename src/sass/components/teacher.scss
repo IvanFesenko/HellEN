@@ -44,9 +44,6 @@
   @include for-size(desktop) {
     margin-bottom: rem(34);
   }
-  @include for-size(hd-desktop) {
-    margin-bottom: rem(34);
-  }
 }
 
 .teacher-photo {
@@ -60,19 +57,11 @@
   @include for-size(desktop) {
     margin-right: rem(86);
   }
-  @include for-size(hd-desktop) {
-    margin-right: rem(86);
-  }
 }
 
 .photo-wrap {
   display: flex;
 }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
 
 .teacher-name {
   padding-bottom: rem(5);
@@ -104,6 +93,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: rem(32);
+
+  @include for-size(desktop) {
+    max-width: rem(480);
+  }
 }
 
 .skill-list:first-child {
@@ -130,11 +123,12 @@
   font-weight: 600;
   line-height: rem(20);
   margin: 0;
+  @include for-size(tablet) {
+    line-height: rem(20);
+  }
   @include for-size(desktop) {
     font-size: rem(17);
-  }
-  @include for-size(hd-desktop) {
-    font-size: rem(17);
+    line-height: rem(29.17);
   }
 }
 
@@ -182,10 +176,11 @@
 .certificate-link {
   margin: 0;
   font-size: rem(11);
-  @include for-size(desktop) {
-    font-size: rem(17);
+  line-height: rem(20);
+  @include for-size(tablet) {
+    line-height: rem(29.17);
   }
-  @include for-size(hd-desktop) {
+  @include for-size(desktop) {
     font-size: rem(17);
   }
 }
