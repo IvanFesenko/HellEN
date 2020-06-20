@@ -1,7 +1,13 @@
 .upper-footer {
   @include for-size(mobile) {
     padding-top: rem(28);
-    padding-bottom: rem(16);
+    margin-bottom: rem(16);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &__item:not(:last-of-type) {
       margin-bottom: rem(30);
@@ -11,69 +17,79 @@
   @include for-size(tablet) {
     padding-top: rem(42);
     margin-bottom: rem(42);
+
+    &__item {
+      @include flexible(space-between);
+    }
   }
 
-  &__list {
-    padding: rem(0);
-    margin: rem(0);
+  @include for-size(desktop) {
+    padding-top: rem(56);
+    margin-bottom: rem(56);
+  }
 
-    @include for-size(mobile) {
-      @include flexible(center);
-      flex-direction: column;
-      align-items: center;
-    }
+  &__list-wrapper {
 
     @include for-size(tablet) {
-      max-width: 82%;
       @include flexible(space-between);
       flex-direction: row-reverse;
       align-items: center;
-    }
-  }
 
-  &__item {
-    position: relative;
+      @include for-size(tablet) {
+        max-width: 80%;
+      }
 
-    @include for-size(tablet) {
-      &--pseudo {
-        &::before {
-          @include pseudo(rem(1), rem(29));
-          position: absolute;
-          top: 0;
-          right: rem(-30);
-          background-color: rgb(224, 224, 224);
-        }
+      @include for-size(desktop) {
+        max-width: 70%;
       }
     }
-
-    &--order {
-      order: -1;
-      position: relative;
-    }
-  }
-
-  &__icon {
-    width: rem(20);
-    height: rem(20);
-    fill: $orange-color;
   }
 
   &__link {
+    position: relative;
     font-weight: 600;
     font-size: rem(18);
     line-height: rem(38);
     letter-spacing: 0.05em;
     color: $black-color-s;
-    position: relative;
+
+    &--pseudo::before {
+      display: inline-block;
+      @include pseudo(rem(20), rem(20));
+      background-image: url('../images/footer/call.svg');
+      @include background-settings(no-repeat, rem(0) rem(4), cover);
+    }
+
+    @include for-size(mobile) {
+      &:not(:last-of-type) {
+        margin-bottom: rem(30);
+      }
+    }
 
     @include for-size(tablet) {
       font-size: rem(20);
-    }
-  }
 
-  &__img {
-    width: rem(37);
-    height: rem(37);
+      &:not(:last-of-type) {
+        margin-right: rem(60);
+      }
+
+      &--pseudo::after {
+        @include pseudo(rem(1), rem(29));
+        position: absolute;
+        top: 0;
+        right: rem(-30);
+        background-color: rgb(224, 224, 224);
+      }
+    }
+
+    @include for-size(desktop) {
+      font-size: rem(28);
+
+      &--pseudo::before {
+        @include pseudo(rem(32), rem(32));
+        @include background-settings(no-repeat, rem(0) rem(6), cover);
+      }
+    }
   }
 }
 
