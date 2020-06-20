@@ -40,16 +40,16 @@ h4 {
       background-image: url(../images/program/program-t@2x.png);
     }
     @include for-size(desktop) {
-      background-image: url(../images/program/program-d2x.png);
+      background-image: url(../images/program/program-d@2x.png);
     }
     @include for-size(hd-desktop) {
-      background-image: url(../images/program/program-xd2x.png);
+      background-image: url(../images/program/program-xd@2x.png);
     }
   }
 
   &__timeline {
     @include for-size(desktop) {
-      border-bottom: rem(1.5) solid rgb(84, 98, 100);
+      border-bottom: rem(1.5) solid #546264;
     }
     @include for-size(hd-desktop) {
     }
@@ -254,7 +254,7 @@ h4 {
     width: rem(10);
     height: rem(10);
     border-radius: 50%;
-    background-color: rgb(255, 107, 8);
+    background-color: $orange-color;
 
     @include for-size(tablet) {
     }
