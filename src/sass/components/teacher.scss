@@ -222,7 +222,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(112, 128, 144, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
@@ -240,6 +240,7 @@
   right: rem(-15);
   top: rem(-25);
   font-size: rem(50);
+  color: $white-color;
   cursor: pointer;
   transition: all 0.3s linear;
 
