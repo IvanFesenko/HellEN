@@ -1,11 +1,16 @@
 .upper-footer {
-  padding-top: rem(28);
-  padding-bottom: rem(16);
-
   @include for-size(mobile) {
+    padding-top: rem(28);
+    padding-bottom: rem(16);
+
     &__item:not(:last-of-type) {
       margin-bottom: rem(30);
     }
+  }
+
+  @include for-size(tablet) {
+    padding-top: rem(42);
+    margin-bottom: rem(42);
   }
 
   &__list {
@@ -19,16 +24,38 @@
     }
 
     @include for-size(tablet) {
-      @include flexible(space-around);
+      max-width: 82%;
+      @include flexible(space-between);
       flex-direction: row-reverse;
+      align-items: center;
     }
   }
 
   &__item {
-    // margin-right: 30px;
+    position: relative;
+
+    @include for-size(tablet) {
+      &--pseudo {
+        &::before {
+          @include pseudo(rem(1), rem(29));
+          position: absolute;
+          top: 0;
+          right: rem(-30);
+          background-color: rgb(224, 224, 224);
+        }
+      }
+    }
+
     &--order {
       order: -1;
+      position: relative;
     }
+  }
+
+  &__icon {
+    width: rem(20);
+    height: rem(20);
+    fill: $orange-color;
   }
 
   &__link {
@@ -37,12 +64,11 @@
     line-height: rem(38);
     letter-spacing: 0.05em;
     color: $black-color-s;
-  }
+    position: relative;
 
-  &__icon {
-    width: rem(20);
-    height: rem(20);
-    fill: $orange-color;
+    @include for-size(tablet) {
+      font-size: rem(20);
+    }
   }
 
   &__img {
@@ -52,8 +78,9 @@
 }
 
 .sub-footer {
-  padding: rem(20);
   background-color: $black-color-s;
+  padding-top: rem(20);
+  padding-bottom: rem(20);
 
   &__copy {
     margin: rem(0);
