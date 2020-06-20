@@ -18,8 +18,7 @@
 }
 
 .sections-title,
-.teacher-name,
-.teacher-photo {
+.teacher-name {
   margin: 0;
   margin-bottom: rem(24);
 }
@@ -31,7 +30,6 @@
   @include for-size(desktop) {
     margin-bottom: rem(50);
   }
-
   @include for-size(hd-desktop) {
     margin-bottom: rem(70);
   }
@@ -44,36 +42,23 @@
   @include for-size(desktop) {
     margin-bottom: rem(34);
   }
-  @include for-size(hd-desktop) {
-    margin-bottom: rem(34);
-  }
 }
 
 .teacher-photo {
   box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
-
-  @include for-size(tablet) {
-    margin: 0;
-    margin-right: rem(46);
-  }
-
-  @include for-size(desktop) {
-    margin-right: rem(86);
-  }
-  @include for-size(hd-desktop) {
-    margin-right: rem(86);
-  }
 }
 
 .photo-wrap {
   display: flex;
-
+  margin-bottom: rem(24);
+  @include for-size(tablet) {
+    margin: 0;
+    margin-right: rem(46);
+  }
+  @include for-size(desktop) {
+    margin-right: rem(86);
+  }
 }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
 
 .teacher-name {
   padding-bottom: rem(5);
@@ -104,7 +89,11 @@
 .skill-list {
   margin: 0;
   padding: 0;
-  margin-bottom: rem(32);
+  margin-bottom: rem(18);
+  @include for-size(desktop) {
+    max-width: rem(480);
+    margin-bottom: rem(34);
+  }
 }
 
 .skill-list:first-child {
@@ -120,7 +109,7 @@
   margin-bottom: rem(24);
 }
 
-.skill-list__item:hover #check {
+.skill-list__item:hover .skill-list__img {
   transform: scale(1.7);
 }
 
@@ -131,32 +120,30 @@
   font-weight: 600;
   line-height: rem(20);
   margin: 0;
-  @include for-size(desktop) {
-    font-size: rem(17);
+  @include for-size(tablet) {
+    line-height: rem(20);
   }
-  @include for-size(hd-desktop) {
-    font-size: rem(17);
+  @include for-size(desktop) {
+    font-size: rem(16.67);
+    line-height: rem(29.17);
   }
 }
 
 .skill-list__img {
-  width: rem(16);
-  height: rem(16);
+  width: rem(18);
+  height: rem(18);
   fill: $orange-color;
   transition: 0.2s;
 }
 
 .list-about {
-  position: relative;
   margin: 0;
-  margin-bottom: rem(10);
-  padding: 0;
+  position: relative;
   padding-left: rem(15);
   line-height: rem(20);
-
-
-  @include for-size(tablet) {
-    padding: 0;
+  padding-top: rem(18);
+  @include for-size(desktop) {
+    padding-top: rem(34);
   }
 }
 
@@ -164,7 +151,7 @@
   @include pseudo(rem(25), rem(2));
   position: absolute;
   background-color: $orange-color;
-  top: rem(-16);
+  top: 0;
   transition: 0.3s;
 }
 
@@ -180,22 +167,16 @@
   text-align: center;
 }
 
-.list-about__description,
-.certificate-link {
+.list-about__description {
   margin: 0;
   font-size: rem(11);
+  line-height: rem(20);
+  @include for-size(tablet) {
+    line-height: rem(29.17);
+  }
   @include for-size(desktop) {
-    font-size: rem(17);
+    font-size: rem(16.67);
   }
-  @include for-size(hd-desktop) {
-    font-size: rem(17);
-  }
-}
-
-.certificate-link {
-  text-decoration: underline;
-  line-height: rem(29);
-  transition: 0.3s;
 }
 
 // POPUP ////////
@@ -205,6 +186,8 @@
   text-decoration: underline;
   cursor: pointer;
   color: $orange-color;
+  font-size: rem(11);
+  line-height: rem(29.17);
 
   @include for-size(hd-desktop) {
     font-size: rem(11);
@@ -224,7 +207,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(112, 128, 144, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
@@ -239,16 +222,17 @@
 
 .close {
   position: absolute;
-  right: rem(-15);
-  top: rem(-25);
+  right: rem(-20);
+  top: rem(-30);
   font-size: rem(50);
+  color: $white-color;
+  cursor: pointer;
   transition: all 0.3s linear;
 
   &:hover,
-  &:hover {
+  &:focus {
     transform: rotateZ(360deg);
     color: $orange-color;
-
   }
 }
 

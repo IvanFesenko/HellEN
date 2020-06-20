@@ -60,6 +60,7 @@
   text-decoration: none;
   color: #000;
   font-weight: 700;
+  position: relative;
 
   &__name {
     @include flexible(space-between);
@@ -125,8 +126,8 @@
     }
     .fire__particle {
       position: absolute;
-      top: 60%;
-      left: 45%;
+      top: 30%;
+      left: 34%;
       width: 10px;
       height: 10px;
       background-color: #ef5a00;
@@ -135,6 +136,10 @@
       animation: particleUp 2s ease-out 0;
       animation-iteration-count: infinite;
       animation-fill-mode: both;
+      @include for-size(tablet) {
+        top: 60%;
+        left: 45%;
+      }
     }
   }
 
@@ -160,10 +165,10 @@
 
     .fire__particle {
       position: absolute;
-      top: 45%;
-      left: 50%;
-      width: 15px;
-      height: 15px;
+      top: 20%;
+      left: 17%;
+      width: 10px;
+      height: 10px;
       background-color: #ef5a00;
       transform: scaleX(0.8) rotate(45deg);
       border-radius: 50%;
@@ -171,6 +176,12 @@
       animation: particleUp 2s ease-out 0;
       animation-iteration-count: infinite;
       animation-fill-mode: both;
+      @include for-size(tablet) {
+        top: 45%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+      }
     }
 
     .fire__left {
