@@ -124,7 +124,7 @@
     line-height: rem(20);
   }
   @include for-size(desktop) {
-    font-size: rem(17);
+    font-size: rem(16.67);
     line-height: rem(29.17);
   }
 }
@@ -175,7 +175,7 @@
     line-height: rem(29.17);
   }
   @include for-size(desktop) {
-    font-size: rem(17);
+    font-size: rem(16.67);
   }
 }
 
