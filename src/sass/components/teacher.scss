@@ -12,6 +12,7 @@
   }
   @include for-size(hd-desktop) {
     padding-top: rem(57);
+
     padding-bottom: rem(130);
   }
 }
@@ -30,6 +31,7 @@
   @include for-size(desktop) {
     margin-bottom: rem(50);
   }
+
   @include for-size(hd-desktop) {
     margin-bottom: rem(70);
   }
@@ -49,10 +51,12 @@
 
 .teacher-photo {
   box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
+
   @include for-size(tablet) {
     margin: 0;
     margin-right: rem(46);
   }
+
   @include for-size(desktop) {
     margin-right: rem(86);
   }
@@ -63,7 +67,13 @@
 
 .photo-wrap {
   display: flex;
+
 }
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
 
 .teacher-name {
   padding-bottom: rem(5);
@@ -143,6 +153,8 @@
   padding: 0;
   padding-left: rem(15);
   line-height: rem(20);
+
+
   @include for-size(tablet) {
     padding: 0;
   }
@@ -236,6 +248,7 @@
   &:hover {
     transform: rotateZ(360deg);
     color: $orange-color;
+
   }
 }
 
