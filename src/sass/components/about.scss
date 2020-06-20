@@ -1,21 +1,28 @@
+.about {
+  padding-top: rem(42);
+  padding-bottom: rem(50);
+
+  @include for-size(tablet) {
+    padding-top: rem(70);
+    padding-bottom: rem(50);
+  }
+
+  @include for-size(desktop) {
+    padding-top: rem(84);
+    padding-bottom: rem(100);
+  }
+
+  @include for-size(hd-desktop) {
+    padding-top: rem(134);
+    padding-bottom: rem(130);
+  }
+}
+
 .about-list {
   padding: 0;
   margin: 0;
   @include flexible;
   flex-wrap: wrap;
-  padding-bottom: rem(50);
-
-  @include for-size(tablet) {
-    padding-bottom: rem(50);
-  }
-
-  @include for-size(desktop) {
-    padding-bottom: rem(100);
-  }
-
-  @include for-size(hd-desktop) {
-    padding-bottom: rem(130);
-  }
 
   &__img {
     width: rem(45);
