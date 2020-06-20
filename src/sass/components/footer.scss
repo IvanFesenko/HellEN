@@ -1,4 +1,36 @@
-.page-footer {
+.upper-footer {
+  padding-top: rem(28);
+  padding-bottom: rem(20);
+
+  &__link {
+    position: relative;
+
+    &::before {
+      @include pseudo(rem(20), rem(20));
+      background-image: url(../images/guarantee/fire-desktop.gif);
+    }
+
+
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: rem(38);
+    letter-spacing: 0.05em;
+    color: $black-color-s;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $orange-color;
+  }
+
+  &__img {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+.sub-footer {
   padding: rem(20);
   background-color: $black-color-s;
 
