@@ -1,17 +1,24 @@
+.advantages {
+  position: relative;
+}
+
 .section-shadow {
   box-shadow: rem(0) rem(14) rem(14) rem(-12) rgba(29, 29, 27, 0.4);
 }
 
 .section-title__container {
-  padding-right: rem(50);
-  margin-bottom: rem(24);
+  margin: 0;
+  padding: rem(46) 0 rem(342) 0;
 
   color: $white-color;
   // temporary for position
-  background-color: #000000;
+  background-color: $black-color-s;
 }
 
 .section-list {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
   margin: 0;
   counter-reset: section-counter;
   font-weight: 700;
