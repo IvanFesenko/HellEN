@@ -3,6 +3,7 @@ let readMore = document.querySelectorAll('.more-text'),
   readMoreButtons = document.querySelectorAll(
     '.sliderbig__item-content-button',
   );
+
 console.log(readMore);
 console.log(dots);
 console.log(readMoreButtons);
@@ -20,6 +21,34 @@ console.log(readMoreArr);
 console.log(dotsArr);
 console.log(buttonsArr);
 
+// readMore[0].parentNode.addEventListener('click', function (e) {
+//   let self = e.target;
+//   if (self.className != 'more-text') return;
+//   let y = readMore.length;
+//   while (y--) {
+//     if (readMore[i] == self) {
+//       var x = i;
+//       break;
+//     }
+//   }
+
+//   alert(x);
+// });
+
+function read() {
+  if (!i) {
+    readMore[0].style.display = 'inline';
+    dots[0].style.display = 'none';
+    readMoreButtons[0].innerHTML = 'скрыть текст';
+    i = 1;
+  } else {
+    readMore[0].style.display = 'none';
+    dots[0].style.display = 'inline';
+    readMoreButtons[0].innerHTML = 'Читать дальше';
+    i = 0;
+  }
+}
+
 // for (let button of readMoreButtons) {0
 //   console.log(button);
 // }
@@ -36,17 +65,3 @@ console.log(buttonsArr);
 // console.log(index);
 
 // console.log(indexOfButton);
-
-function read() {
-  if (!i) {
-    readMore[0].style.display = 'inline';
-    dots[0].style.display = 'none';
-    readMoreButtons[0].innerHTML = 'скрыть текст';
-    i = 1;
-  } else {
-    readMore[0].style.display = 'none';
-    dots[0].style.display = 'inline';
-    readMoreButtons[0].innerHTML = 'Читать дальше';
-    i = 0;
-  }
-}

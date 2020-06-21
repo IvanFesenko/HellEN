@@ -12,7 +12,6 @@
   }
   @include for-size(hd-desktop) {
     padding-top: rem(57);
-
     padding-bottom: rem(130);
   }
 }
@@ -35,17 +34,11 @@
   }
 }
 
-.teacher-name {
+.teacher-wrapper {
   @include for-size(tablet) {
-    margin-bottom: rem(20);
+    display: flex;
+    align-items: flex-start;
   }
-  @include for-size(desktop) {
-    margin-bottom: rem(34);
-  }
-}
-
-.teacher-photo {
-  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
 }
 
 .photo-wrap {
@@ -60,17 +53,8 @@
   }
 }
 
-.teacher-name {
-  padding-bottom: rem(5);
-  font-weight: 800;
-  border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
-}
-
-.teacher-wrapper {
-  @include for-size(tablet) {
-    display: flex;
-    align-items: flex-start;
-  }
+.teacher-photo {
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
 }
 
 .teacher-info {
@@ -83,6 +67,21 @@
   }
   @include for-size(hd-desktop) {
     max-width: rem(676);
+  }
+}
+
+.teacher-name {
+  font-weight: 800;
+  border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
+  line-height: rem(29.17);
+  font-size: rem(16);
+  @include for-size(tablet) {
+    margin-bottom: rem(20);
+    font-size: rem(20);
+  }
+  @include for-size(desktop) {
+    margin-bottom: rem(34);
+    font-size: rem(29.17);
   }
 }
 
@@ -136,18 +135,15 @@
   transition: 0.2s;
 }
 
-.list-about {
-  margin: 0;
+.description-wrapper {
   position: relative;
-  padding-left: rem(15);
-  line-height: rem(20);
   padding-top: rem(18);
   @include for-size(desktop) {
     padding-top: rem(34);
   }
 }
 
-.list-about::before {
+.description-wrapper::before {
   @include pseudo(rem(25), rem(2));
   position: absolute;
   background-color: $orange-color;
@@ -155,28 +151,13 @@
   transition: 0.3s;
 }
 
-.list-about:hover::before {
+.description-wrapper:hover::before {
   width: 100%;
 }
 
-.list-about__item:not(:last-child) {
-  margin-bottom: rem(16);
-}
-
-.list-about__item:last-child {
-  text-align: center;
-}
-
-.list-about__description {
+.teacher-description {
   margin: 0;
-  font-size: rem(11);
-  line-height: rem(20);
-  @include for-size(tablet) {
-    line-height: rem(29.17);
-  }
-  @include for-size(desktop) {
-    font-size: rem(16.67);
-  }
+  margin-bottom: rem(16);
 }
 
 // POPUP ////////
@@ -186,14 +167,14 @@
   text-decoration: underline;
   cursor: pointer;
   color: $orange-color;
+
+}
+
+
+.teacher-description,
+.popup__btn {
   font-size: rem(11);
-  line-height: rem(29.17);
-
-  @include for-size(hd-desktop) {
-    font-size: rem(11);
-    line-height: rem(29.17);
-  }
-
+  line-height: rem(20);
   @include for-size(desktop) {
     font-size: rem(16.67);
     line-height: rem(29.17);
