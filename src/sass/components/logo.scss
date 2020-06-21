@@ -122,7 +122,7 @@
       );
       transform: scaleX(0.8) rotate(45deg);
       border-radius: 0 40% 60% 40%;
-      filter: drop-shadow(0 0 10px #d43322);
+      filter: drop-shadow(0 0 3px #d43322);
     }
     .fire__particle {
       position: absolute;
@@ -132,8 +132,8 @@
       height: 10px;
       background-color: #ef5a00;
       border-radius: 50%;
-      filter: drop-shadow(0 0 10px #d43322);
-      animation: particleUp 2s ease-out 0;
+      filter: drop-shadow(0 0 3px #d43322);
+      animation: particleUp 2s ease-out;
       animation-iteration-count: infinite;
       animation-fill-mode: both;
       @include for-size(tablet) {
@@ -147,7 +147,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    animation: shake 2s ease-out 0;
+    animation: shake 2s ease-out;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
 
@@ -160,7 +160,7 @@
       background-color: #ef5a00;
       transform: scaleX(0.8) rotate(45deg);
       border-radius: 0 40% 60% 40%;
-      filter: drop-shadow(0 0 10px #d43322);
+      filter: drop-shadow(0 0 3px #d43322);
     }
 
     .fire__particle {
@@ -172,8 +172,8 @@
       background-color: #ef5a00;
       transform: scaleX(0.8) rotate(45deg);
       border-radius: 50%;
-      filter: drop-shadow(0 0 10px #d43322);
-      animation: particleUp 2s ease-out 0;
+      filter: drop-shadow(0 0 3px #d43322);
+      animation: particleUp 2s ease-out;
       animation-iteration-count: infinite;
       animation-fill-mode: both;
       @include for-size(tablet) {
@@ -188,7 +188,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      animation: shake 3s ease-out 0;
+      animation: shake 3s ease-out;
       animation-iteration-count: infinite;
       animation-fill-mode: both;
     }
@@ -214,7 +214,7 @@
       background-color: #ef5a00;
       border-radius: 50%;
       filter: drop-shadow(0 0 10px #d43322);
-      animation: particleUp 3s infinite ease-out 0;
+      animation: particleUp 3s infinite ease-out;
       animation-fill-mode: both;
     }
   }
@@ -235,7 +235,7 @@
   transform: scaleX(0.8) rotate(45deg);
   border-radius: 0 40% 100% 40%;
   filter: blur(10px);
-  animation: glow 2s ease-out 0;
+  animation: glow 2s ease-out;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }

@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    //= ./html/preloader.html
+    <!-- //= ./html/preloader.html -->
     <!-- preloader -->
     <!-- //= ./html/style-guide.html -->
     <!-- style-guide -->
@@ -46,7 +46,15 @@
     <!-- registration-->
     //= ./html/footer.html
     <!-- footer-->
-    <a href="#" id="back2Top" class="to-header-btn"></a>
+
+    <a href="#" id="back2Top" class="to-header-btn">
+      <!-- <div class="to-header-btn__img-wrapper"> -->
+      <svg class="svg to-header-btn__img">
+        <use href="./images/icon/sprite.svg#icon-circle-up"></use>
+      </svg>
+      <!-- </div> -->
+    </a>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Сюда будет всталена ссылка на файл скриптов -->
     <!-- inject:js -->
