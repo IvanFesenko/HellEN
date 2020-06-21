@@ -1,9 +1,9 @@
 .teacher {
   position: relative;
-  padding-top: rem(23);
+  padding-top: rem(280);
   padding-bottom: rem(50);
   @include for-size(tablet) {
-    padding-top: rem(31);
+    padding-top: rem(236);
     padding-bottom: rem(60);
   }
   @include for-size(desktop) {
@@ -11,7 +11,7 @@
     padding-bottom: rem(90);
   }
   @include for-size(hd-desktop) {
-    padding-top: rem(57);
+    padding-top: rem(300);
     padding-bottom: rem(130);
   }
 }
