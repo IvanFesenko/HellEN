@@ -1,67 +1,56 @@
-let readMore = document.querySelectorAll('.more-text'),
-  dots = document.querySelectorAll('.sliderbig__item-content_dots'),
-  readMoreButtons = document.querySelectorAll(
-    '.sliderbig__item-content-button',
-  );
 
-console.log(readMore);
-console.log(dots);
-console.log(readMoreButtons);
+// let readMore = document.querySelectorAll('.more-text'),
+//   dots = document.querySelectorAll('.sliderbig__item-content_dots'),
+//   readMoreButtons = document.querySelectorAll(
+//     '.sliderbig__item-content-button',
+//   );
 
-let i = 0;
-let button;
+// console.log(readMore);
+// console.log(dots);
+// console.log(readMoreButtons);
 
-let readMoreArr = Array.from(readMore);
+// let i = 0;
+// let button;
 
-let dotsArr = Array.from(dots);
+// let readMoreArr = Array.from(readMore);
 
-let buttonsArr = Array.from(readMoreButtons);
+// let dotsArr = Array.from(dots);
 
-console.log(readMoreArr);
-console.log(dotsArr);
-console.log(buttonsArr);
+// let buttonsArr = Array.from(readMoreButtons);
 
-// readMore[0].parentNode.addEventListener('click', function (e) {
-//   let self = e.target;
-//   if (self.className != 'more-text') return;
-//   let y = readMore.length;
-//   while (y--) {
-//     if (readMore[i] == self) {
-//       var x = i;
-//       break;
-//     }
+// console.log(readMoreArr);
+// console.log(dotsArr);
+// console.log(buttonsArr);
+
+// function read() {
+//   if (!i) {
+//     readMore[0].style.display = 'inline';
+//     dots[0].style.display = 'none';
+//     readMoreButtons[0].innerHTML = 'скрыть текст';
+//     i = 1;
+//   } else {
+//     readMore[0].style.display = 'none';
+//     dots[0].style.display = 'inline';
+//     readMoreButtons[0].innerHTML = 'Читать дальше';
+//     i = 0;
 //   }
-
-//   alert(x);
-// });
-
-function read() {
-  if (!i) {
-    readMore[0].style.display = 'inline';
-    dots[0].style.display = 'none';
-    readMoreButtons[0].innerHTML = 'скрыть текст';
-    i = 1;
-  } else {
-    readMore[0].style.display = 'none';
-    dots[0].style.display = 'inline';
-    readMoreButtons[0].innerHTML = 'Читать дальше';
-    i = 0;
-  }
-}
-
-// for (let button of readMoreButtons) {0
-//   console.log(button);
 // }
-// let indexOfButton;
-// readMoreButtons.forEach(function (button, index, buttonArr) {
-//   indexOfButton = index;
-//   console.log(indexOfButton);
-// });
 
-// map
-// let indexOfButton = buttonsArr.map(index => {
-//   return index;
-// });
-// console.log(index);
+let button = document.getElementsByClassName('sliderbig__item-content-button');
+let dots = document.getElementsByClassName('sliderbig__item-content_dots');
+let readMoreText = document.getElementsByClassName('more-text');
+let offBtn = document.getElementsByClassName(
+  'sliderbig__item-content-button-active',
+);
 
-// console.log(indexOfButton);
+$(function () {
+  $(button).click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('sliderbig__item-content-button-active');
+    $(dots).toggleClass('sliderbig__item-content_dots-off');
+    $(readMoreText).toggleClass('more-text-on');
+    $('.read').toggleClass('read-off');
+    $('.unread').toggleClass('unread-on');
+  });
+});
+
