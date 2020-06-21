@@ -23,6 +23,7 @@ $("#sendMail").on("click", function () {
 
       $("#sendMail").prop("disabled", true);
 
+      console.log
     },
     success: function (data) {
       if (data == false)
@@ -31,6 +32,7 @@ $("#sendMail").on("click", function () {
         $('.js-overlay-thank-you').fadeIn();
       $('#mail-form').trigger('reset');
 
+      console.log
     }
 
   })
