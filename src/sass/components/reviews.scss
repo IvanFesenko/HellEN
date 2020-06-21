@@ -93,24 +93,29 @@
 
     & .slick-arrow.slick-prev {
       background-image: url('../images/reviews/prev.svg');
+      height: 100%;
+      width: 40px;
 
       @include for-size(tablet) {
         left: -5px;
       }
 
       @include for-size(desktop) {
-        left: -35px;
+        left: -25px;
       }
     }
 
     & .slick-arrow.slick-next {
       background-image: url('../images/reviews/next.svg');
+      height: 100%;
+      width: 40px;
+
       @include for-size(tablet) {
         right: -25px;
       }
 
       @include for-size(desktop) {
-        right: -55px;
+        right: -64px;
       }
     }
   }
@@ -314,4 +319,24 @@
 
 .more-text {
   display: none;
+}
+
+.more-text-on {
+  display: inline;
+}
+
+.sliderbig__item-content_dots-off {
+  display: none;
+}
+
+.read-off {
+  display: none;
+}
+
+.unread {
+  display: none;
+}
+
+.unread-on {
+  display: inline;
 }
