@@ -1,3 +1,4 @@
+
 // let readMore = document.querySelectorAll('.more-text'),
 //   dots = document.querySelectorAll('.sliderbig__item-content_dots'),
 //   readMoreButtons = document.querySelectorAll(
@@ -52,3 +53,4 @@ $(function () {
     $('.unread').toggleClass('unread-on');
   });
 });
+
