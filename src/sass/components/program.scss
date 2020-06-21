@@ -116,6 +116,8 @@ h4 {
   }
 
   &__list {
+    list-style-type: none;
+    counter-reset: program-counter;
     padding: 0;
     @include for-size(desktop) {
       display: flex;
@@ -126,11 +128,15 @@ h4 {
   }
 
   &__item {
-    @include for-size(tablet) {
-    }
-    @include for-size(desktop) {
-    }
-    @include for-size(hd-desktop) {
+    &::before {
+      content: counter(my-counter);
+      counter-increment: program-counter;
+      @include for-size(tablet) {
+      }
+      @include for-size(desktop) {
+      }
+      @include for-size(hd-desktop) {
+      }
     }
 
     &:nth-last-of-type(n + 2) {
