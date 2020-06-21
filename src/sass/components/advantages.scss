@@ -1,3 +1,31 @@
 .section-list__advantages {
   position: static;
 }
+
+.advantages {
+  position: absolute;
+  bottom: -250px;
+  width: 100%;
+
+  .title {
+    color: #fff;
+    padding-right: 130px;
+
+    @include for-size(tablet) {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
+  @include for-size(tablet) {
+    bottom: -200px;
+  }
+
+  @include for-size(desktop) {
+    bottom: -5px;
+  }
+
+  @include for-size(hd-desktop) {
+    bottom: -190px;
+  }
+}
