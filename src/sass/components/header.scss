@@ -201,8 +201,9 @@
   width: rem(30);
   height: rem(12);
   cursor: pointer;
-  position: relative;
-
+  position: absolute;
+  top: 40px;
+  right: 15px;
   @include for-size(mobile) {
     margin-left: auto;
   }
@@ -275,25 +276,24 @@
   background-color: rgba(0, 0, 0, 0.95);
   z-index: 50;
   padding: 30px 20px 0 20px;
-  align-items: flex-start;
+  display: block;
 
   .logo {
     color: #fff;
   }
 
-  .header__burger {
-    top: 10px;
-  }
-
   .menu {
     display: block;
-    position: absolute;
-    top: 90px;
-    z-index: 51;
-    @include for-size(tablet) {
-      top: 140px;
-      left: 190px;
-    }
+    font-size: 19px;
+    margin: 44px 0;
+    text-align: center;
+    // position: absolute;
+    // top: 90px;
+    // z-index: 51;
+    // @include for-size(tablet) {
+    //   top: 140px;
+    //   left: 190px;
+    // }
   }
 
   .menu__link {
@@ -321,8 +321,7 @@
 
   .header__btn {
     display: flex;
-    position: absolute;
-    top: 288px;
+    width: 100%;
 
     @include for-size(tablet) {
       position: relative;
