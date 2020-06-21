@@ -4,7 +4,6 @@ $(function () {
     $(this).toggleClass('burger--active');
     $('.burger-wrap').toggleClass('burger--active');
     $('.navigation').toggleClass('popup-menu');
-    $('body').toggleClass('lock');
     $('body').toggleClass('overflow-hidden');
   });
 });
