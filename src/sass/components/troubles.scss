@@ -1,27 +1,74 @@
 .troubles {
   background-color: $black-color-s;
+  padding-top: 50px;
+  padding-bottom: 328px;
+
+  @include for-size(tablet) {
+    padding-top: 62px;
+    padding-bottom: 178px;
+    background-image: url(../images/troubles/fire-t.png);
+    background-repeat: no-repeat;
+    background-position: right bottom -10px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 75px;
+    padding-bottom: 270px;
+    background-image: url(../images/troubles/fire-d.png);
+    background-repeat: no-repeat;
+    background-position: right bottom -48px;
+  }
+  @include for-size(hd-desktop) {
+    padding-top: 116px;
+    background-image: url(../images/troubles/fire-xd.png);
+    background-repeat: no-repeat;
+    background-position: right bottom -120px;
+  }
 }
 .section-shadow {
   box-shadow: rem(0) rem(14) rem(14) rem(-12) rgba(29, 29, 27, 0.4);
 }
 .absolute-wrapper {
   position: relative;
-  width: 100%;
+  // width: 100%;
 }
 
 .section-title__container {
   margin: 0;
-  padding-right: 60px;
-  padding-top: 48px;
-  padding-bottom: 326px;
+  padding-right: 52px;
   color: $white-color;
-  margin-bottom: rem(18);
+
+  @include for-size(mobile) {
+    line-height: rem(30);
+  }
+
+  @include for-size(tablet) {
+    padding-right: 140px;
+    // padding-top: 58px;
+    // padding-bottom: 176px;
+    // &-centered {
+    //   text-align: center;
+    //   padding-right: rem(0);
+    // }
+  }
+  @include for-size(desktop) {
+    line-height: 55px;
+    padding-right: 470px;
+    // padding-top: 68px;
+    // padding-bottom: 294px;
+  }
+  @include for-size(hd-desktop) {
+    padding-right: 470px;
+    // padding-top: 104px;
+    // padding-bottom: 266px;
+    line-height: rem(64);
+  }
 }
 
 .section-list {
   width: 100%;
   position: absolute;
-  top: 212px;
+  top: 160px;
   background-color: $white-color;
   margin: 0;
   counter-reset: section-counter;
@@ -49,17 +96,7 @@
       line-height: rem(30);
     }
   }
-}
-
-.advantages-reason {
-  margin: 0;
-  padding: 0;
-}
-@include for-size(mobile) {
-  .section-title__container {
-    line-height: rem(30);
-  }
-  .section-list {
+  @include for-size(mobile) {
     padding: 28px 64px 28px 32px;
     &__item {
       &:not(:last-of-type) {
@@ -67,28 +104,11 @@
       }
     }
   }
-}
-@include for-size(tablet) {
-  .troubles {
-    background-image: url(../images/troubles/fire-t.png);
-    background-repeat: no-repeat;
-    background-position: right bottom -10px;
-  }
-  .section-title__container {
-    padding-right: 140px;
-    padding-top: 58px;
-    padding-bottom: 176px;
-    margin-bottom: rem(18);
-    &-centered {
-      text-align: center;
-      padding-right: rem(0);
-    }
-  }
-  .section-list {
+  @include for-size(tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    top: 178px;
+    top: 112px;
     padding: 42px 108px 22px;
     &__item {
       flex-basis: rem(200);
@@ -97,22 +117,8 @@
       }
     }
   }
-}
-@include for-size(desktop) {
-  .troubles {
-    background-image: url(../images/troubles/fire-d.png);
-    background-repeat: no-repeat;
-    background-position: right bottom -48px;
-  }
-  .section-title__container {
-    line-height: 55px;
-    padding-right: 470px;
-    padding-top: 68px;
-    padding-bottom: 294px;
-    margin-bottom: rem(18);
-  }
-  .section-list {
-    top: 280px;
+  @include for-size(desktop) {
+    top: 210px;
     padding: 62px 100px 22px;
     &__item {
       font-size: rem(18);
@@ -131,21 +137,8 @@
       }
     }
   }
-}
-@include for-size(hd-desktop) {
-  .troubles {
-    background-image: url(../images/troubles/fire-xd.png);
-    background-repeat: no-repeat;
-    background-position: right bottom -120px;
-  }
-  .section-title__container {
-    padding-right: 470px;
-    padding-top: 104px;
-    padding-bottom: 266px;
-    line-height: rem(64);
-  }
-  .section-list {
-    top: 356px;
+  @include for-size(hd-desktop) {
+    top: 234px;
     padding: 80px 116px 22px;
     &__item {
       font-size: rem(20);
@@ -159,4 +152,9 @@
       }
     }
   }
+}
+
+.advantages-reason {
+  margin: 0;
+  padding: 0;
 }
