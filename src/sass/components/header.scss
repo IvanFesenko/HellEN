@@ -508,96 +508,59 @@
     margin-right: auto;
   }
 
-  @media (min-width: rem(576)) {
-    @include flexible(center);
-    flex-wrap: wrap;
-    width: rem(600);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   @include for-size(tablet) {
-    justify-content: space-between;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    @include flexible(space-between);
   }
 }
 
 .benefit__item {
   display: flex;
   align-items: center;
+  width: rem(205);
   position: relative;
+  z-index: 1;
 
-  &--one {
-    width: rem(205);
-
-    @include for-size(mobile) {
-      margin-bottom: rem(25);
-    }
-
-    @media (min-width: rem(576)) {
-      margin-right: rem(70);
-      margin-bottom: rem(70);
-    }
-
-    @include for-size(tablet) {
-      margin-bottom: 0;
-      margin-right: 0;
-    }
-
-    @include for-size(desktop) {
-      width: rem(385);
-    }
-
-    @include for-size(hd-desktop) {
-      width: rem(430);
-    }
+  @include for-size(desktop) {
+    width: rem(380);
   }
 
-  &--two {
-    width: rem(185);
-
-    @include for-size(mobile) {
-      margin-bottom: rem(25);
-    }
-
-    @media (min-width: rem(576)) {
-      margin-bottom: rem(70);
-    }
-
-    @include for-size(tablet) {
-      margin-bottom: 0;
-    }
-
-    @include for-size(desktop) {
-      width: rem(350);
-    }
-
-    @include for-size(hd-desktop) {
-      width: rem(330);
-    }
-  }
-
-  &--three {
-    width: rem(180);
-
-    @include for-size(desktop) {
-      width: rem(320);
-    }
-
-    @include for-size(hd-desktop) {
-      width: rem(383);
-    }
+  @include for-size(hd-desktop) {
+    width: rem(430);
   }
 }
 
+.benefit__item:not(:last-child) {
+  @include for-size(mobile) {
+    margin-bottom: rem(25);
+  }
+}
+
+.benefit__item:hover .benefit__img,
+.benefit__item:focus .benefit__img {
+  fill: $black-color;
+  transform: scale(1.1);
+}
+
+.benefit__item:hover .benefit__img-wrap,
+.benefit__item:focus .benefit__img-wrap {
+  border-color: $black-color;
+}
+
+.benefit__item:hover .benefit__title,
+.benefit__item:focus .benefit__title {
+  color: $orange-color;
+  transform: translateX(2px);
+}
+
 .benefit__img-wrap {
+  position: absolute;
   border: 2px solid $orange-color;
   width: rem(58);
   height: rem(58);
-  position: relative;
+  z-index: -1;
+  transition: all 0.2s linear;
 
+  // Белая линия над бордером
   &:before {
     position: absolute;
     display: block;
@@ -622,6 +585,7 @@
 .benefit__img {
   height: rem(36);
   fill: $orange-color;
+  transition: all 0.2s linear;
 
   @include for-size(desktop) {
     height: rem(45);
@@ -629,15 +593,13 @@
 }
 
 .benefit__title {
+  display: inline-block;
   font-size: rem(13);
   line-height: 1.53em;
   letter-spacing: 0.05em;
   font-weight: 700;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  transition: all 0.2s linear;
 
   @include for-size(mobile) {
     padding-left: rem(70);
