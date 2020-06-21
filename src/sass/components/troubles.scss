@@ -1,21 +1,28 @@
 .troubles {
-  position: relative;
+  background-color: $black-color-s;
 }
-
 .section-shadow {
   box-shadow: rem(0) rem(14) rem(14) rem(-12) rgba(29, 29, 27, 0.4);
+}
+.absolute-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .section-title__container {
   margin: 0;
-  padding: rem(48) rem(60) 0 0;
+  padding-right: 60px;
+  padding-top: 48px;
+  padding-bottom: 326px;
   color: $white-color;
   margin-bottom: rem(18);
 }
 
 .section-list {
+  width: 100%;
+  position: absolute;
+  top: 212px;
   background-color: $white-color;
-
   margin: 0;
   counter-reset: section-counter;
   font-weight: 700;
@@ -49,42 +56,28 @@
   padding: 0;
 }
 @include for-size(mobile) {
-  .troubles {
-    background-image: linear-gradient(
-      to bottom,
-      $black-color-s 0%,
-      $black-color 72.5%,
-      $white-color 72.5%
-    );
-  }
   .section-title__container {
     line-height: rem(30);
   }
   .section-list {
-    padding: rem(26) rem(60) rem(28) rem(20);
+    padding: 28px 64px 28px 32px;
     &__item {
       &:not(:last-of-type) {
-        margin-bottom: rem(22);
+        margin-bottom: 22px;
       }
     }
   }
 }
 @include for-size(tablet) {
   .troubles {
-    background-image: url(../images/troubles/fire-t.png),
-      linear-gradient(
-        to bottom,
-        $black-color-s 0%,
-        $black-color 55%,
-        $white-color 55%
-      );
-    background-color: $black-color-s;
-    background-position: right top 15%;
+    background-image: url(../images/troubles/fire-t.png);
     background-repeat: no-repeat;
+    background-position: right bottom -10px;
   }
   .section-title__container {
-    padding: rem(56) rem(200) 0 0;
-
+    padding-right: 140px;
+    padding-top: 58px;
+    padding-bottom: 176px;
     margin-bottom: rem(18);
     &-centered {
       text-align: center;
@@ -95,7 +88,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: rem(45) rem(108) rem(28);
+    top: 178px;
+    padding: 42px 108px 22px;
     &__item {
       flex-basis: rem(200);
       &:not(:nth-last-of-type(-n + 2)) {
@@ -106,28 +100,20 @@
 }
 @include for-size(desktop) {
   .troubles {
-    background-image: url(../images/troubles/fire-d.png),
-      linear-gradient(
-        to bottom,
-        $black-color-s 0%,
-        $black-color 82%,
-        $white-color 82%
-      );
-    background-color: $black-color-s;
-    background-position: right top 15%;
+    background-image: url(../images/troubles/fire-d.png);
     background-repeat: no-repeat;
+    background-position: right bottom -48px;
   }
   .section-title__container {
-    line-height: rem(58);
-    padding-right: rem(466);
-    margin-bottom: rem(42);
-    &-centered {
-      text-align: center;
-      padding-right: rem(000);
-    }
+    line-height: 55px;
+    padding-right: 470px;
+    padding-top: 68px;
+    padding-bottom: 294px;
+    margin-bottom: rem(18);
   }
   .section-list {
-    padding: rem(62) rem(98) rem(28);
+    top: 280px;
+    padding: 62px 100px 22px;
     &__item {
       font-size: rem(18);
       line-height: rem(30);
@@ -148,26 +134,19 @@
 }
 @include for-size(hd-desktop) {
   .troubles {
-    background-image: url(../images/troubles/fire-xd.png),
-      linear-gradient(
-        to bottom,
-        $black-color-s 0%,
-        $black-color 70%,
-        $white-color 70%
-      );
-    background-color: $black-color-s;
-    background-position: right top 15%;
+    background-image: url(../images/troubles/fire-xd.png);
     background-repeat: no-repeat;
+    background-position: right bottom -120px;
   }
   .section-title__container {
+    padding-right: 470px;
+    padding-top: 104px;
+    padding-bottom: 266px;
     line-height: rem(64);
-    &-centered {
-      text-align: center;
-      padding-right: rem(000);
-    }
   }
   .section-list {
-    padding: rem(94) rem(114) rem(28);
+    top: 356px;
+    padding: 80px 116px 22px;
     &__item {
       font-size: rem(20);
       line-height: rem(28);
