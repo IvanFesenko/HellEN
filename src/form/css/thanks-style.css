@@ -253,6 +253,9 @@ body {
   animation-iteration-count: infinite;
   animation-fill-mode: both; 
 }
+
+
+
     
 .orange-color {
   color: var(--color-orange);
@@ -357,11 +360,9 @@ body {
   padding: 0 0 70px 0;
 }
 .social__wrapper {
-  width: 80%;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
   padding: 25px 80px;  
   transition: all .4s linear;
 }
@@ -381,7 +382,7 @@ body {
   fill: var(--color-orange);
 
 }
-.social__item+.social__item {
+.social__item {
   margin-left: 20px;
 }
 .thanks__text-link {
@@ -527,7 +528,6 @@ body {
     padding: 0px 40px;
   }
   .social__wrapper {
-    width: 80%;
     padding: 25px 55px 25px 55px;
   }
   .social__svg {
