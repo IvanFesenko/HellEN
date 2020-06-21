@@ -1,9 +1,11 @@
 .reviews {
   padding: rem(24) 0 rem(24) 0;
+  .title {
+    text-align: center;
+  }
 }
 
 .section-title {
-  text-align: center;
   margin: 0 auto;
   line-height: rem(26.5);
   margin-bottom: rem(20);
