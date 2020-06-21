@@ -367,7 +367,6 @@
 
 .hero__offer {
   @include for-size(mobile) {
-    // text-align: center;
     margin-bottom: rem(35);
   }
 
