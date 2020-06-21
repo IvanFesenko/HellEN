@@ -18,7 +18,7 @@ h4 {
   }
   @include for-size(hd-desktop) {
     background-image: url(../images/program/program-xd.png);
-    background-position: left 98.8%;
+    background-position: left 96.1%;
   }
 
   @media (min-resolution: 144dpi) {
@@ -49,9 +49,10 @@ h4 {
 
   &__timeline {
     @include for-size(desktop) {
-      border-bottom: rem(1.5) solid #546264;
+      border-bottom: rem(2) solid #546264;
     }
     @include for-size(hd-desktop) {
+      border-bottom: rem(4) solid #546264;
     }
   }
 
@@ -69,6 +70,8 @@ h4 {
       padding-bottom: rem(42);
     }
     @include for-size(hd-desktop) {
+      padding-top: rem(121);
+      padding-bottom: rem(89);
     }
   }
 
@@ -85,11 +88,11 @@ h4 {
     @include for-size(desktop) {
       width: 100%;
       padding-top: rem(24);
-
       padding-bottom: rem(440);
     }
     @include for-size(hd-desktop) {
-      padding-bottom: rem(372);
+      padding-top: rem(54);
+      padding-bottom: rem(350);
     }
   }
 
@@ -126,7 +129,6 @@ h4 {
     @include for-size(tablet) {
     }
     @include for-size(desktop) {
-      width: rem(234);
     }
     @include for-size(hd-desktop) {
     }
@@ -138,8 +140,19 @@ h4 {
         margin-bottom: rem(28);
       }
       @include for-size(desktop) {
+        width: rem(234);
       }
       @include for-size(hd-desktop) {
+        width: rem(255);
+      }
+    }
+
+    &:nth-last-of-type(1) {
+      @include for-size(desktop) {
+        width: rem(175);
+      }
+      @include for-size(hd-desktop) {
+        width: rem(155);
       }
     }
   }
@@ -176,6 +189,7 @@ h4 {
     @include for-size(hd-desktop) {
       font-size: rem(21);
       line-height: 1.4;
+      margin-bottom: rem(6);
     }
   }
 
@@ -242,8 +256,9 @@ h4 {
   }
 
   @include for-size(hd-desktop) {
-    font-size: rem(29);
+    font-size: rem(20);
     line-height: 1;
+    letter-spacing: rem(3);
   }
 
   &::after {
@@ -265,6 +280,10 @@ h4 {
       height: rem(17);
     }
     @include for-size(hd-desktop) {
+      left: rem(-19);
+      top: rem(-82);
+      width: rem(20);
+      height: rem(20);
     }
   }
 }
