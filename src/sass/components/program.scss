@@ -128,16 +128,7 @@ h4 {
   }
 
   &__item {
-    &::before {
-      content: counter(my-counter);
-      counter-increment: program-counter;
-      @include for-size(tablet) {
-      }
-      @include for-size(desktop) {
-      }
-      @include for-size(hd-desktop) {
-      }
-    }
+    position: relative;
 
     &:nth-last-of-type(n + 2) {
       margin-bottom: rem(20);
@@ -173,6 +164,23 @@ h4 {
       flex-direction: column;
     }
     @include for-size(hd-desktop) {
+    }
+
+    &::before {
+      content: '';
+      width: rem(2);
+      height: 110%;
+      background-color: #546264;
+      position: absolute;
+      top: 15px;
+      left: -31px;
+
+      @include for-size(tablet) {
+      }
+      @include for-size(desktop) {
+      }
+      @include for-size(hd-desktop) {
+      }
     }
   }
 
@@ -266,16 +274,28 @@ h4 {
     line-height: 1;
     letter-spacing: rem(3);
   }
+  &::before {
+    content: counter(program-counter) ' ';
+    counter-increment: program-counter;
+    color: $white-color;
+    @include for-size(tablet) {
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
+  }
 
   &::after {
     content: '';
     position: absolute;
-    left: rem(-36);
+    left: rem(-35);
     top: rem(10);
     width: rem(10);
     height: rem(10);
     border-radius: 50%;
     background-color: $orange-color;
+    z-index: 1;
 
     @include for-size(tablet) {
     }
