@@ -38,7 +38,7 @@
   margin: 0 auto;
   margin-bottom: rem(16);
   background-color: rgb(255, 255, 255);
-  box-shadow: 4px 6.928px 34.96px 11.04px rgba(29, 29, 27, 0.09);
+  box-shadow: rem(4) rem(6.928) rem(34.96) rem(11.04) rgba(29, 29, 27, 0.09);
   padding: rem(24) 0 rem(34) 0;
 
   @include for-size(tablet) {
@@ -94,28 +94,28 @@
     & .slick-arrow.slick-prev {
       background-image: url('../images/reviews/prev.svg');
       height: 100%;
-      width: 40px;
+      width: rem(40);
 
       @include for-size(tablet) {
-        left: -5px;
+        left: rem(-5);
       }
 
       @include for-size(desktop) {
-        left: -25px;
+        left: rem(-25);
       }
     }
 
     & .slick-arrow.slick-next {
       background-image: url('../images/reviews/next.svg');
       height: 100%;
-      width: 40px;
+      width: rem(40);
 
       @include for-size(tablet) {
-        right: -25px;
+        right: rem(-44);
       }
 
       @include for-size(desktop) {
-        right: -64px;
+        right: rem(-64);
       }
     }
   }
@@ -259,12 +259,12 @@
   }
 
   & .slick-arrow.slick-prev {
-    left: 10px;
+    left: rem(10);
     background-image: url('../images/reviews/prev.svg');
   }
 
   & .slick-arrow.slick-next {
-    right: -10px;
+    right: rem(-10);
     background-image: url('../images/reviews/next.svg');
   }
 
