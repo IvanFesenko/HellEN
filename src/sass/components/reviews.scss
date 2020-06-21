@@ -1,25 +1,17 @@
 .reviews {
   padding: rem(24) 0 rem(24) 0;
+  .title {
+    text-align: center;
+  }
 }
 
 .section-title {
-  max-width: rem(180);
-  text-align: center;
   margin: 0 auto;
   line-height: rem(26.5);
   margin-bottom: rem(20);
 
   @include for-size(tablet) {
-    max-width: rem(340);
     line-height: rem(62.5);
-  }
-
-  @include for-size(desktop) {
-    max-width: rem(550);
-  }
-
-  @include for-size(hd-desktop) {
-    max-width: rem(600);
   }
 }
 
@@ -48,7 +40,7 @@
   margin: 0 auto;
   margin-bottom: rem(16);
   background-color: rgb(255, 255, 255);
-  box-shadow: 4px 6.928px 34.96px 11.04px rgba(29, 29, 27, 0.09);
+  box-shadow: rem(4) rem(6.928) rem(34.96) rem(11.04) rgba(29, 29, 27, 0.09);
   padding: rem(24) 0 rem(34) 0;
 
   @include for-size(tablet) {
@@ -103,24 +95,29 @@
 
     & .slick-arrow.slick-prev {
       background-image: url('../images/reviews/prev.svg');
+      height: 100%;
+      width: rem(40);
 
       @include for-size(tablet) {
-        left: -5px;
+        left: rem(-5);
       }
 
       @include for-size(desktop) {
-        left: -35px;
+        left: rem(-25);
       }
     }
 
     & .slick-arrow.slick-next {
       background-image: url('../images/reviews/next.svg');
+      height: 100%;
+      width: rem(40);
+
       @include for-size(tablet) {
-        right: -25px;
+        right: rem(-44);
       }
 
       @include for-size(desktop) {
-        right: -55px;
+        right: rem(-64);
       }
     }
   }
@@ -264,12 +261,12 @@
   }
 
   & .slick-arrow.slick-prev {
-    left: 10px;
+    left: rem(10);
     background-image: url('../images/reviews/prev.svg');
   }
 
   & .slick-arrow.slick-next {
-    right: -10px;
+    right: rem(-10);
     background-image: url('../images/reviews/next.svg');
   }
 
@@ -324,4 +321,24 @@
 
 .more-text {
   display: none;
+}
+
+.more-text-on {
+  display: inline;
+}
+
+.sliderbig__item-content_dots-off {
+  display: none;
+}
+
+.read-off {
+  display: none;
+}
+
+.unread {
+  display: none;
+}
+
+.unread-on {
+  display: inline;
 }

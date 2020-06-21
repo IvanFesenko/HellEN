@@ -17,8 +17,7 @@
 }
 
 .sections-title,
-.teacher-name,
-.teacher-photo {
+.teacher-name {
   margin: 0;
   margin-bottom: rem(24);
 }
@@ -35,20 +34,16 @@
   }
 }
 
-.teacher-name {
+.teacher-wrapper {
   @include for-size(tablet) {
-    margin-bottom: rem(20);
-  }
-  @include for-size(desktop) {
-    margin-bottom: rem(34);
-  }
-  @include for-size(hd-desktop) {
-    margin-bottom: rem(34);
+    display: flex;
+    align-items: flex-start;
   }
 }
 
-.teacher-photo {
-  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
+.photo-wrap {
+  display: flex;
+  margin-bottom: rem(24);
   @include for-size(tablet) {
     margin: 0;
     margin-right: rem(46);
@@ -56,26 +51,10 @@
   @include for-size(desktop) {
     margin-right: rem(86);
   }
-  @include for-size(hd-desktop) {
-    margin-right: rem(86);
-  }
 }
 
-.photo-wrap {
-  display: flex;
-}
-
-.teacher-name {
-  padding-bottom: rem(5);
-  font-weight: 800;
-  border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
-}
-
-.teacher-wrapper {
-  @include for-size(tablet) {
-    display: flex;
-    align-items: flex-start;
-  }
+.teacher-photo {
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
 }
 
 .teacher-info {
@@ -91,10 +70,29 @@
   }
 }
 
+.teacher-name {
+  font-weight: 800;
+  border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
+  line-height: rem(29.17);
+  font-size: rem(16);
+  @include for-size(tablet) {
+    margin-bottom: rem(20);
+    font-size: rem(20);
+  }
+  @include for-size(desktop) {
+    margin-bottom: rem(34);
+    font-size: rem(29.17);
+  }
+}
+
 .skill-list {
   margin: 0;
   padding: 0;
-  margin-bottom: rem(32);
+  margin-bottom: rem(18);
+  @include for-size(desktop) {
+    max-width: rem(480);
+    margin-bottom: rem(34);
+  }
 }
 
 .skill-list:first-child {
@@ -110,7 +108,7 @@
   margin-bottom: rem(24);
 }
 
-.skill-list__item:hover #check {
+.skill-list__item:hover .skill-list__img {
   transform: scale(1.7);
 }
 
@@ -121,129 +119,60 @@
   font-weight: 600;
   line-height: rem(20);
   margin: 0;
-  @include for-size(desktop) {
-    font-size: rem(17);
-  }
-  @include for-size(hd-desktop) {
-    font-size: rem(17);
-  }
-}
-
-.skill-list__img {
-  width: rem(16);
-  height: rem(16);
-  fill: $orange-color;
-  transition: 0.2s;
-}
-
-.list-about {
-  position: relative;
-  margin: 0;
-  margin-bottom: rem(10);
-  padding: 0;
-  padding-left: rem(15);
-  line-height: rem(20);
   @include for-size(tablet) {
-    padding: 0;
+    line-height: rem(20);
   }
-}
-
-.list-about::before {
-  @include pseudo(rem(25), rem(2));
-  position: absolute;
-  background-color: $orange-color;
-  top: rem(-16);
-  transition: 0.3s;
-}
-
-.list-about:hover::before {
-  width: 100%;
-}
-
-.list-about__item:not(:last-child) {
-  margin-bottom: rem(16);
-}
-
-.list-about__item:last-child {
-  text-align: center;
-}
-
-.list-about__description,
-.certificate-link {
-  margin: 0;
-  font-size: rem(11);
-  @include for-size(desktop) {
-    font-size: rem(17);
-  }
-  @include for-size(hd-desktop) {
-    font-size: rem(17);
-  }
-}
-
-.certificate-link {
-  text-decoration: underline;
-  line-height: rem(29);
-  transition: 0.3s;
-}
-
-// POPUP ////////
-
-.popup__btn {
-  all: unset;
-  text-decoration: underline;
-  cursor: pointer;
-  color: $orange-color;
-
-  @include for-size(hd-desktop) {
-    font-size: rem(11);
-    line-height: rem(29.17);
-  }
-
   @include for-size(desktop) {
     font-size: rem(16.67);
     line-height: rem(29.17);
   }
 }
 
-.popup {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(112, 128, 144, 0.2);
-  z-index: 3;
+.skill-list__img {
+  width: rem(18);
+  height: rem(18);
+  fill: $orange-color;
+  transition: 0.2s;
 }
 
-.popup-content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 20%;
-  margin: 0 auto;
-  min-width: rem(200);
-}
-
-.close {
-  position: absolute;
-  right: rem(-15);
-  top: rem(-25);
-  font-size: rem(50);
-  transition: all 0.3s linear;
-
-  &:hover,
-  &:hover {
-    transform: rotateZ(360deg);
-    color: $orange-color;
+.description-wrapper {
+  position: relative;
+  padding-top: rem(18);
+  @include for-size(desktop) {
+    padding-top: rem(34);
   }
 }
 
-.popup__img {
-  width: rem(400);
-  margin: 0 auto;
-  padding: rem(15);
-  border: rem(3) solid $orange-color;
-  border-radius: rem(30);
-  box-shadow: inset 0px 0px 11px 0px rgba(0, 0, 0, 0.54);
+.description-wrapper::before {
+  @include pseudo(rem(25), rem(2));
+  position: absolute;
+  background-color: $orange-color;
+  top: 0;
+  transition: 0.3s;
+}
+
+.description-wrapper:hover::before {
+  width: 100%;
+}
+
+.teacher-description {
+  margin: 0;
+  margin-bottom: rem(16);
+}
+
+.teacher__link {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $orange-color;
+}
+
+.teacher-description,
+.teacher__link {
+  font-size: rem(11);
+  line-height: rem(20);
+  @include for-size(desktop) {
+    font-size: rem(16.67);
+    line-height: rem(29.17);
+  }
 }

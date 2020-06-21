@@ -6,7 +6,7 @@ h4 {
   background-color: $black-color-s;
   background-image: url(../images/program/program-m.png);
   background-repeat: no-repeat;
-  background-position: right 85.28%;
+  background-position: right 83%;
 
   @include for-size(tablet) {
     background-image: url(../images/program/program-t.png);
@@ -14,11 +14,11 @@ h4 {
   }
   @include for-size(desktop) {
     background-image: url(../images/program/program-d.png);
-    background-position: left 89.5%;
+    background-position: left 70%;
   }
   @include for-size(hd-desktop) {
     background-image: url(../images/program/program-xd.png);
-    background-position: left 98.8%;
+    background-position: left 96.1%;
   }
 
   @media (min-resolution: 144dpi) {
@@ -40,99 +40,142 @@ h4 {
       background-image: url(../images/program/program-t@2x.png);
     }
     @include for-size(desktop) {
-      background-image: url(../images/program/program-d2x.png);
+      background-image: url(../images/program/program-d@2x.png);
     }
     @include for-size(hd-desktop) {
-      background-image: url(../images/program/program-xd2x.png);
+      background-image: url(../images/program/program-xd@2x.png);
     }
   }
 
-  &__container-header {
-    padding-top: rem(20);
-    text-align: center;
+  &__container-title {
+    padding-top: rem(36);
+    padding-bottom: rem(17);
 
     @include for-size(tablet) {
       padding-top: rem(52);
-      padding-bottom: rem(22);
-      text-align: left;
+      padding-bottom: rem(37);
     }
     @include for-size(desktop) {
+      padding-top: rem(69);
+      padding-bottom: rem(42);
     }
     @include for-size(hd-desktop) {
+      padding-top: rem(121);
+      padding-bottom: rem(89);
+    }
+    @include for-size(mobile) {
+      text-align: center;
     }
   }
 
-  &__container-footer {
-    width: rem(188);
-    padding-bottom: rem(414);
-    margin: 0 auto;
+  &__container-timeline {
+    padding-bottom: rem(437);
+    padding-left: rem(20);
 
     @include for-size(tablet) {
-      width: rem(520);
       padding-bottom: rem(321);
+      padding-left: rem(210);
     }
     @include for-size(desktop) {
-      padding-bottom: rem(490);
+      max-width: 100%;
+      border-top: rem(2) solid #546264;
+      padding-bottom: rem(440);
+      padding-top: rem(24);
     }
     @include for-size(hd-desktop) {
-      padding-bottom: rem(372);
+      border-top-width: rem(4);
+      padding-top: rem(54);
+      padding-bottom: rem(350);
     }
   }
 
   &__title {
     line-height: rem(48);
     margin: 0;
+
+    &-tree {
+      @include for-size(desktop) {
+        margin-bottom: rem(3);
+      }
+      @include for-size(hd-desktop) {
+        margin-bottom: rem(0);
+      }
+      &_finish {
+        @include for-size(desktop) {
+          margin-bottom: rem(27);
+        }
+      }
+    }
   }
 
   &__list {
+    list-style-type: none;
+    counter-reset: program-counter;
+    padding-left: rem(49);
+
     @include for-size(tablet) {
-      // display: flex;
-      // // flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: start;
+      padding-left: rem(28);
     }
+
     @include for-size(desktop) {
+      display: flex;
+      justify-content: space-between;
+      max-width: rem(520);
     }
-    @include for-size(hd-desktop) {
+    @include for-size(mobile) {
+      max-width: rem(216);
     }
   }
 
   &__item {
-    @include for-size(tablet) {
-      // width: rem(180);
-      // display: flex;
-      // flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: start;
-    }
-    @include for-size(desktop) {
-    }
-    @include for-size(hd-desktop) {
-    }
-  }
+    position: relative;
 
-  &__title-tree {
+    &:nth-last-of-type(n + 2) {
+      padding-bottom: rem(22);
+
+      @include for-size(tablet) {
+        padding-bottom: rem(28);
+      }
+      @include for-size(desktop) {
+        width: rem(234);
+      }
+      @include for-size(hd-desktop) {
+        width: rem(255);
+      }
+    }
+
+    &:nth-last-of-type(1) {
+      @include for-size(desktop) {
+        width: rem(175);
+      }
+      @include for-size(hd-desktop) {
+        width: rem(155);
+      }
+    }
+
+    &:nth-last-of-type(n + 2)::before {
+      content: '';
+      width: rem(2);
+      height: 100%;
+      background-color: #546264;
+      position: absolute;
+      top: 15px;
+      left: -31px;
+
+      @include for-size(desktop) {
+        display: none;
+      }
+    }
   }
 
   &__sub-list {
     padding: 0;
 
-    &:nth-last-of-type(n + 1) {
-      margin-bottom: rem(20);
-      @include for-size(tablet) {
-        display: flex;
-        margin-bottom: rem(28);
-      }
-      @include for-size(desktop) {
-      }
-      @include for-size(hd-desktop) {
-      }
-    }
-
     @include for-size(tablet) {
       display: flex;
     }
     @include for-size(desktop) {
+      flex-direction: column;
     }
     @include for-size(hd-desktop) {
     }
@@ -144,44 +187,49 @@ h4 {
 
   &__orange-font {
     font-size: rem(13.25);
-    line-height: 3.6;
+    line-height: 3.4;
     letter-spacing: rem(0.5);
-    margin-bottom: rem(0);
 
     @include for-size(desktop) {
       font-size: rem(18);
       line-height: 1.62;
+      margin-bottom: rem(5);
     }
 
     @include for-size(hd-desktop) {
       font-size: rem(21);
       line-height: 1.4;
+      margin-bottom: rem(6);
     }
   }
 
   &__sub-item {
-    width: rem(175);
-
     &:nth-last-of-type(n + 2) {
-      margin-right: rem(3);
+      margin-bottom: rem(6);
     }
 
     @include for-size(tablet) {
       display: flex;
       flex-direction: column;
-      // width: rem(160);
+      width: rem(155);
+      margin-right: rem(24);
     }
     @include for-size(desktop) {
+      padding-top: rem(27);
     }
     @include for-size(hd-desktop) {
     }
-  }
 
-  &__orange-font {
+    &_finish {
+      @include for-size(desktop) {
+        padding-top: 0;
+      }
+    }
   }
 
   &__sub-sub-list {
     padding: 0;
+
     @include for-size(tablet) {
     }
     @include for-size(desktop) {
@@ -193,7 +241,7 @@ h4 {
   &__grey-font {
     font-size: rem(11);
     opacity: 0.502;
-    line-height: 1.818;
+    line-height: 1.9;
     letter-spacing: rem(0.55);
 
     @include for-size(desktop) {
@@ -204,6 +252,7 @@ h4 {
 }
 
 .title-tree {
+  position: relative;
   font-size: rem(15);
   font-weight: 700;
   text-transform: uppercase;
@@ -217,7 +266,46 @@ h4 {
   }
 
   @include for-size(hd-desktop) {
-    font-size: rem(29);
+    font-size: rem(20);
     line-height: 1;
+    letter-spacing: rem(3);
+  }
+  &::before {
+    content: counter(program-counter) ' ';
+    counter-increment: program-counter;
+    color: $white-color;
+    @include for-size(tablet) {
+    }
+    @include for-size(desktop) {
+    }
+    @include for-size(hd-desktop) {
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: rem(-35);
+    top: rem(10);
+    width: rem(10);
+    height: rem(10);
+    border-radius: 50%;
+    background-color: $orange-color;
+    z-index: 1;
+
+    @include for-size(tablet) {
+    }
+    @include for-size(desktop) {
+      left: rem(-21);
+      top: rem(-49);
+      width: rem(17);
+      height: rem(17);
+    }
+    @include for-size(hd-desktop) {
+      left: rem(-19);
+      top: rem(-82);
+      width: rem(20);
+      height: rem(20);
+    }
   }
 }
