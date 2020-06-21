@@ -1,52 +1,59 @@
-.upper-footer {
+.page-footer {
   @include for-size(mobile) {
     padding-top: rem(28);
-    margin-bottom: rem(16);
 
-    &__item {
+    &__container {
+      margin-bottom: rem(16);
+    }
+
+    &__item:not(:last-of-type) {
+      margin-bottom: rem(20);
+    }
+  }
+  @include for-size(tablet) {
+    padding-top: rem(35);
+
+    &__container {
+      margin-bottom: rem(40);
+    }
+  }
+  @include for-size(desktop) {
+    padding-top: rem(52);
+
+    &__container {
+      margin-bottom: rem(52);
+    }
+  }
+
+  &__list {
+    margin: rem(0);
+    padding: rem(0);
+
+    @include for-size(mobile) {
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
-    &__item:not(:last-of-type) {
-      margin-bottom: rem(30);
-    }
-  }
-
-  @include for-size(tablet) {
-    padding-top: rem(42);
-    margin-bottom: rem(42);
-
-    &__item {
-      @include flexible(space-between);
-    }
-  }
-
-  @include for-size(desktop) {
-    padding-top: rem(56);
-    margin-bottom: rem(56);
-  }
-
-  &__list-wrapper {
-
     @include for-size(tablet) {
       @include flexible(space-between);
       flex-direction: row-reverse;
-      align-items: center;
+      max-width: 80%;
+    }
+    @include for-size(desktop) {
+      max-width: 68%;
+    }
+  }
 
-      @include for-size(tablet) {
-        max-width: 80%;
-      }
-
-      @include for-size(desktop) {
-        max-width: 70%;
-      }
+  &__item {
+    @include for-size(tablet) {
+      @include flexible(flex-start);
     }
   }
 
   &__link {
     position: relative;
+    display: block;
     font-weight: 600;
     font-size: rem(18);
     line-height: rem(38);
@@ -57,15 +64,19 @@
       display: inline-block;
       @include pseudo(rem(20), rem(20));
       background-image: url('../images/footer/call.svg');
-      @include background-settings(no-repeat, rem(0) rem(4), cover);
+      @include background-settings(no-repeat);
     }
 
     @include for-size(mobile) {
       &:not(:last-of-type) {
-        margin-bottom: rem(30);
+        margin-bottom: rem(20);
+      }
+
+      &--center{
+        max-width: max-content;
+        margin: 0 auto;
       }
     }
-
     @include for-size(tablet) {
       font-size: rem(20);
 
@@ -81,13 +92,11 @@
         background-color: rgb(224, 224, 224);
       }
     }
-
     @include for-size(desktop) {
       font-size: rem(28);
 
       &--pseudo::before {
         @include pseudo(rem(32), rem(32));
-        @include background-settings(no-repeat, rem(0) rem(6), cover);
       }
     }
   }
