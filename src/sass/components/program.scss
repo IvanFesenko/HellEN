@@ -6,7 +6,7 @@ h4 {
   background-color: $black-color-s;
   background-image: url(../images/program/program-m.png);
   background-repeat: no-repeat;
-  background-position: right 85.28%;
+  background-position: right 83%;
 
   @include for-size(tablet) {
     background-image: url(../images/program/program-t.png);
@@ -47,23 +47,13 @@ h4 {
     }
   }
 
-  &__timeline {
-    @include for-size(desktop) {
-      border-bottom: rem(2) solid #546264;
-    }
-    @include for-size(hd-desktop) {
-      border-bottom: rem(4) solid #546264;
-    }
-  }
-
-  &__container-header {
-    padding-top: rem(20);
-    text-align: center;
+  &__container-title {
+    padding-top: rem(36);
+    padding-bottom: rem(17);
 
     @include for-size(tablet) {
       padding-top: rem(52);
-      padding-bottom: rem(22);
-      text-align: left;
+      padding-bottom: rem(37);
     }
     @include for-size(desktop) {
       padding-top: rem(69);
@@ -73,24 +63,27 @@ h4 {
       padding-top: rem(121);
       padding-bottom: rem(89);
     }
+    @include for-size(mobile) {
+      text-align: center;
+    }
   }
 
-  &__container-footer {
-    width: rem(188);
-    padding-bottom: rem(414);
-    padding-left: rem(49);
-    margin: 0 auto;
+  &__container-timeline {
+    padding-bottom: rem(437);
+    padding-left: rem(20);
 
     @include for-size(tablet) {
-      width: rem(520);
       padding-bottom: rem(321);
+      padding-left: rem(210);
     }
     @include for-size(desktop) {
-      width: 100%;
-      padding-top: rem(24);
+      max-width: 100%;
+      border-top: rem(2) solid #546264;
       padding-bottom: rem(440);
+      padding-top: rem(24);
     }
     @include for-size(hd-desktop) {
+      border-top-width: rem(4);
       padding-top: rem(54);
       padding-bottom: rem(350);
     }
@@ -118,12 +111,19 @@ h4 {
   &__list {
     list-style-type: none;
     counter-reset: program-counter;
-    padding: 0;
+    padding-left: rem(49);
+
+    @include for-size(tablet) {
+      padding-left: rem(28);
+    }
+
     @include for-size(desktop) {
       display: flex;
       justify-content: space-between;
+      max-width: rem(520);
     }
-    @include for-size(hd-desktop) {
+    @include for-size(mobile) {
+      max-width: rem(216);
     }
   }
 
@@ -131,10 +131,10 @@ h4 {
     position: relative;
 
     &:nth-last-of-type(n + 2) {
-      margin-bottom: rem(20);
+      padding-bottom: rem(22);
 
       @include for-size(tablet) {
-        margin-bottom: rem(28);
+        padding-bottom: rem(28);
       }
       @include for-size(desktop) {
         width: rem(234);
@@ -152,6 +152,20 @@ h4 {
         width: rem(155);
       }
     }
+
+    &:nth-last-of-type(n + 2)::before {
+      content: '';
+      width: rem(2);
+      height: 100%;
+      background-color: #546264;
+      position: absolute;
+      top: 15px;
+      left: -31px;
+
+      @include for-size(desktop) {
+        display: none;
+      }
+    }
   }
 
   &__sub-list {
@@ -165,23 +179,6 @@ h4 {
     }
     @include for-size(hd-desktop) {
     }
-
-    &::before {
-      content: '';
-      width: rem(2);
-      height: 110%;
-      background-color: #546264;
-      position: absolute;
-      top: 15px;
-      left: -31px;
-
-      @include for-size(tablet) {
-      }
-      @include for-size(desktop) {
-      }
-      @include for-size(hd-desktop) {
-      }
-    }
   }
 
   &__pseudo-line {
@@ -190,9 +187,8 @@ h4 {
 
   &__orange-font {
     font-size: rem(13.25);
-    line-height: 3.6;
+    line-height: 3.4;
     letter-spacing: rem(0.5);
-    margin-bottom: rem(1.5);
 
     @include for-size(desktop) {
       font-size: rem(18);
@@ -208,23 +204,22 @@ h4 {
   }
 
   &__sub-item {
-    width: rem(175);
-
     &:nth-last-of-type(n + 2) {
-      margin-right: rem(3);
+      margin-bottom: rem(6);
     }
 
     @include for-size(tablet) {
       display: flex;
       flex-direction: column;
-      margin-right: 0;
+      width: rem(155);
+      margin-right: rem(24);
     }
     @include for-size(desktop) {
-      width: 100%;
       padding-top: rem(27);
     }
     @include for-size(hd-desktop) {
     }
+
     &_finish {
       @include for-size(desktop) {
         padding-top: 0;
@@ -234,6 +229,7 @@ h4 {
 
   &__sub-sub-list {
     padding: 0;
+
     @include for-size(tablet) {
     }
     @include for-size(desktop) {
@@ -245,7 +241,7 @@ h4 {
   &__grey-font {
     font-size: rem(11);
     opacity: 0.502;
-    line-height: 1.818;
+    line-height: 1.9;
     letter-spacing: rem(0.55);
 
     @include for-size(desktop) {
