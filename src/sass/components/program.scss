@@ -59,7 +59,8 @@ h4 {
     }
     @include for-size(desktop) {
       padding-top: rem(69);
-      padding-bottom: rem(42);
+      padding-bottom: rem(41);
+      padding-left: rem(15);
     }
     @include for-size(hd-desktop) {
       padding-top: rem(121);
@@ -75,14 +76,17 @@ h4 {
     padding-left: rem(20);
 
     @include for-size(tablet) {
+      display: flex;
+      justify-items: center;
       padding-bottom: rem(321);
-      padding-left: rem(210);
     }
     @include for-size(desktop) {
       max-width: 100%;
       border-top: rem(2) solid #546264;
+      padding-right: 0;
       padding-bottom: rem(440);
-      padding-top: rem(24);
+      padding-top: rem(40);
+      padding-left: 0;
     }
     @include for-size(hd-desktop) {
       border-top-width: rem(4);
@@ -116,13 +120,15 @@ h4 {
     padding-left: rem(49);
 
     @include for-size(tablet) {
+      max-width: rem(522);
       padding-left: rem(28);
     }
 
     @include for-size(desktop) {
+      max-width: rem(1210);
       display: flex;
       justify-content: space-between;
-      // max-width: rem(520);
+      padding-left: 0;
     }
     @include for-size(mobile) {
       max-width: rem(216);
@@ -139,16 +145,16 @@ h4 {
         padding-bottom: rem(28);
       }
       @include for-size(desktop) {
-        width: rem(234);
+        width: rem(205);
       }
       @include for-size(hd-desktop) {
         width: rem(255);
       }
     }
 
-    &:nth-last-of-type(1) {
+    &:last-of-type {
       @include for-size(desktop) {
-        width: rem(175);
+        width: rem(135);
       }
       @include for-size(hd-desktop) {
         width: rem(155);
@@ -162,7 +168,7 @@ h4 {
       background-color: #546264;
       position: absolute;
       top: 15px;
-      left: -31px;
+      left: -54px;
 
       @include for-size(desktop) {
         display: none;
@@ -208,13 +214,20 @@ h4 {
   &__sub-item {
     &:nth-last-of-type(n + 2) {
       margin-bottom: rem(6);
+
+      @include for-size(tablet) {
+        width: rem(155);
+        margin-right: rem(22);
+      }
+      @include for-size(desktop) {
+        width: rem(230);
+        margin-right: 0;
+      }
     }
 
     @include for-size(tablet) {
       display: flex;
       flex-direction: column;
-      width: rem(155);
-      margin-right: rem(24);
     }
     @include for-size(desktop) {
       padding-top: rem(27);
@@ -222,6 +235,14 @@ h4 {
     @include for-size(hd-desktop) {
     }
 
+    &:last-of-type {
+      @include for-size(tablet) {
+        max-width: rem(100);
+      }
+      @include for-size(desktop) {
+        max-width: rem(200);
+      }
+    }
     &_finish {
       @include for-size(desktop) {
         padding-top: 0;
@@ -250,6 +271,9 @@ h4 {
       font-size: rem(18.75);
       line-height: 1.556;
     }
+    // &_mini {
+    //   font-size: rem(15);
+    // }
   }
 }
 
@@ -296,9 +320,11 @@ h4 {
     z-index: 1;
 
     @include for-size(tablet) {
+      left: rem(-58);
+      top: rem(10);
     }
     @include for-size(desktop) {
-      left: rem(-21);
+      left: rem(-3);
       top: rem(-49);
       width: rem(17);
       height: rem(17);
