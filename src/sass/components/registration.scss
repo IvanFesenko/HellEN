@@ -332,10 +332,14 @@ input:hover {
 
 .social__link {
   display: block;
-  width: 30px;
-  height: 30px;
-  
+  width: 40px;
+  height: 40px; 
+  transition: all 0.2s linear; 
 }
+.social__link:hover {
+  transform: rotate(10deg);
+}
+
 .social__link-instagram {
   background-image: url('../images/registration/instagram.svg');
 }
@@ -620,11 +624,18 @@ input:hover {
   }
   .social__text {
     font-size: 16px;
-  }
+  } 
   
-.social__item {
-  margin-left: 20px;
-}
+  .social__item {
+    margin-left: 20px;
+  }
+  .social__link {
+    width: 45px;
+    height: 45px;    
+  }
+
+
+
 }
 @media (min-width: 1280px) {
   .registration> .container {
@@ -657,7 +668,11 @@ input:hover {
     height: 575px;
     width: 530px;
     border-radius: 80px;
-}
+  }
+  .social__link {
+    width: 55px;
+    height: 55px;    
+  }
 }
 @media (min-width: 1680px) {
   .registration> .container {
