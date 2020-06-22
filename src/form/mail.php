@@ -36,6 +36,6 @@ $mail->AltBody = '';
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    '.js-overlay-thank-you';
+    header('.js-close-thank-you');
 }
 ?>
