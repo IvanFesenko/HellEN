@@ -4,7 +4,7 @@
   background-size: cover;
   padding: 55px 0 60px 0;
   text-align: center;
-  // color: $white-color;
+  color: $white-color;
   @include for-size(tablet) {
     background: rgb(17, 21, 23) url(../images/registration/registration-t.png)
       no-repeat center center;
@@ -75,8 +75,6 @@
     font-weight: 800;
     padding: 0 10px 0 10px;
     margin: 0 0 26px 0;
-  color: $white-color;
-
     @include for-size(tablet) {
       font-size: rem(22);
       line-height: rem(38);
@@ -100,8 +98,6 @@
     font-weight: 600;
     padding: 0 10px 0 10px;
     margin: 0 0 28px 0;
-  color: $white-color;
-
     @include for-size(tablet) {
       font-size: rem(15);
       margin: 0 0 38px 0;
@@ -151,7 +147,6 @@ input {
   transition-timing-function: linear;
   transition-duration: 0.3s;
   font-size: 16px;
-  font-family: var(--font-first);
 
   @include for-size(desktop) {
     height: rem(70);
@@ -204,9 +199,11 @@ input:active {
     }
   }
 }
+
 input:hover {
   border: 1px solid $orange-color;
 }
+
 .button {
   display: block;
   width: rem(250);
@@ -236,6 +233,7 @@ input:hover {
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   }
 }
+
 .contacts__form input::placeholder {
   font-size: rem(14);
   color: $white-color;
@@ -246,6 +244,7 @@ input:hover {
     font-size: rem(20.8);
   }
 }
+
 .input input[type='text']:invalid {
   color: red;
 }
@@ -275,6 +274,7 @@ input:hover {
   background: rgba(252, 252, 252, .98) url(../images/registration/thanks-bg.png)
     no-repeat center right;
   background-size: 60%;
+  color: $black-color;
 }
 
 .close-popup {
@@ -443,6 +443,7 @@ input:hover {
 .social__list {
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .social__svg {
   width: 40px;
@@ -487,6 +488,10 @@ input:hover {
   width: 100%;
 }
 
+.social__text {
+  margin: 0 0 0 0 ;
+}
+
 
 
 
@@ -497,7 +502,9 @@ input:hover {
     width: 100%;
     padding: 0px 15px;
   }
-  
+  .social__list {
+    margin: 0 0 15px 0;
+  }
   .navigation-tp {
     flex-direction: column;
   }
@@ -530,7 +537,7 @@ input:hover {
   .social__text {
     font-size: 17px;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     
   }
   .masc {
@@ -569,12 +576,20 @@ input:hover {
     max-width: 768px;
     padding: 0px 40px;
   }
-  
+  .popup {
+    padding: 30px;
+  }
+  .navigation-tp {
+    margin: 0 0 10px 0;
+  }
   .thanks__image-wrapper {
     flex: 0 0 35%;
   } 
   .thanks__description {
     padding-left: 20px;
+  }
+  .social__wrapper {
+    padding: 0 20px 0 0;
   }
   .thanks__title {
     font-size: 44px;
@@ -584,11 +599,6 @@ input:hover {
   .thanks__text {
     font-size: 20px;
     line-height: 24px;
-  }
-  .social__wrapper {
-		width: 100%;
-		
-    padding: 10px 25px 10px 25px;
   }
   .social__text {
     font-size: 16px;
@@ -614,8 +624,8 @@ input:hover {
     font-size: 30px;
   }
   .thanks__title {
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 58px;
+    line-height: 75px;
   }
   .thanks__text {
     font-size: 31px;

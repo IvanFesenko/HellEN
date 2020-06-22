@@ -1,5 +1,3 @@
-
-
 $("#sendMail").on("click", function () {
   var name = $('#user-name').val();
   var phone = $('#phone-mask').val();
@@ -37,4 +35,3 @@ $(document).mouseup(function (e) { // по клику вне попапа
 
   }
 });
-

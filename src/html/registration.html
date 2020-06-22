@@ -11,20 +11,19 @@
       консультант и ответит на вопросы.
     </p>
     <div class="form__wrapper">
-      <form class="contacts__form" id="mail-form" method="POST" name="info-data">
+      <form class="contacts__form" action="form/mail.php" method="POST" name="info-data">
         <input class="input" type="text" name="name" placeholder="имя*" id="user-name"
           pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,12}" title="Введите только имя, которое должно содержать
            буквы украинского, русского или 
           латинского алфавита длинной символов от 2 до 12." required />
         <input class="input" type="tel" name="phone" value="" placeholder="телефон*" id="phone-mask" required />
 
-        <button type="submit" id="sendMail" class="button">
+        <button type="submit" class="button">
           хочу на бесплатное занятие
         </button>
       </form>
     </div>
   </div>
-  <!-- <div id="errorMess"></div> -->
   <div class="overlay js-overlay-thank-you">
     <div class="popup js-thank-you">
       <header class="thanks-header">
@@ -59,21 +58,21 @@
             <p class="social__text">Следите за новостями:</p>
             <ul class="social__list">
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://www.youtube.com/" class="social__link">
                   <svg class="social__svg">
                     <use href="./images/registration/sprite-form.svg#youtube"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://www.instagram.com/" class="social__link">
                   <svg class="social__svg">
                     <use href="./images/registration/sprite-form.svg#instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="#" class="social__link">
+                <a href="https://www.facebook.com/" class="social__link">
                   <svg class="social__svg">
                     <use href="./images/registration/sprite-form.svg#facebook"></use>
                   </svg>
