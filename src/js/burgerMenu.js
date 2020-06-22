@@ -10,11 +10,9 @@ $(function () {
 });
 
 $(function () {
-  $('.menu__item').click(function (e) {
+  $('.menu__link').click(function (e) {
     e.preventDefault();
     $('.burger').toggleClass('active');
-    $('body').toggleClass('lock');
-    $('.navigation .logo').toggleClass('close');
-    $('.burger__wrap .logo').toggleClass('open');
+    $('.burger--btn').toggleClass('active');
   });
 });
