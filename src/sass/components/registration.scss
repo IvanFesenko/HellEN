@@ -385,14 +385,14 @@ input:hover {
   fill: $black-color;
 }
 .contacts__wrapper:hover .contacts__phone {
-  color: orange-color;
+  color: $orange-color;
 }
 .contacts__svg {
   position: absolute;
   width: 35px;
   height: 35px;
   left: -50px;
-  fill: orange-color;
+  fill: $orange-color;
   transition: all .3s linear;
 }
 .contacts__phone {
