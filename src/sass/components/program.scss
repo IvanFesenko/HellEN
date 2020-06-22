@@ -94,37 +94,12 @@ h4 {
     background-position: left 96.1%;
     padding-top: 130px;
   }
-
-  @media (min-resolution: 144dpi) {
-    background-image: url(../images/program/program-m@1.5x.png);
-    @include for-size(tablet) {
-      background-image: url(../images/program/program-t@1.5x.png);
-    }
-    @include for-size(desktop) {
-      background-image: url(../images/program/program-d@1.5x.png);
-    }
-    @include for-size(hd-desktop) {
-      background-image: url(../images/program/program-xd@1.5x.png);
-    }
-  }
-
-  @media (min-resolution: 192dpi) {
-    background-image: url(../images/program/program-m@2x.png);
-    @include for-size(tablet) {
-      background-image: url(../images/program/program-t@2x.png);
-    }
-    @include for-size(desktop) {
-      background-image: url(../images/program/program-d@2x.png);
-    }
-    @include for-size(hd-desktop) {
-      background-image: url(../images/program/program-xd@2x.png);
-    }
-  }
 }
 
 .program__list {
   padding-left: 110px;
-  list-style: none;
+  list-style-type: none;
+  counter-reset: program-counter;
 
   &-title {
     margin-bottom: 28px;
@@ -135,6 +110,14 @@ h4 {
     }
     @include for-size(hd-desktop) {
       font-size: 21px;
+    }
+    &::before {
+      content: counter(program-counter) ' ';
+      counter-increment: program-counter;
+      color: $white-color;
+      @include for-size(hd-desktop) {
+        font-size: rem(30);
+      }
     }
   }
 
