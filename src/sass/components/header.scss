@@ -208,7 +208,7 @@
   height: rem(30);
   cursor: pointer;
   position: relative;
-  z-index: 5;
+  z-index: 50;
 
   @include for-size(mobile) {
     margin-left: auto;
@@ -298,7 +298,7 @@ body.lock {
   right: -100%;
   background-color: rgba(0, 0, 0, 0.9);
   padding-top: rem(35);
-  z-index: 2;
+  z-index: 50;
   overflow: auto;
   transition: all 0.2s linear;
 
