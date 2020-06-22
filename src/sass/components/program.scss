@@ -201,3 +201,17 @@ h4 {
     font-size: 19px;
   }
 }
+
+.program__orange-font {
+  background: linear-gradient(
+    rgba(255, 107, 8, 1) 0%,
+    rgba(255, 107, 8, 1) 42%,
+    rgba(208, 0, 184, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0b2349;
+  display: table;
+  margin: 20px auto;
+}
