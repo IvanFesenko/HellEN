@@ -4,7 +4,7 @@
   background-size: cover;
   padding: 55px 0 60px 0;
   text-align: center;
-  // color: $white-color;
+  color: $white-color;
   @include for-size(tablet) {
     background: rgb(17, 21, 23) url(../images/registration/registration-t.png)
       no-repeat center center;
@@ -75,8 +75,6 @@
     font-weight: 800;
     padding: 0 10px 0 10px;
     margin: 0 0 26px 0;
-  color: $white-color;
-
     @include for-size(tablet) {
       font-size: rem(22);
       line-height: rem(38);
@@ -100,8 +98,6 @@
     font-weight: 600;
     padding: 0 10px 0 10px;
     margin: 0 0 28px 0;
-  color: $white-color;
-
     @include for-size(tablet) {
       font-size: rem(15);
       margin: 0 0 38px 0;
@@ -204,9 +200,11 @@ input:active {
     }
   }
 }
+
 input:hover {
   border: 1px solid $orange-color;
 }
+
 .button {
   display: block;
   width: rem(250);
@@ -236,6 +234,7 @@ input:hover {
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   }
 }
+
 .contacts__form input::placeholder {
   font-size: rem(14);
   color: $white-color;
@@ -246,9 +245,11 @@ input:hover {
     font-size: rem(20.8);
   }
 }
+
 .input input[type='text']:invalid {
   color: red;
 }
+<<<<<<< HEAD
 
 // popup
 
@@ -632,3 +633,5 @@ input:hover {
   }
 }
 
+=======
+>>>>>>> parent of b0a42b4... fucking changes =)

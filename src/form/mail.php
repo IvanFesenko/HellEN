@@ -36,6 +36,6 @@ $mail->AltBody = '';
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    header('.js-close-thank-you');
+    header('location: thanks.html');
 }
 ?>
