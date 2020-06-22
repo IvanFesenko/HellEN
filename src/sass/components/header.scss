@@ -34,6 +34,7 @@
 .navigation {
   display: flex;
   align-items: center;
+  position: relative;
 
   @include for-size(mobile) {
     margin-bottom: rem(0);
@@ -56,14 +57,14 @@
   display: none;
   font-weight: 700;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   padding: 0;
-  margin-left: auto;
 
   @include for-size(desktop) {
     display: flex;
     font-size: rem(12);
+    text-transform: uppercase;
     margin-right: rem(25);
+    margin-left: auto;
   }
 
   @include for-size(hd-desktop) {
@@ -83,8 +84,11 @@
 }
 
 .menu__link {
-  color: $grey-color;
   transition: color 0.2s linear;
+
+  @include for-size(desktop) {
+    color: $grey-color;
+  }
 
   &:hover,
   &:focus {
@@ -108,63 +112,65 @@
 }
 
 .menu__link {
-  display: block;
-  overflow: hidden;
-
-  &::before {
-    right: 0;
-    bottom: 0;
-    background: $orange-color;
-  }
-
-  &:before,
-  &:after {
-    right: 0;
-    bottom: 0;
-    background: $orange-color;
-  }
-
-  &:before {
-    width: 100%;
-    height: rem(2);
-    transform: translateX(-100%);
-  }
-
-  &:after {
-    width: rem(2);
-    height: 100%;
-    transform: translateY(100%);
-  }
-
-  > span {
+  @include for-size(desktop) {
     display: block;
-    padding: rem(10);
+    overflow: hidden;
+
+    &::before {
+      right: 0;
+      bottom: 0;
+      background: $orange-color;
+    }
 
     &:before,
     &:after {
-      left: 0;
-      top: 0;
+      right: 0;
+      bottom: 0;
       background: $orange-color;
     }
 
     &:before {
       width: 100%;
       height: rem(2);
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
 
     &:after {
       width: rem(2);
       height: 100%;
-      transform: translateY(-100%);
+      transform: translateY(100%);
     }
-  }
 
-  &:hover:before,
-  &:hover:after,
-  &:hover > span:before,
-  &:hover > span:after {
-    transform: translate(0, 0);
+    > span {
+      display: block;
+      padding: rem(10);
+
+      &:before,
+      &:after {
+        left: 0;
+        top: 0;
+        background: $orange-color;
+      }
+
+      &:before {
+        width: 100%;
+        height: rem(2);
+        transform: translateX(100%);
+      }
+
+      &:after {
+        width: rem(2);
+        height: 100%;
+        transform: translateY(-100%);
+      }
+    }
+
+    &:hover:before,
+    &:hover:after,
+    &:hover > span:before,
+    &:hover > span:after {
+      transform: translate(0, 0);
+    }
   }
 }
 
@@ -201,9 +207,9 @@
   width: rem(30);
   height: rem(12);
   cursor: pointer;
-  position: absolute;
-  top: 40px;
-  right: 15px;
+  position: relative;
+  z-index: 5;
+
   @include for-size(mobile) {
     margin-left: auto;
   }
@@ -242,7 +248,7 @@
   }
 }
 
-.header__burger.burger--active {
+.header__burger.active {
   &::before {
     transform: rotate(45deg);
     background-color: $white-color;
@@ -259,83 +265,86 @@
     transform: scale(0);
   }
 }
-// Burger END
 
-//popup menu START
-
-.overflow-hidden {
+body.lock {
   overflow: hidden;
 }
 
-.popup-menu {
+.logo.close {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.logo.open {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  color: $white-color;
+  margin-bottom: rem(55);
+}
+
+.burger {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  z-index: 50;
-  padding: 30px 20px 0 20px;
-  display: block;
+  top: 0;
+  right: -100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: rem(25);
+  z-index: 2;
+  overflow: auto;
+  transition: all 0.2s linear;
 
-  .logo {
-    color: #fff;
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.burger.active {
+  right: 0;
+}
+
+.menu--burger {
+  display: block;
+  width: rem(280);
+  padding-left: rem(15);
+  margin-bottom: rem(60);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(tablet) {
+    width: rem(320);
+    font-size: rem(22);
   }
 
-  .menu {
-    display: block;
-    font-size: 19px;
-    margin: 44px 0;
-    text-align: center;
-    // position: absolute;
-    // top: 90px;
-    // z-index: 51;
-    // @include for-size(tablet) {
-    //   top: 140px;
-    //   left: 190px;
-    // }
+  @include for-size(desktop) {
+    display: none;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: rem(20);
   }
 
   .menu__link {
     color: $white-color;
-    text-transform: initial;
 
-    &:before,
-    &:after {
-      background: transparent;
-    }
-
-    > span {
-      &:before,
-      &:after {
-        background: transparent;
-      }
-    }
-    &:hover {
+    &:hover,
+    &:focus {
       color: $orange-color;
     }
-    @include for-size(tablet) {
-      font-size: rem(30);
-    }
-  }
-
-  .header__btn {
-    display: flex;
-    width: 100%;
-
-    @include for-size(tablet) {
-      position: relative;
-      top: 0;
-      z-index: 0;
-    }
-  }
-
-  @include for-size(tablet) {
-    max-width: 100%;
   }
 }
 
-//popup menu END
+.burger__btn {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+// Burger END
 
 // Hero START
 

@@ -1,17 +1,10 @@
 $(function () {
   $('.header__burger').click(function (e) {
     e.preventDefault();
-    $(this).toggleClass('burger--active');
-    $('.navigation').toggleClass('popup-menu');
-    $('body').toggleClass('overflow-hidden');
-  });
-});
-
-$(function () {
-  $('.menu__link').click(function (e) {
-    e.preventDefault();
-    $('.navigation').toggleClass('popup-menu');
-    $('.header__burger').toggleClass('burger--active');
-    $('body').toggleClass('overflow-hidden');
+    $(this).toggleClass('active');
+    $('.burger').toggleClass('active');
+    $('body').toggleClass('lock');
+    $('.navigation .logo').toggleClass('close');
+    $('.burger__wrap .logo').toggleClass('open');
   });
 });
