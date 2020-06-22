@@ -124,7 +124,8 @@ h4 {
 
 .program__list {
   padding-left: 110px;
-  list-style: none;
+  list-style-type: none;
+  counter-reset: program-counter;
 
   &-title {
     margin-bottom: 28px;
@@ -135,6 +136,14 @@ h4 {
     }
     @include for-size(hd-desktop) {
       font-size: 21px;
+    }
+    &::before {
+      content: counter(program-counter) ' ';
+      counter-increment: program-counter;
+      color: $white-color;
+      @include for-size(hd-desktop) {
+        font-size: rem(30);
+      }
     }
   }
 
