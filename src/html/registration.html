@@ -11,33 +11,12 @@
       консультант и ответит на вопросы.
     </p>
     <div class="form__wrapper">
-      <form
-        class="contacts__form"
-        action="form/mail.php"
-        method="POST"
-        name="info-data"
-      >
-        <input
-          class="input"
-          type="text"
-          name="name"
-          placeholder="имя*"
-          id="user-name"
-          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,12}"
-          title="Введите только имя, которое должно содержать
+      <form class="contacts__form" action="form/mail.php" method="POST" name="info-data">
+        <input class="input" type="text" name="name" placeholder="имя*" id="user-name"
+          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,12}" title="Введите только имя, которое должно содержать
            буквы украинского, русского или 
-          латинского алфавита длинной символов от 2 до 12."
-          required
-        />
-        <input
-          class="input"
-          type="tel"
-          name="phone"
-          value=""
-          placeholder="телефон*"
-          id="phone-mask"
-          required
-        />
+          латинского алфавита длинной символов от 2 до 12." required />
+        <input class="input" type="tel" name="phone" value="" placeholder="телефон*" id="phone-mask" required />
 
         <button type="submit" class="button">
           хочу на бесплатное занятие
@@ -45,8 +24,6 @@
       </form>
     </div>
   </div>
-<<<<<<< HEAD
-  <!-- <div id="errorMess"></div> -->
   <div class="overlay js-overlay-thank-you">
     <div class="popup js-thank-you">
       <header class="thanks-header">
@@ -119,6 +96,3 @@
     </div>
   </div>
 </section>
-=======
-</section>
->>>>>>> parent of b0a42b4... fucking changes =)
