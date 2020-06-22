@@ -334,20 +334,19 @@ input:hover {
   display: block;
   width: 40px;
   height: 40px; 
-  transition: all 0.2s linear; 
-}
-.social__link:hover {
-  transform: rotate(10deg);
-}
-
-.social__link-instagram {
-  background-image: url('../images/registration/instagram.svg');
-}
-.social__link-youtube {
-  background-image: url('../images/registration/youtube.svg');
-}
-.social__link-facebook {
-  background-image: url('../images/registration/facebook.svg');
+  transition: all 0.2s linear;
+  &:hover {
+    transform: rotate(10deg);
+  }
+  &-instagram {
+    background-image: url('../images/registration/instagram.svg');
+  }
+  &-youtube {
+    background-image: url('../images/registration/youtube.svg');
+  }
+  &-facebook {
+    background-image: url('../images/registration/facebook.svg');
+  }
 }
 
 .orange-color {
@@ -422,101 +421,92 @@ input:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0 0;
-  
-}
-.thanks__image-wrapper {
-  background-image : url(../images/registration/thanks-img.jpg);
-  background-size: contain;
-    height: 260px;
-    background-repeat: no-repeat;
-    width: 200px;
-    border-radius: 50px;
+  &__image-wrapper {
+    background-image : url(../images/registration/thanks-img.jpg);
+    background-size: contain;
+      height: 260px;
+      background-repeat: no-repeat;
+      width: 200px;
+      border-radius: 50px;
+  }
+  &__description {
+    flex: 0 0 60%;
+  }
+  &__title {
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 55px;
+    margin: 0 0 50px 0;
+  }
+  &__text {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  &__text-link {
+    color: $orange-color;;
+    font-size: 25px;
+    line-height: 35px;
+    text-transform: uppercase;
+  }
+  &__text-link {
+    display: block;
+  }
+  &__text+&__text {
+    margin-top: 15px;
+  }
+  &__back-link {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 35px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: $orange-color;
+    font-weight: 700;
+    position: relative;
+  }
+  &__back-link::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 3px;
+    bottom: -10px;
+    background-color: $orange-color;
+    transition: all .3s linear;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  &__back-link:hover::after {
+    width: 100%;
+  }
 }
 
-
-.thanks__description {
-  flex: 0 0 60%;
-}
-
-.thanks__title {
-  font-size: 35px;
-  text-transform: uppercase;
-  line-height: 55px;
-  margin: 0 0 50px 0;
-}
-.thanks__text {
-  font-size: 25px;
-  line-height: 35px;
-}
-
-
-.thanks__text-link {
-  color: $orange-color;;
-  font-size: 25px;
-  line-height: 35px;
-  text-transform: uppercase;
-}
 .social {
   padding: 0 0 70px 0;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all .4s linear;
+  }
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  &__svg {
+    width: 40px;
+    height: 40px;
+    fill: $black-color;
+    transition: all .5s linear;
+  }
+  &__svg:hover {
+    fill: $orange-color;
+  }
+  &__text {
+    margin: 0 0 0 0 ;
+  }
 }
-.social__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  transition: all .4s linear;
-}
-.social__list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-.social__svg {
-  width: 40px;
-  height: 40px;
-  fill: $black-color;
-  transition: all .5s linear;
-}
-.social__svg:hover {
-  fill: $orange-color;
-
-}
-.thanks__text-link {
-  display: block;
-}
-.thanks__text+.thanks__text {
-  margin-top: 15px;
-}
-.thanks__back-link {
-  display: inline-block;
-  font-size: 25px;
-  line-height: 35px;
-  margin-top: 30px;
-  text-transform: uppercase;
-  color: $orange-color;
-  font-weight: 700;
-  position: relative;
-}
-.thanks__back-link::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 3px;
-  bottom: -10px;
-  background-color: $orange-color;
-  transition: all .3s linear;
-  transform: translateX(-50%);
-  left: 50%;
-}
-
-.thanks__back-link:hover::after {
-  width: 100%;
-}
-
-.social__text {
-  margin: 0 0 0 0 ;
-}
-
 
 
 
