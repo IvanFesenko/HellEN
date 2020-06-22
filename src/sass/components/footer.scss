@@ -53,26 +53,27 @@
 
   &__link {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     font-weight: 600;
     font-size: rem(18);
     line-height: rem(38);
     letter-spacing: 0.05em;
     color: $black-color-s;
 
-    &--pseudo::before {
-      display: inline-block;
-      @include pseudo(rem(20), rem(20));
-      background-image: url('../images/footer/call.svg');
-      @include background-settings(no-repeat);
-    }
+    // &--pseudo::before {
+    //   display: inline-block;
+    //   @include pseudo(rem(32), rem(31));
+    //   background-image: url('../../images/footer/call.svg');
+    //   @include background-settings(no-repeat);
+    // }
 
     @include for-size(mobile) {
       &:not(:last-of-type) {
         margin-bottom: rem(20);
       }
 
-      &--center{
+      &--center {
         max-width: max-content;
         margin: 0 auto;
       }
@@ -124,4 +125,11 @@
       font-size: rem(14);
     }
   }
+}
+
+.footer-svg {
+  width: rem(32);
+  height: rem(32);
+  fill: $orange-color;
+  margin-right: rem(7);
 }

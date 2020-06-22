@@ -23,12 +23,10 @@
   }
 }
 
-/* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
 }
 
-/* Лента слайдов */
 .slick-track {
   display: flex;
   align-items: center;
@@ -101,10 +99,6 @@
       @include for-size(tablet) {
         left: rem(-5);
       }
-
-      @include for-size(desktop) {
-        left: rem(-25);
-      }
     }
 
     & .slick-arrow.slick-next {
@@ -115,10 +109,18 @@
       @include for-size(tablet) {
         right: rem(-44);
       }
+    }
+  }
 
-      @include for-size(desktop) {
-        right: rem(-64);
-      }
+  & .slick-arrow.slick-prev {
+    @include for-size(desktop) {
+      left: rem(-25);
+    }
+  }
+
+  & .slick-arrow.slick-next {
+    @include for-size(desktop) {
+      right: rem(-64);
     }
   }
 }
