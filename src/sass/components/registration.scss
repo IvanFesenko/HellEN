@@ -330,7 +330,21 @@ input:hover {
     color: #777777;
 }
 
-
+.social__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  
+}
+.social__link-instagram {
+  background-image: url('../images/registration/instagram.svg');
+}
+.social__link-youtube {
+  background-image: url('../images/registration/youtube.svg');
+}
+.social__link-facebook {
+  background-image: url('../images/registration/facebook.svg');
+}
 
 .orange-color {
   color: $orange-color;
@@ -407,8 +421,15 @@ input:hover {
   
 }
 .thanks__image-wrapper {
-  flex: 0 0 30%;
+  background-image : url(../images/registration/thanks-img.jpg);
+  background-size: contain;
+    height: 300px;
+    background-repeat: no-repeat;
+    width: 230px;
+    border-radius: 50px;
 }
+
+
 .thanks__description {
   flex: 0 0 60%;
 }
@@ -508,7 +529,7 @@ input:hover {
   .navigation-tp {
     flex-direction: column;
   }
-  .logo {
+  .registration> .logo {
     margin-bottom: 20px;
   }
   .thanks__image-wrapper {
@@ -582,9 +603,6 @@ input:hover {
   .navigation-tp {
     margin: 0 0 10px 0;
   }
-  .thanks__image-wrapper {
-    flex: 0 0 35%;
-  } 
   .thanks__description {
     padding-left: 20px;
   }
@@ -635,6 +653,11 @@ input:hover {
     font-size: 32px;
     margin-top: 20px;
   }
+  .thanks__image-wrapper {
+    height: 575px;
+    width: 530px;
+    border-radius: 80px;
+}
 }
 @media (min-width: 1680px) {
   .registration> .container {
