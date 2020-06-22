@@ -258,7 +258,7 @@ input:hover {
 	bottom: 0;
 	left: 0;
   background-color: rgba(0, 0, 0, .7);
-  z-index: 5;
+  z-index: 30;
   display: none;
 
 }
@@ -427,9 +427,9 @@ input:hover {
 .thanks__image-wrapper {
   background-image : url(../images/registration/thanks-img.jpg);
   background-size: contain;
-    height: 300px;
+    height: 260px;
     background-repeat: no-repeat;
-    width: 230px;
+    width: 200px;
     border-radius: 50px;
 }
 
@@ -634,7 +634,7 @@ input:hover {
     height: 45px;    
   }
 
-
+  
 
 }
 @media (min-width: 1280px) {
@@ -665,8 +665,8 @@ input:hover {
     margin-top: 20px;
   }
   .thanks__image-wrapper {
-    height: 575px;
-    width: 530px;
+    height: 450px;
+    width: 340px;
     border-radius: 80px;
   }
   .social__link {
@@ -674,6 +674,8 @@ input:hover {
     height: 55px;    
   }
 }
+
+
 @media (min-width: 1680px) {
   .registration> .container {
     max-width: 1372px;
