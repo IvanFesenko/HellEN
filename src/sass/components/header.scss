@@ -201,11 +201,11 @@
 }
 
 // Burger strat
-
-.header__burger {
-  display: block;
+.burger--btn {
+  display: flex;
+  align-items: center;
   width: rem(30);
-  height: rem(12);
+  height: rem(30);
   cursor: pointer;
   position: relative;
   z-index: 5;
@@ -217,6 +217,13 @@
   @include for-size(desktop) {
     display: none;
   }
+}
+
+.header__burger {
+  display: block;
+  width: rem(30);
+  height: rem(12);
+  position: absolute;
 
   &::before,
   &::after {
@@ -248,7 +255,7 @@
   }
 }
 
-.header__burger.active {
+.burger--btn.active .header__burger {
   &::before {
     transform: rotate(45deg);
     background-color: $white-color;
@@ -290,7 +297,7 @@ body.lock {
   top: 0;
   right: -100%;
   background-color: rgba(0, 0, 0, 0.9);
-  padding-top: rem(25);
+  padding-top: rem(35);
   z-index: 2;
   overflow: auto;
   transition: all 0.2s linear;
@@ -306,6 +313,7 @@ body.lock {
 
 .menu--burger {
   display: block;
+  font-size: rem(20);
   width: rem(280);
   padding-left: rem(15);
   margin-bottom: rem(60);
@@ -314,7 +322,7 @@ body.lock {
 
   @include for-size(tablet) {
     width: rem(320);
-    font-size: rem(22);
+    font-size: rem(24);
   }
 
   @include for-size(desktop) {
