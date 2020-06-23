@@ -3,11 +3,11 @@ $("#sendMail").on("click", function () {
   var name = $('#user-name').val();
   var phone = $('#phone-mask').val();
 
-  if (name == "") {
-    alert('введите имя');
+  if (name.length < 2) {
+    smoke.prompt('введите имя');
     return false;
   } else if (phone.length < 18) {
-    alert('введите номер телефона');
+    smoke.prompt('введите номер телефона');
     return false;
   }
 
