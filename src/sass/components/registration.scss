@@ -252,88 +252,87 @@ input:hover {
 // popup
 
 .overlay {
-	position: fixed;
-	width: 100%;
-	height: 100vh;
-	bottom: 0;
-	left: 0;
-  background-color: rgba(0, 0, 0, .7);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 30;
   display: none;
-
 }
 
 .popup {
-	position: absolute;
-	width: 80%;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	padding: 20px;
-  // background-color: #FFF;  
-  background: rgba(252, 252, 252, .98) url(../images/registration/thanks-bg.png)
-    no-repeat center right;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  // background-color: #FFF;
+  background: rgba(252, 252, 252, 0.98)
+    url(../images/registration/thanks-bg.png) no-repeat center right;
   background-size: 60%;
   color: $black-color;
 }
 
 .close-popup {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	width: 23px;
-	height: 23px;
-	cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
 }
 
 .close-popup:before {
-	content: '';
-	background-color: #000;
-	position: absolute;
-	height: 1px;
-	width: 31px;
-	top: 11px;
-	left: -4px;
-	transform: rotate(-45deg);
+  content: '';
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  transform: rotate(-45deg);
 }
 
 .close-popup:after {
-	content: '';
-	background-color: #000;
-	position: absolute;
-	height: 1px;
-	width: 31px;
-	top: 11px;
-	transform: rotate(45deg);
-	left: -4px;
+  content: '';
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  transform: rotate(45deg);
+  left: -4px;
 }
 
 .scroll-up {
-    width: 130px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: #fcfcfc;
-    color: #aaa;
-    font-size: 13px;
-    text-align: center;
-    padding: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: background .2s ease;
-    display: none;
+  width: 130px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fcfcfc;
+  color: #aaa;
+  font-size: 13px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: none;
 }
 
 .scroll-up:hover {
-    background-color: #eeeeee;
-    color: #777777;
+  background-color: #eeeeee;
+  color: #777777;
 }
 
 .social__link {
   display: block;
   width: 40px;
-  height: 40px; 
+  height: 40px;
   transition: all 0.2s linear;
   &:hover {
     transform: rotate(10deg);
@@ -355,13 +354,13 @@ input:hover {
 .br {
   display: block;
 }
-.registration> .container {
+.registration > .container {
   max-width: 1180px;
   margin: auto;
   padding: 0 30px 0 30px;
 }
 .thaks-header {
-	padding: 0 0 25px 0;
+  padding: 0 0 25px 0;
 }
 .contacts__image {
   width: 40px;
@@ -377,7 +376,6 @@ input:hover {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  
 }
 .contacts__wrapper:hover .contacts__svg {
   transform: rotate(135deg);
@@ -392,13 +390,13 @@ input:hover {
   height: 35px;
   left: -50px;
   fill: $orange-color;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 .contacts__phone {
   font-size: 30px;
   font-weight: 700;
   color: $black-color;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 .contacts__instagram {
@@ -422,12 +420,12 @@ input:hover {
   align-items: center;
   padding: 0 0 0 0;
   &__image-wrapper {
-    background-image : url(../images/registration/thanks-img.jpg);
+    background-image: url(../images/registration/thanks-img.jpg);
     background-size: contain;
-      height: 260px;
-      background-repeat: no-repeat;
-      width: 200px;
-      border-radius: 50px;
+    height: 260px;
+    background-repeat: no-repeat;
+    width: 200px;
+    border-radius: 50px;
   }
   &__description {
     flex: 0 0 60%;
@@ -443,7 +441,7 @@ input:hover {
     line-height: 35px;
   }
   &__text-link {
-    color: $orange-color;;
+    color: $orange-color;
     font-size: 25px;
     line-height: 35px;
     text-transform: uppercase;
@@ -451,7 +449,7 @@ input:hover {
   &__text-link {
     display: block;
   }
-  &__text+&__text {
+  &__text + &__text {
     margin-top: 15px;
   }
   &__back-link {
@@ -472,7 +470,7 @@ input:hover {
     height: 3px;
     bottom: -10px;
     background-color: $orange-color;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     transform: translateX(-50%);
     left: 50%;
   }
@@ -487,7 +485,7 @@ input:hover {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    transition: all .4s linear;
+    transition: all 0.4s linear;
   }
   &__list {
     display: flex;
@@ -498,22 +496,18 @@ input:hover {
     width: 40px;
     height: 40px;
     fill: $black-color;
-    transition: all .5s linear;
+    transition: all 0.5s linear;
   }
   &__svg:hover {
     fill: $orange-color;
   }
   &__text {
-    margin: 0 0 0 0 ;
+    margin: 0 0 0 0;
   }
 }
 
-
-
-
-
 @media (max-width: 767px) {
-  .registration> .container {
+  .registration > .container {
     width: 100%;
     padding: 0px 15px;
   }
@@ -523,7 +517,7 @@ input:hover {
   .navigation-tp {
     flex-direction: column;
   }
-  .registration> .logo {
+  .registration > .logo {
     margin-bottom: 20px;
   }
   .thanks__image-wrapper {
@@ -545,15 +539,14 @@ input:hover {
   .social__wrapper {
     flex-direction: column;
   }
-  
-.social__item+.social__item {
-  margin-left: 20px;
-}
+
+  .social__item + .social__item {
+    margin-left: 20px;
+  }
   .social__text {
     font-size: 17px;
     text-align: center;
     margin: 0 0 10px 0;
-    
   }
   .masc {
     display: none;
@@ -565,7 +558,6 @@ input:hover {
     width: 50px;
     height: 50px;
   }
-  
 
   .contacts__wrapper {
     flex-direction: column;
@@ -582,12 +574,12 @@ input:hover {
     height: 30px;
     left: -12px;
   }
-  .thanks__text+.thanks__text {
+  .thanks__text + .thanks__text {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .registration> .container {
+  .registration > .container {
     max-width: 768px;
     padding: 0px 40px;
   }
@@ -614,21 +606,18 @@ input:hover {
   }
   .social__text {
     font-size: 16px;
-  } 
-  
+  }
+
   .social__item {
     margin-left: 20px;
   }
   .social__link {
     width: 45px;
-    height: 45px;    
+    height: 45px;
   }
-
-  
-
 }
 @media (min-width: 1280px) {
-  .registration> .container {
+  .registration > .container {
     max-width: 1240px;
     padding: 0px 40px;
   }
@@ -661,14 +650,97 @@ input:hover {
   }
   .social__link {
     width: 55px;
-    height: 55px;    
+    height: 55px;
   }
 }
 
-
 @media (min-width: 1680px) {
-  .registration> .container {
+  .registration > .container {
     max-width: 1372px;
   }
 }
 
+// alert window
+
+.smoke-base {
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: table;
+  z-index: 1001;
+}
+
+.smoke-dialog_wrapper {
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.smoke-dialog {
+  // width: 80%;
+  width: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #202020;
+  border: 1px solid #b6b6b6;
+  border-radius: 28px;
+  background-color: #f3f3f3;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 24px;
+}
+
+.smoke-dialog-buttons {
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.smoke-dialog-buttons-ok,
+.smoke-dialog-buttons-cancel {
+  margin: 0 7px;
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 7px;
+  outline: 0;
+  color: white;
+  background: rgb(255, 107, 8);
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 18px;
+  vertical-align: baseline;
+  display: inline-block;
+  cursor: pointer;
+}
+.smoke-dialog-buttons-ok:hover,
+.smoke-dialog-buttons-cancel:hover {
+  background: #222;
+}
+
+.smoke-prompt {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.smoke-prompt-input {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  margin: 0;
+  padding: 11.2px;
+  border: 1.4px solid #aaa;
+  outline: none;
+  font-family: arial;
+  font-size: 22.4px;
+  background-color: white;
+  display: inline-block;
+}
+
+.smoke-dialog-buttons-cancel {
+  background-color: rgba(0, 0, 0, 0.4);
+}
