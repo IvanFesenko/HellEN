@@ -4,8 +4,8 @@
 где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
 
 //Переменная $name,$phone, $mail получает данные при помощи метода POST из формы
-$name = $_POST['user_name'];
-$phone = $_POST['user_phone'];
+$name = $_POST['name'];
+$phone = $_POST['phone'];
 
 //в переменную $token нужно вставить токен, который нам прислал @botFather
 $token = "1127876001:AAFtrrQzL4UJK27EoBkaTASIxtg6DaBk5P8";

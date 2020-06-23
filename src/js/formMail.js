@@ -6,7 +6,7 @@ $("#sendMail").on("click", function () {
   if (name == "") {
     alert('введите имя');
     return false;
-  } else if (phone == "") {
+  } else if (phone.length < 18) {
     alert('введите номер телефона');
     return false;
   }
@@ -21,6 +21,25 @@ $("#sendMail").on("click", function () {
     beforeSend: function () {
       $("#sendMail").prop("disabled", true);
     },
+    success: function (data) {
+      $('.js-overlay-thank-you').fadeIn();
+      // $(this).find('input').val('');
+      $("#sendMail").prop("disabled", false);
+      $('#mail-form').trigger('reset');
+
+    }
+  });
+
+  $.ajax({
+    url: '../form/telegram.php',
+    type: 'POST',
+    cache: false,
+    data: { 'name': name, 'phone': phone },
+    dataType: 'html',
+    beforeSend: function () {
+      $("#sendMail").prop("disabled", true);
+    },
+
     success: function (data) {
       $('.js-overlay-thank-you').fadeIn();
       // $(this).find('input').val('');
