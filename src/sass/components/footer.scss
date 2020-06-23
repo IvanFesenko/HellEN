@@ -88,7 +88,7 @@
       &--pseudo::after {
         @include pseudo(rem(1), rem(29));
         position: absolute;
-        top: 0;
+        top: rem(10);
         right: rem(-30);
         background-color: rgb(224, 224, 224);
       }
