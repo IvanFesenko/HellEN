@@ -11,12 +11,34 @@
       консультант и ответит на вопросы.
     </p>
     <div class="form__wrapper">
-      <form class="contacts__form" id="mail-form" method="POST" name="info-data">
-        <input class="input" type="text" name="name" placeholder="имя*" id="user-name"
-          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,12}" title="Введите только имя, которое должно содержать
+      <form
+        class="contacts__form"
+        id="mail-form"
+        method="POST"
+        name="info-data"
+      >
+        <input
+          class="input"
+          type="text"
+          name="name"
+          maxlength="12"
+          placeholder="имя*"
+          id="user-name"
+          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2,12}"
+          title="Введите только имя, которое должно содержать
            буквы украинского, русского или 
-          латинского алфавита длинной символов от 2 до 12." required />
-        <input class="input" type="tel" name="phone" value="" placeholder="телефон*" id="phone-mask" required />
+          латинского алфавита длинной символов от 2 до 12."
+          required
+        />
+        <input
+          class="input"
+          type="tel"
+          name="phone"
+          value=""
+          placeholder="телефон*"
+          id="phone-mask"
+          required
+        />
 
         <button type="submit" id="sendMail" class="button">
           хочу на бесплатное занятие
@@ -58,21 +80,33 @@
             <p class="social__text">Следите за новостями:</p>
             <ul class="social__list">
               <li class="social__item">
-                <a href="https://www.youtube.com/" class="social__link social__link-youtube" target="_blank">
+                <a
+                  href="https://www.youtube.com/"
+                  class="social__link social__link-youtube"
+                  target="_blank"
+                >
                   <!-- <svg class="social__svg">
                     <use href="./images/registration/sprite-form.svg#youtube"></use>
                   </svg> -->
                 </a>
               </li>
               <li class="social__item">
-                <a href="https://www.instagram.com/" class="social__link social__link-instagram" target="_blank">
+                <a
+                  href="https://www.instagram.com/"
+                  class="social__link social__link-instagram"
+                  target="_blank"
+                >
                   <!-- <svg class="social__svg">
                     <use href="./images/registration/sprite-form.svg#instagram"></use>
                   </svg> -->
                 </a>
               </li>
               <li class="social__item">
-                <a href="https://www.facebook.com/" class="social__link social__link-facebook" target="_blank">
+                <a
+                  href="https://www.facebook.com/"
+                  class="social__link social__link-facebook"
+                  target="_blank"
+                >
                   <!-- <svg class="social__svg">
                     <use href="./images/registration/sprite-form.svg#facebook"></use>
                   </svg> -->
@@ -85,10 +119,11 @@
       <section class="thanks">
         <div class="thanks__image-wrapper">
           <!-- <img src="./images/registration/thanks-img.jpg" alt="teacher" class="thanks__image"> -->
-
         </div>
         <div class="thanks__description">
-          <h2 class="thanks__title"><span class="br">Спасибо</span> за вашу <span class="orange-color">заявку</span>!
+          <h2 class="thanks__title">
+            <span class="br">Спасибо</span> за вашу
+            <span class="orange-color">заявку</span>!
           </h2>
           <p class="thanks__text">Мы свяжемся с Вами в ближайшее время</p>
         </div>

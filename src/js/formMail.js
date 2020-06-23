@@ -5,6 +5,9 @@ $('#sendMail').on('click', function () {
   if (name.length < 2) {
     smoke.alert('введите имя');
     return false;
+  } else if (name.length != name.match(/[A-Z А-Я Ї І Є]/gi).length) {
+    smoke.alert('Имя не может содержать цифры или символы');
+    return false;
   } else if (phone.length < 18) {
     smoke.alert('введите номер телефона');
     return false;
