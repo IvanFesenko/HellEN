@@ -3,7 +3,7 @@
 var smoke = {};
 void (function () {
   // Options:
-  smoke.ok = 'Подтвердить'; // Text for "Ok" button.
+  smoke.ok = 'ok'; // Text for "Ok" button.
   smoke.cancel = 'Отмена'; // Text for "Cancel" button.
   smoke.point_event = 'click'; // Point event ("click", "touchstart", etc.)
   smoke.parent = document.body; // Where the smoke div attaches. Note that if this is undefined (because document.body hasn't been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.
