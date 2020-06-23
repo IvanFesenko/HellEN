@@ -3,6 +3,14 @@ $("#sendMail").on("click", function () {
   var name = $('#user-name').val();
   var phone = $('#phone-mask').val();
 
+  if (name == "") {
+    alert('введите имя');
+    return false;
+  } else if (phone == "") {
+    alert('введите номер телефона');
+    return false;
+  }
+
 
   $.ajax({
     url: '../form/mail.php',
