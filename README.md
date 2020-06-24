@@ -17,7 +17,7 @@
 
 ### Ссылки:
 
-- [Демо версия на github.io]()
-- [Рабочий продукт]()
+- [Демо версия на github.io](https://ivanfesenko.github.io/HellEN/)
+- [Рабочий продукт](https://hellen.fun/)
 
 #### Проект собирался используя [Gulp Starter Kit](https://github.com/luxplanjay/gulp-starter-kit)
