@@ -6,7 +6,7 @@
 
 - ### Участники:
   - [Андрей Животовский](https://github.com/AndriiZhyvotovskyi)
-  - [Вадим Евланов](https://github.com/Google-Barma)
+  - [Вадим Евланов](https://github.com/Google-Barma) [LinkedIn](https://www.linkedin.com/in/vadym-yevlanov-14b3201a6/)
   - [Виктор Петлюк](https://github.com/chain-mailer)
   - [Дмитрий Осипов](https://github.com/Dima-Os)
   - [Дмитрий Шамота](https://github.com/dmitrij-sh)
