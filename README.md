@@ -5,7 +5,7 @@
 # HellEN Адский английский
 
 - ### Участники:
-  - [Андрей Животовский](https://github.com/AndriiZhyvotovskyi)
+  - [Андрей Животовский](https://github.com/AndriiZhyvotovskyi) [linkedin](https://www.linkedin.com/in/andrii-zhyvotovskyi-017b03158/)
   - [Вадим Евланов](https://github.com/Google-Barma)
   - [Виктор Петлюк](https://github.com/chain-mailer)
   - [Дмитрий Осипов](https://github.com/Dima-Os)
