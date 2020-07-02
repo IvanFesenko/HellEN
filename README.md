@@ -14,7 +14,7 @@
   - [Иван Фесенко](https://github.com/IvanFesenko) [instagram](https://www.instagram.com/did1van/)
   - [Максим Козлов](https://github.com/Maximusvin)
   - [Никита Самойленко](https://github.com/Bignichok)
-  - [Николай Винничук](https://github.com/Mykola-Vynnychuk)
+  - [Николай Винничук](https://github.com/Mykola-Vynnychuk) [facebook](https://www.facebook.com/mykola.vynnychuk)
 
 ### Ссылки:
 
