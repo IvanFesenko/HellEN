@@ -8,7 +8,7 @@
 
   - [Андрей Животовский](https://github.com/AndriiZhyvotovskyi) [linkedin](https://www.linkedin.com/in/andrii-zhyvotovskyi-017b03158/)
   - [Вадим Евланов](https://github.com/Google-Barma) [LinkedIn](https://www.linkedin.com/in/vadym-yevlanov-14b3201a6/)
-  - [Виктор Петлюк](https://github.com/chain-mailer)
+  - [Виктор Петлюк](https://github.com/chain-mailer) [LinkedIn](https://www.linkedin.com/in/viktor-petliuk/)
   - [Дмитрий Осипов](https://github.com/Dima-Os) [linkedIn](https://www.linkedin.com/in/dmytro-osipov-ba032b177)
   - [Дмитрий Шамота](https://github.com/dmitrij-sh) [facebook](https://www.facebook.com/dmitrij.shamota)
   - [Иван Фесенко](https://github.com/IvanFesenko) [instagram](https://www.instagram.com/did1van/)
