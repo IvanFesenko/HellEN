@@ -13,7 +13,7 @@
   - [Дмитрий Шамота](https://github.com/dmitrij-sh) [facebook](https://www.facebook.com/dmitrij.shamota)
   - [Иван Фесенко](https://github.com/IvanFesenko) [instagram](https://www.instagram.com/did1van/)
   - [Максим Козлов](https://github.com/Maximusvin) [LinkedIn](https://www.linkedin.com/in/maxim-kozlov/)
-  - [Никита Самойленко](https://github.com/Bignichok)
+  - [Никита Самойленко](https://github.com/Bignichok) [LinkedIn](https://www.linkedin.com/in/nikita-samoilenko-5124121a6/)
   - [Николай Винничук](https://github.com/Mykola-Vynnychuk) [facebook](https://www.facebook.com/mykola.vynnychuk)
 
 ### Ссылки:
