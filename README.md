@@ -17,7 +17,7 @@
   - [Дмитрий Шамота](https://github.com/dmitrij-sh)
     - [facebook](https://www.facebook.com/dmitrij.shamota)
   - [Иван Фесенко](https://github.com/IvanFesenko)
-    - [LinkedIn](https://www.linkedin.com/in/ivan-fesenko-ba56b21a5)
+    - [LinkedIn](https://www.linkedin.com/in/IvanFesenko)
   - [Максим Козлов](https://github.com/Maximusvin)
     - [LinkedIn](https://www.linkedin.com/in/maxim-kozlov/)
   - [Никита Самойленко](https://github.com/Bignichok)
